@@ -2,11 +2,29 @@
 title: "Labs"
 ---
 
-Find below several examples of labs students can complete.
+----
 
-## Descriptive Statistics
+Find below several examples of labs students can complete to master the various topics covered in the ISK e-book.
 
-### Lab 1
+### 1. `jamovi` Survival Skills
+
+#### 1.2. Getting started with `jamovi`
+
+**Learning objectives**
+
+1. Differentiate between independent and dependent variables
+2. Assign the correct data level to variables (nominal, ordinal, and continuous)
+3. Create and compute new variables in `jamovi`
+4. Select and deselect cases in `jamovi`
+5. Install modules in `jamovi`
+
+[**Complete the lab**](https://osf.io/7562g/)
+
+----
+
+### 2. Descriptive Statistics Labs {#ds-labs}
+
+#### 2.1 Example 1
 
 **Learning objectives**
 
@@ -15,4 +33,7 @@ Find below several examples of labs students can complete.
 3. create and interpret histograms and boxplots
 4. understand characteristics of normal and non-normal distributions
 
-[**Complete the lab**](labs/lab1.html)
+[**Complete the lab**:](labs/ds1.html)
+
+----
+

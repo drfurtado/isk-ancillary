@@ -1,0 +1,25 @@
+---
+title: "Projects"
+---
+
+----
+
+Find below several examples of projects students can complete to master the various topics covered in the ISK e-book.
+
+## Example 1
+
+In this example, each student receive a data set and a research question and have to write a research report.
+
+### Learning Objectives
+
+1. Identify variables from a research question statement
+2. Formulate hypotheses from a research question statement
+3. Identify the appropriate statistical procedure to test the formulated hypothesis
+4. Conduct statistical analysis in `jamovi` (See Section \@ref(jamovi))
+5. Interpret the results of the data analysis
+6. Create tables and figures to illustrate the findings
+7. Prepare a research report
+
+[**Complete this project**](https://bit.ly/3yxkvbH) 
+
+

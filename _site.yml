@@ -17,6 +17,8 @@ navbar:
           href: slides.html
         - text: "Labs"
           href: labs.html
+        - text: "Projects"
+          href: projects.html
   right:
     - icon: fa-book fa-lg
       href: https://drfurtado.github.io/isk/

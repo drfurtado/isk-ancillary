@@ -3,10 +3,10 @@ title: "Lab 1 - Descriptive Stats"
 author: "Furtado Jr., O."
 date: "10/5/2021"
 output:
+  word_document: default
   html_document:
     df_print: paged
   pdf_document: default
-  word_document: default
 ---
 
 **Other Formats**: [PDF](lab1.pdf) | [Word](lab1.docx)
