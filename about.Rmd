@@ -4,6 +4,4 @@ author: "Furtado Jr., O."
 date: "9/22/2021"
 ---
 
-```{r embed-xaringan, echo=FALSE}
-xaringanExtra::embed_xaringan(url = "mct.html", ratio = "16:9")
-```
+About the site
