@@ -2,8 +2,6 @@
 title: "Labs"
 ---
 
-# Intro
-
 Find below several examples of labs students can complete.
 
 ## Descriptive Statistics
