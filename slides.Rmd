@@ -2,6 +2,8 @@
 title: "Slides"
 ---
 
+----
+
 Below you will find the slides created to accompany this e-book.
 
 | Topic                        | HTML                   | PDF  |
