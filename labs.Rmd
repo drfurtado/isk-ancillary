@@ -1,7 +1,5 @@
 ---
 title: "Labs"
-author: "Furtado Jr., O."
-date: "10/5/2021"
 ---
 
 # Intro

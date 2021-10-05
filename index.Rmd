@@ -2,4 +2,4 @@
 title: "Introduction to Statistics in Kinesiology"
 ---
 
-This site was created to house the ancillary material for the Introduction to Statistics in Kinesiology e-book.
+This site was created to house the ancillary material for the [Introduction to Statistics in Kinesiology e-book](https://drfurtado.github.io/isk/).

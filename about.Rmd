@@ -1,7 +1,5 @@
 ---
-title: "ISK-Measures of Central Tendency"
-author: "Furtado Jr., O."
-date: "9/22/2021"
+title: "About"
 ---
 
-About the site
+This site

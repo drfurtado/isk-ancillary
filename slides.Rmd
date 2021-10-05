@@ -1,12 +1,10 @@
 ---
-title: "ISK-Measures of Central Tendency"
-author: "Furtado Jr., O."
-date: "9/22/2021"
+title: "Slides"
 ---
 
-Below you will find the slides for ISK.
+Below you will find the slides created to accompany this e-book.
 
 | Topic                        | HTML                   | PDF  |
-|------------------------------|------------------------|------|
-| Measures of central tendency | [Link](slide-mct.html) | Link |
+|:-----------------------------|:-----------------------|:-----|
+| Measures of central tendency | [Link](slide-mct.html) | Coming soon |
 |                              |                        |      |
