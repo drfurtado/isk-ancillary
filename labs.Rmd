@@ -1,0 +1,22 @@
+---
+title: "Labs"
+author: "Furtado Jr., O."
+date: "10/5/2021"
+---
+
+# Intro
+
+Find below several examples of labs students can complete.
+
+## Descriptive Statistics
+
+### Lab 1
+
+**Learning objectives**
+
+1. calculate measures of central tendency and variability in `jamovi`
+2. differentiate between descriptive and inferential statistics
+3. create and interpret histograms and boxplots
+4. understand characteristics of normal and non-normal distributions
+
+[**Complete the lab**](labs/lab1.html)

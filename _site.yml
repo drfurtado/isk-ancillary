@@ -10,19 +10,13 @@ navbar:
     - text: "About"
       icon: fa-info
       href: about.html
-    - text: "More"
+    - text: "Assignments"
       icon: fa-gear
       menu:
         - text: "Slides"
           href: slides.html
-        - text: "Page B"
-          href: page-b.html
-        - text: "---------"
-        - text: "Heading 2"
-        - text: "Page C"
-          href: page-c.html
-        - text: "Page D"
-          href: page-d.html
+        - text: "Labs"
+          href: labs.html
   right:
     - icon: fa-question fa-lg
       href: https://example.com
