@@ -4,12 +4,12 @@ author: "Furtado Jr., O."
 date: "10/5/2021"
 output:
   word_document: default
+  pdf_document: default
   html_document:
     df_print: paged
-  pdf_document: default
 ---
 
-**Other Formats**: [PDF](lab1.pdf) | [Word](lab1.docx)
+**Other Formats**: [PDF](ds1.pdf) | [Word](ds1.docx)
 
 ## Learning objectives
 
