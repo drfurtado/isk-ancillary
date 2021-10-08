@@ -1,6 +1,6 @@
 ---
 title: "Chapter 04 - Measures of Central Tendency"
-subtitle: "⚔<br/>Introduction to Statistics for Kinesiology Students"
+subtitle: "⚔<br/>Introduction to Statistics in Kinesiology"
 author: "Furtado JR., O"
 institute: "Cal State Northridge"
 date: "updated: `r Sys.Date()`"
