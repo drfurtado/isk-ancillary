@@ -23,7 +23,6 @@ output:
 6.  Create tables and figures to illustrate the findings
 7.  Prepare a research report
 
-
 # Data {#data}
 
 ## Data set
@@ -61,7 +60,7 @@ In a nutshell, you will be assigned a research question and be given a data set 
 
 Before running the statistical test to answer your research question, you will be asked to complete four steps:
 
-1. Search related articles
+1. Search related articles + 2-page summary
 2. Identify the DV and IV
 3. State the Null (Ho) and Research hypotheses (Ha)
 4. Choose the statistical model to test your Null hypothesis (Ho)
@@ -103,8 +102,6 @@ Notice above that `Ha` was stated as non-directional (two-tailed) because, even 
 
 Recall that you should only use a directional hypothesis (one-tailed) if you have strong evidence of the direction of the effect (refer to our textbook about one- and two-tailed tests).
 
--------
-
 ### 4. Choose the appropriate statistical model to test the hypothesis(ses)
 
 State the statistical procedure (i.e., ANOVA, Spearman rho) you selected to test the hypothesis(ses) and explain the rationale for choosing the procedure(s).
@@ -113,12 +110,12 @@ Recall that the selection of the procedure will depend on several factors, inclu
 
 Note that you must chose a statistical model for each research hypothesis `(Ha)` formulated.
 
-------
 
 # Structure of the Report
 
 Once the preliminary information is gathered, and after running the appropriate statistical model to test your hypothesis(ses), you can proceed to write your research report following the APA Style. You will be required to follow the example proposed by Dr. McLeod (https://bit.ly/3fptZzD). 
 
+```
 1. Title
 2. Abstract
 3. Introduction
@@ -132,14 +129,17 @@ Once the preliminary information is gathered, and after running the appropriate 
 6. Discussion
 7. References
 8. Appendix
+   8.1 Preliminary info
 
 ```
+
+----
+
 Hint 1: Please download and read this article (https://bit.ly/31skJ5I)  that covers the best practices of Methods/Results/Conclusion write-ups.
 
 Hint 2: Ensure to phrase your results following the APA Style (https://bit.ly/2HirVLv)
 
-```
-------------------------------------------------------------------------
+----
 
 # Appendices {#appendices}
 
@@ -153,7 +153,6 @@ When evaluating the size of a bivariate correlation, please use Cohen (1988)
 | 0.3 \< *r* \< .5   | medium/moderate correlation |
 | *r* \> .5          | Large/strong correlation    |
 
-----
 
 ## Appendix B: Research Questions {#appendix-b}
 
@@ -165,9 +164,10 @@ Since you had access to players from another university in the State of Iowa `(U
 
 As a group, do players from `Iowa State (70)` perform better than players from `Iowa University (69)` on the **Bench Press** (`bench_press_post)` test? How about for **vertical Leap** (`vert_leap_post`)?
 
-```
+----
+
 You will need to filter cases to perform this analysis so that only values `69` and `70` is selected for `college`. Notice that you will need to run the analysis for bench press and vertical leap.
-```
+
 ----
 
 ### Research Question #2
@@ -176,9 +176,10 @@ Research has shown that in the general population there is a `negative` and `mod
 
 Assume that you are specially interested in football players that play as `Defensive Ends (3)`. Is there a relationship between `Weight` and `Broad Jump (pre)` scores among `Defensive Ends (3)`?
 
-```
+----
+
 You will need to filter cases to perform this analysis so that only value `3` is selected/checked for `position`.
-```
+
 ----
 
 ### Research Question #3
@@ -187,9 +188,10 @@ Defensive players are known to be stronger than those playing on other positions
 
 Are Defensive `Tacklers (4)`, `Linebackers (10)`, and `Cornerbacks (2)` different when it comes to `bench press (pre)` scores?
 
-```
+----
+
 You will need to filter cases to perform this analysis so that only the values `4`, `10` and `2` are selected/checked for `position`.
-```
+
 ----
 
 ### Research Question #4
@@ -200,9 +202,10 @@ To test the effectiveness of the program, you invited players from `Ohio State U
 
 Do players from `Ohio State University (127)` improve their scores on the `20-yard Shuttle` from pre to post-test? How about for the `3-cone Drill`?
 
-```
+----
+
 You will need to filter cases to perform this analysis so that only the value `127` is selected/checked for `college`. Notice that you will need to run the analysis for 20-yard Shuttle and 3-cone Drill.
-```
+
 ----
 
 ### Research Question #5
@@ -211,9 +214,10 @@ There is evidence that `Wide Receivers` and `Running Backs` have a higher incide
 
 How do players playing as `Wide Receivers (22)`, `Running Backs (18)` and `Quarterbacks (17)` compare on the Wonderlic scores? For this analysis, please, **ONLY use the data for 2020 data**.
 
-```
+----
+
 You will need to filter cases to perform this analysis so that only the values `17`, `18` and `22` are selected/checked for `position`.
-```
+
 ----
 
 ### Research Question #6
@@ -228,9 +232,10 @@ According to the test developers, the average (mean) score on the Wonderlic test
 
 Do QBs tested in 2018, 2019, and 2019 perform better than the general population on the Wonderlic Cognitive ability test?
 
-```
+----
+
 You will need to filter cases to perform this analysis so that only the value `17`, is selected/checked for `position`.
-```
+
 ----
 
 ### Research Question #7
@@ -239,9 +244,10 @@ It has been [reported](https://www.cbssports.com/nfl/news/nfl-draft-combine-the-
 
 Test the hypothesis that OT (15) players tested in 2018, 2019, and 2020 perform differently than FB (6) players on the Wonderlic Cognitive Ability test.
 
-```
+----
+
 You will need to filter cases to perform this analysis so that only the values `5` and `15` are selected/checked for `position`.
-```
+
 ----
 
 ### Research Question #8
@@ -252,9 +258,10 @@ Considering that defensive players do train speed during football practices, it 
 
 Is there a correlation between `weight` and `speed` among football `Defensive Tackles (4)`? How about `Defensive Ends (3)`?
 
-```
+----
+
 For this analysis, use the variables `Weight` and `40-yard Dash Pretest`, and filter cases so that only positions `3` and `4` are selected/checked.
-```
+
 ----
 
 ### Research Question #9
@@ -265,9 +272,10 @@ In 2020, you designed a program to help players improve their `speed`.
 
 `Quarterbacks (17)` from all attending colleges were selected to be part of the intervention. Test the hypothesis that the players would improve from pre to post-test on the `40-yard Dash`.
 
-```
+----
+
 For this analysis, use the variables `40-yard Dash`, and filter cases so that only position `17` is selected/checked. Also, note that this study involves only players who were tested in `2020`.
-```
+
 ----
 
 ### Research Question #10
@@ -278,9 +286,10 @@ In `2020`, you designed a program to help players improve their `speed` scores.
 
 `Running Backs (18)` from all attending colleges were selected to be part of the intervention. Test the hypothesis that the players would improve from pre to post-test on the `40-yard Dash`.
 
-```
+----
+
 For this analysis, use the variable `40-yard Dash`, and filter cases so that only position `18` is selected/checked. Also, note that this study involves only players who were tested in `2020`.
-```
+
 ----
 
 ### Research Question #11
@@ -291,9 +300,10 @@ In 2020, you designed a program to help players improve their `agility`.
 
 `Quarterbacks (17)` from all attending colleges were selected to be part of the intervention. Test the hypothesis that the players would improve from pre to post-test on the `3-cone Drill`.
 
-```
+----
+
 For this analysis, use the variable `3-cone Drill`, and filter cases so that only position `17` is selected/checked. Also, note that this study involves only players who were tested in `2020`.
-```
+
 ----
 
 ### Research Question #12
@@ -304,16 +314,15 @@ In 2020, you designed a program to help players improve their `agility`.
 
 `Running Backs (18)` from all attending colleges were selected to be part of the intervention. Test the hypothesis that the players would improve from pre to post-test on the `3-cone Drill`.
 
-```
+----
+
 For this analysis, use the variable `3-cone Drill`, and filter cases so that only position `18` is selected/checked. Also, note that this study involves only players who were tested in `2020`.
-```
+
 ----
 
 ### Research Question #13
 
 In football, the size of a player's hand may make a difference at a decisive moment during a game. Test the hypothesis that `Wide Receivers (WR)`, `Quarterbacks (QB)`, and `Defensive Lines (DT)` will show differences in the size of their hands. Your prediction is that `WR` and `QB` players will have significantly larger hands compared to `DT` players and `WR` and `QB` players will show no differences in the size of their hands when compared.
-
-----
 
 ### Research Question #14
 
@@ -321,20 +330,82 @@ Certain football positions require players to perform extraordinary moves. `Wide
 
 Test the hypothesis that `WR` will perform differently when compared to `Quarterbacks` (QB) and `Defensive Line` (DT) players on the test of `Broad-Jump` (broad_jump_post). Your prediction is that `WR` will overperform both `QB` and `DL` players and the last two positions will not show difference when compared.
 
-```
+----
+
 Hint: use `position_labels` for this analysis.
-```
+
 ----
 
 ## Appendix C: Timeline {#timeline}
 
-| Due Date | What to submit |
+| Due Date | What to do |
 |:---------|:---------------|
-| TBD      | [3 related articles](#articles) |
-| TBD     | 2-page introduction |
-| TBD      | submit items 2-4 of [`Preliminary Info`](#prelim-info) |
-| TBD     | submit an outline of the presentation |
+|10/19/21| submit items 2-4 of [Preliminary Info](#prelim-info) |
+|10/26/21 | [3 related articles](#articles) |
+|11/02/21 | 2-page introduction |
+|11/09/21 | submit an outline of the presentation* |
+|12/14/21 | Present  |
+|12/20/21 | submit written report |
 
+*Presentation will be on 12/14/21
+
+# Templates
+
+Below you will find the templates you are to use when submitting the required assignments related to the final project.
+
+1. Copy the content of each template
+2. Open [Google Docs](http://docs.google.com) and paste the content into the body of the blank document - Do NOT change the font type or size
+3. Proceed to complete the assignment, then click on "File>Download>PDF Document"
+4. Finally, submit the PDF file via Canvas
+
+## Preliminary info
+
+```
+Cal State Northridge - Kinesiology
+KIN-610 - Dr. Furtado
+
+YOUR RESEAERCH QUESTION
+Type here...
+
+
+DEPENDENT AND INDEPENDENT VARIABLES
+
+IV: 
+Levels of the IV:
+Scale:
+
+DV:
+Scale:
+
+HYPOTHESES
+
+State your prediction (i.e., boys will perform better than gilrs on the skill of kicking)
+Type here...
+
+Type of hypothesis (e.g., directional vs non-directional)
+
+State the null hyphothsis (Ho)
+Type here...
+
+State the alternative (aka research hypothesis) hyphothsis (Ha)
+Type here...
+
+STATISTICAL MODEL
+
+State the statistical model (test) that you chose to test the hypothesis
+Type here...
+
+Reason 1 for choosing the test:
+Reason 2 for choosing the test:
+Reason 3 for choosing the test:
+
+```
+
+## Two-page summary
+
+```
+Coming soon
+```
 
 
 
