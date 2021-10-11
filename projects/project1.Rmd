@@ -60,10 +60,10 @@ In a nutshell, you will be assigned a research question and be given a data set 
 
 Before running the statistical test to answer your research question, you will be asked to complete four steps:
 
-1. Search related articles + 2-page summary
-2. Identify the DV and IV
-3. State the Null (Ho) and Research hypotheses (Ha)
-4. Choose the statistical model to test your Null hypothesis (Ho)
+1. Identify the DV and IV
+2. State the Null (Ho) and Research hypotheses (Ha)
+3. Choose the statistical model to test your Null hypothesis (Ho)
+4. Search related articles + 2-page summary
 
 ### 1. Search for related articles {#articles}
 
