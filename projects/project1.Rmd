@@ -347,7 +347,7 @@ Hint: use `position_labels` for this analysis.
 |12/14/21 | Present project results  |
 |12/20/21 | submit written report |
 
-*Presentation will be on 12/14/21
+*Presentation will be on **12/14/21**
 
 # Templates
 
