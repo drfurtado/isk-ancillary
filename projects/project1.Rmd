@@ -369,6 +369,7 @@ Below you will find the templates you are to use when submitting the required as
 ```
 Cal State Northridge - Kinesiology
 KIN-610 - Dr. Furtado
+Points: ___/30
 
 YOUR RESEAERCH QUESTION
 Type here...
@@ -407,10 +408,39 @@ Reason 3 for choosing the test:
 
 ```
 
-## Two-page summary
+## Articles and annotated bibliography entries
 
 ```
-Coming soon
+Cal State Northridge - Kinesiology
+KIN-610 - Dr. Furtado
+Points ___/30
+
+YOUR RESEAERCH QUESTION
+Type here...
+
+Link to 1st article:
+  URL here....
+
+Annotated bibliography entry:
+Type text here...
+
+
+Link to 2nd article:
+Text here....
+
+Annotated bibliography entry:
+Type text here...
+
+
+Link to 3rd article:
+Text here....
+
+Annotated bibliography entry:
+Type text here...
+
+Note: visit the following link to learn about annotated bibliography
+entries and samples: https://bit.ly/2YIGK2t
+
 ```
 
 
