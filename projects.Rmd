@@ -2,8 +2,6 @@
 title: "Projects"
 ---
 
-----
-
 Find below several examples of projects students can complete to master the various topics covered in the ISK e-book.
 
 ## Example 1

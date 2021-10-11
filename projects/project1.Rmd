@@ -341,10 +341,10 @@ Hint: use `position_labels` for this analysis.
 | Due Date | What to do |
 |:---------|:---------------|
 |10/19/21| submit items 2-4 of [Preliminary Info](#prelim-info) |
-|10/26/21 | [3 related articles](#articles) |
-|11/02/21 | 2-page introduction |
+|10/26/21 | [submit 3 related articles](#articles) |
+|11/02/21 | submit a 2-page introduction |
 |11/09/21 | submit an outline of the presentation* |
-|12/14/21 | Present  |
+|12/14/21 | Present project results  |
 |12/20/21 | submit written report |
 
 *Presentation will be on 12/14/21
