@@ -119,7 +119,9 @@ Then, proceed to write a 2-page summary that will be part of the `Introduction` 
 
 # Structure of the Report
 
-Once the preliminary information is gathered, and after running the appropriate statistical model to test your hypothesis(ses), you can proceed to write your research report following the APA Style. You will be required to follow the example proposed by Dr. McLeod (https://bit.ly/3fptZzD). 
+Once the preliminary information is gathered, and after running the appropriate statistical model to test your hypothesis(ses), you can proceed to write your research report following the APA Style. 
+
+> IMPORTANT: You will be required to follow the example proposed by Dr. McLeod (https://bit.ly/3fptZzD). 
 
 ```
 1. Title
@@ -350,7 +352,7 @@ Hint: use `position_labels` for this analysis.
 |10/26/21 | [submit 3 related articles](#articles) |
 |11/02/21 | submit a 2-page introduction |
 |11/09/21 | submit an outline of the presentation* |
-|12/14/21 | Present project results  |
+|12/14/21 | present project results  |
 |12/20/21 | submit written report |
 
 *Presentation will be on **12/14/21**
@@ -443,5 +445,69 @@ entries and samples: https://bit.ly/2YIGK2t
 
 ```
 
+## Two-page summary (Introduction for the final written report)
 
+```
+Cal State Northridge - Kinesiology
+KIN-610 - Dr. Furtado
+Points ___/20
+
+YOUR RESEAERCH QUESTION
+Type here...
+
+Type your summary here...
+
+Note: This assignment will become the "Introduction" section of your final 
+project's written report.
+
+```
+
+## Presentation outline
+
+```
+Cal State Northridge - Kinesiology
+KIN-610 - Dr. Furtado
+Points ___/10
+
+1. Title slide
+2. Background (info from your introduction)
+3. Purpose
+4. Prediction and Hypotheses
+5. Method
+   a. Participants
+   b. Design
+   c. Statistical Analysis
+   d. Materials
+   e. Procedures
+6. Results
+7. Conclusion
+8. References
+
+```
+
+## Written report
+
+```
+Cal State Northridge - Kinesiology
+KIN-610 - Dr. Furtado
+Points ___/100
+*Refer to Canvas for the eval rubric
+
+
+1. Title
+2. Abstract
+3. Introduction
+4. Method
+   a. Participants
+   b. Design
+   c. Statistical Analysis
+   d. Materials
+   e. Procedures
+5. Results
+6. Discussion
+7. References
+8. Appendix
+   8.1 Preliminary info
+   
+```
 
