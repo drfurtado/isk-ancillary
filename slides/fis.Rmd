@@ -6,6 +6,7 @@ institute: "Cal State Northridge"
 date: "updated: `r Sys.Date()`"
 output:
   xaringan::moon_reader:
+    css: [default, tamu, tamu-fonts]
     lib_dir: libs
     nature:
       highlightStyle: github
@@ -206,5 +207,16 @@ content tab2
 ]
 
 
+---
+  
+  The holy passion of Friendship is of so sweet and steady
+and loyal and enduring a nature that it will last through
+a whole lifetime...
+
+???
+  
+  _if not asked to lend money_.
+
+--- Mark Twain
 
 

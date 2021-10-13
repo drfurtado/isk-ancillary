@@ -1,16 +1,11 @@
 ---
-title: "Stats Project - KIN610 [Dr. Furtado]"
+title: "KIN-610 - Stats Project"
+author: "Furtado, JR., O"
 date: "`r Sys.Date()`"
-author: Furtado, JR., O
 output:
-  rmdformats::html_clean:
-    self_contained: true
-    thumbnails: true
-    lightbox: true
-    gallery: false
-    highlight: tango
-    embed_fonts: false
-    use_bookdown: false
+  bookdown::html_document2:
+    toc: true
+    toc_float: true
 ---
 
 # Learning objectives {#learning-objectives}
