@@ -1,0 +1,210 @@
+---
+title: "Chapter 07: Fundamentals of Inferential Statistics"
+subtitle: "⚔<br/>Introduction to Statistics in Kinesiology"
+author: "Furtado JR., O"
+institute: "Cal State Northridge"
+date: "updated: `r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: true
+---
+
+```{r broadcast, echo=FALSE}
+xaringanExtra::use_broadcast()
+```
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
+```{r xaringan-editable, echo=FALSE}
+xaringanExtra::use_editable(expires = 1)
+```
+```{r style-share-again, echo=FALSE}
+xaringanExtra::style_share_again(
+  share_buttons = c("twitter", "linkedin")
+)
+```
+```{r xaringan-panelset, echo=FALSE}
+xaringanExtra::use_panelset()
+```
+
+```{r xaringan-tachyons, echo=FALSE}
+xaringanExtra::use_tachyons()
+```
+```{r}
+xaringanExtra::use_webcam()
+```
+
+```{r xaringanExtra-search, echo=FALSE}
+xaringanExtra::use_search(show_icon = TRUE)
+```
+
+```{r xaringan-scribble, echo=FALSE}
+xaringanExtra::use_scribble()
+```
+
+
+# From sample to population
+## - Inferential statistics: the process of estimating population parameters based on sample statistics.
+### 1. Difficult to access entire population
+### 2. Population estimation is made based on sample
+
+Statistic > Parameter
+
+---
+# Parameter vs Statistic
+
+*Parameter* is a characteristic of the population, while *stastistic* is an estimate of a parameter based on the information obtained from a sample.
+
+| Measurement               | statistics    | parameter |
+| :---  | :----: | :----:   |   :----:      |
+| Population Proportion     | p             | P         |
+| Data points               | x             | X     |
+| Population mean           | $\bar{x}$     | $\mu$|
+| Standard deviation        | s           | $\sigma$|
+| Variance                  | s<sup>2 | $\sigma$<sup>2   |
+| Number of persons/objects | n             | N|
+| Correlation coefficient   | *r*            | $\rho$|
+
+Also:
+
+H<sub>0</sub>: for **null hypothesis**
+
+H<sub>1</sub>: for **alternate hypothesis**
+
+---
+# Sampling error
+
+## the amount of error in the estimate of a population parameter
+## Standard error of the mean (*SE<sub>m</sub>*)
+
+$$\sigma_{\bar{X}} = \frac{s}{\sqrt{N}}$$
+
+(*SE<sub>m</sub>*) = estimate of the amount of error when a sample mean ( $\bar{x}$ ) is used to estimate the population mean ( $\mu$ ).
+
+Since the $\mu$ cannot be known, we use the $\bar{x}$ and a estimate of the error (*SE<sub>m</sub>*) we should to expect. 
+
+---
+# LOC and Probability error
+## Levels of confidence (LOC)
+- A percentage value that establishes the probability that a statement is correct
+
+## Probability error
+**Common values**:
+- at 68% LOC, probability of error = 32%
+- at 90% LOC, probability of error = 10%
+- at 95% LOC, probability of error = 5%
+
+---
+# Hypothesis testing
+
+
+
+
+
+.panelset[
+.panel[.panel-name[even]
+
+| id    | scores |
+| :---  | :----: |
+| 1     |   2   |
+| 2     |   4  |
+| 3     |   7  |
+| 4     |   11  |
+| 5     |   12  |
+| 6     |   14  |
+]
+.panel[.panel-name[odd]
+
+| id    | scores |
+| :---  | :----: |
+| 1     |   2   |
+| 2     |   4  |
+| 3     |   7  |
+| 4     |   11  |
+| 5     |   12  |
+| 6     |   14  |
+| 7     |   16  |
+]
+]
+
+---
+# Median, cont.
+## - Represents the score at the **50th percentile**
+
+--
+## - Divides the data set in two (visible in a boxplot)
+
+--
+## - If *N* is odd, **median** is the middle score<sup>1</sup> 
+
+--
+## - If *N* is even, do one of the following:
+- Use the higher of the two middle scores
+- Compute the average of the two middle scores
+
+
+.footnote[
+[1] data must be ranked first.
+]
+
+---
+# Median (cont.)
+## When to use the **median**?
+
+### - use with ordinal data or cases of highly skewed distributions
+
+--
+### Important: not affected by extreme scores
+
+---
+# Mean 
+
+### The **mean**<sup>1</sup> is the most popular index of central tendency
+
+#### Equation for the **sample** mean:
+\begin{align} \bar{x}=\frac{\sum x}{n} \end{align}
+
+#### Equation for the **population** mean:
+\begin{align} \mu=\frac{\sum x}{N} \end{align}
+
+.footnote[
+[1] equal to arithmetic average
+]
+
+---
+# Mean (cont.) 
+
+## The most sensitive of the central tendency indices
+### 1. affected by every score in the
+### 2. greatly affected by outliers
+
+--
+## Play important role on statistical inference
+
+--
+## Used with interval and ratio data<sup>1</sup>
+
+.footnote[
+[1] In `jamovi`, interval and ratio = **continuous** data
+]
+
+---
+# Test
+
+.panelset[
+.panel[.panel-name[tab1]
+content tab1
+]
+.panel[.panel-name[tab2]
+content tab2
+]
+]
+
+
+
+
