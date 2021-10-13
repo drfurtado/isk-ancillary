@@ -82,7 +82,7 @@ Whenever applicable, run the normality plots with tests to verify whether the di
 
 A hypothesis for each of the DVs must be formulated. First, state your prediction; i.e., `10-year-old girls will overperform 10-year-old boys on the skill of skipping`.
 
-Next, you must decide whether you will be testing your hypothesis using the one-tailed or the two-tailed test. Once this is decided, you are ready to state the `Ho` (Null) and the `Ha` (Alternative Hypothesis). Below is an example of two-tailed test (non-directional hypothesis):
+Next, you must decide whether you will be testing your hypothesis using the one-tailed or the two-tailed test. Once this is decided, you are ready to state the `Ho` (Null) and the `H1` (alternate Hypothesis). Below is an example of two-tailed test (non-directional hypothesis):
 
 - Ho: 10-year-old girls and boys perform similarly on the skill of skipping
 - Ha: 10-year-old girls and boys will perform differently on the skill of skipping
