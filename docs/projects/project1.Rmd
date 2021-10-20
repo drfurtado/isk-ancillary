@@ -64,7 +64,7 @@ Before running the statistical test to answer your research question, you will b
 
 The assignment of research question will be done on the first day of class and a record of the assignment will be available on Canvas (Modules > Project Information). 
 
-Once you are assigned a number, refer to [Appendix A](#appendix-a) to identify the research question associated with your assigned #.
+Once you are assigned a number, refer to [Appendix B](#appendix-b) to identify the research question associated with your assigned #.
 
 Once the research question is identified,  proceed to identify the independent and dependent variables.
 
@@ -361,7 +361,7 @@ Below you will find the templates you are to use when submitting the required as
 3. Proceed to complete the assignment, then click on "File>Download>PDF Document"
 4. Finally, submit the PDF file via Canvas
 
-## Preliminary info
+## Preliminary info (Part 1) - Variables, Hypotheses, and Model
 
 ```
 Cal State Northridge - Kinesiology
@@ -405,7 +405,7 @@ Reason 3 for choosing the test:
 
 ```
 
-## Articles and annotated bibliography entries
+## Preliminary info (Part 2) - Articles and annotated bibliography entries
 
 ```
 Cal State Northridge - Kinesiology
@@ -505,4 +505,5 @@ Points ___/100
    8.1 Preliminary info
    
 ```
+Test reference 
 
