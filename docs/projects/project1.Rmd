@@ -107,10 +107,14 @@ Note that you must chose a statistical model for each research hypothesis `(Ha)`
 
 You will be asked to search and find at least *3 articles* related to your research question. These articles are to be used when writing the `Introduction` section of your report. Ensure to include these three sources under `References`.
 
-Once you find the articles, read and summarize them [create annotated bibliography entries for each](https://bit.ly/2YIGK2t). Note that you will be required to submit the links to the 3 articles and the annotated bibliography entries for each of the 3 articles before the [deadline](#deadlines).
+Once you find the articles, read and summarize them, then [create annotated bibliography entries for each](https://bit.ly/2YIGK2t). 
 
+**Submit the following through Canvas:**
 
-Then, proceed to write a 2-page summary that will be part of the `Introduction` section of the final project. Note that you will need to turn in the 2-page summary by the [deadline](#deadlines).
+1. the URL address (links) pointing to each article online
+2. the annotated bibliography entries for each of the 3 articles before the [deadline](#deadlines).
+
+Then, **in a separate assignment**, write a 2-page summary that will be part of the `Introduction` section of the final project. Note that you will need to turn in the 2-page summary by the [deadline](#deadlines).
 
 # Structure of the Report
 
