@@ -103,7 +103,7 @@ Recall that the selection of the procedure will depend on several factors, inclu
 
 *Note 1: You must chose a statistical model for each research hypothesis `(Ha)` formulated.*
 
-*Note 2: Visit [this link](https://stats.idre.ucla.edu/other/mult-pkg/whatstat/) for a guide on choosing the correct procedure.*
+*Note 2: Visit [this link](https://stats.idre.ucla.edu/other/mult-pkg/whatstat/) for a guide on choosing the correct procedure. For a more comprehensive article on thi topic, please take the time to read [this article](https://www.scribbr.com/statistics/statistical-tests/).*
 
 ----
 
