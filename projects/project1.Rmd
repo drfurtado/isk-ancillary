@@ -103,7 +103,7 @@ Recall that the selection of the procedure will depend on several factors, inclu
 
 *Note 1: You must chose a statistical model for each research hypothesis `(Ha)` formulated.*
 
-*Note 2: Visit [this link](https://stats.idre.ucla.edu/other/mult-pkg/whatstat/) for a guide on choosing the correct procedure. For a more comprehensive article on thi topic, please take the time to read [this article](https://www.scribbr.com/statistics/statistical-tests/).*
+*Note 2: Visit [this link](https://stats.idre.ucla.edu/other/mult-pkg/whatstat/) for a guide on choosing the correct procedure. For a more comprehensive article on this topic, please take the time to read [this article](https://www.scribbr.com/statistics/statistical-tests/).*
 
 ----
 
@@ -185,7 +185,7 @@ As a group, do players from `Iowa State (70)` perform better than players from `
 
 ----
 
-You will need to filter cases to perform this analysis so that only values `69` and `70` is selected for `college`. Notice that you will need to run the analysis for bench press and vertical leap.
+*You will need to filter cases to perform this analysis so that only values `69` and `70` is selected for `college`. Notice that you will need to run the analysis for bench press and vertical leap.*
 
 ----
 
@@ -197,7 +197,7 @@ Assume that you are specially interested in football players that play as `Defen
 
 ----
 
-You will need to filter cases to perform this analysis so that only value `3` is selected/checked for `position`.
+*You will need to filter cases to perform this analysis so that only value `3` is selected/checked for `position`.*
 
 ----
 
@@ -209,7 +209,7 @@ Are Defensive `Tacklers (4)`, `Linebackers (10)`, and `Cornerbacks (2)` differen
 
 ----
 
-You will need to filter cases to perform this analysis so that only the values `4`, `10` and `2` are selected/checked for `position`.
+*You will need to filter cases to perform this analysis so that only the values `4`, `10` and `2` are selected/checked for `position`.*
 
 ----
 
@@ -223,7 +223,7 @@ Do players from `Ohio State University (127)` improve their scores on the `20-ya
 
 ----
 
-You will need to filter cases to perform this analysis so that only the value `127` is selected/checked for `college`. Notice that you will need to run the analysis for 20-yard Shuttle and 3-cone Drill.
+*You will need to filter cases to perform this analysis so that only the value `127` is selected/checked for `college`. Notice that you will need to run the analysis for 20-yard Shuttle and 3-cone Drill.*
 
 ----
 
@@ -235,7 +235,7 @@ How do players playing as `Wide Receivers (22)`, `Running Backs (18)` and `Quart
 
 ----
 
-You will need to filter cases to perform this analysis so that only the values `17`, `18` and `22` are selected/checked for `position`.
+*You will need to filter cases to perform this analysis so that only the values `17`, `18` and `22` are selected/checked for `position`.*
 
 ----
 
@@ -247,13 +247,13 @@ Since the Wonderlic[^project-01-4] test assesses cognitive ability under pressur
 
 [^project-01-4]: <https://en.wikipedia.org/wiki/Wonderlic_test>
 
-According to the test developers, the average (mean) score on the Wonderlic test is 20 and the median score is (19).
+According to the test developers, the average (mean) score on the Wonderlic test is `20` and the median score is `19`.
 
 Do QBs tested in 2018, 2019, and 2019 perform better than the general population on the Wonderlic Cognitive ability test?
 
 ----
 
-You will need to filter cases to perform this analysis so that only the value `17`, is selected/checked for `position`.
+*You will need to filter cases to perform this analysis so that only the value `17`, is selected/checked for `position`.* 
 
 ----
 
@@ -265,7 +265,7 @@ Test the hypothesis that OT (15) players tested in 2018, 2019, and 2020 perform 
 
 ----
 
-You will need to filter cases to perform this analysis so that only the values `5` and `15` are selected/checked for `position`.
+*You will need to filter cases to perform this analysis so that only the values `5` and `15` are selected/checked for `position`.*
 
 ----
 
@@ -279,7 +279,7 @@ Is there a correlation between `weight` and `speed` among football `Defensive Ta
 
 ----
 
-For this analysis, use the variables `Weight` and `40-yard Dash Pretest`, and filter cases so that only positions `3` and `4` are selected/checked.
+*For this analysis, use the variables `Weight` and `40-yard Dash Pretest`, and filter cases so that only positions `3` and `4` are selected/checked.*
 
 ----
 
@@ -293,7 +293,7 @@ In 2020, you designed a program to help players improve their `speed`.
 
 ----
 
-For this analysis, use the variables `40-yard Dash`, and filter cases so that only position `17` is selected/checked. Also, note that this study involves only players who were tested in `2020`.
+*For this analysis, use the variables `40-yard Dash`, and filter cases so that only position `17` is selected/checked. Also, note that this study involves only players who were tested in `2020`.*
 
 ----
 
@@ -307,7 +307,7 @@ In `2020`, you designed a program to help players improve their `speed` scores.
 
 ----
 
-For this analysis, use the variable `40-yard Dash`, and filter cases so that only position `18` is selected/checked. Also, note that this study involves only players who were tested in `2020`.
+*For this analysis, use the variable `40-yard Dash`, and filter cases so that only position `18` is selected/checked. Also, note that this study involves only players who were tested in `2020`.*
 
 ----
 
@@ -321,7 +321,7 @@ In 2020, you designed a program to help players improve their `agility`.
 
 ----
 
-For this analysis, use the variable `3-cone Drill`, and filter cases so that only position `17` is selected/checked. Also, note that this study involves only players who were tested in `2020`.
+*For this analysis, use the variable `3-cone Drill`, and filter cases so that only position `17` is selected/checked. Also, note that this study involves only players who were tested in `2020`.*
 
 ----
 
@@ -335,7 +335,7 @@ In 2020, you designed a program to help players improve their `agility`.
 
 ----
 
-For this analysis, use the variable `3-cone Drill`, and filter cases so that only position `18` is selected/checked. Also, note that this study involves only players who were tested in `2020`.
+*For this analysis, use the variable `3-cone Drill`, and filter cases so that only position `18` is selected/checked. Also, note that this study involves only players who were tested in `2020`.*
 
 ----
 
@@ -351,7 +351,7 @@ Test the hypothesis that `WR` will perform differently when compared to `Quarter
 
 ----
 
-Hint: use `position_labels` for this analysis.
+*Hint: use `position_labels` for this analysis.*
 
 ----
 
