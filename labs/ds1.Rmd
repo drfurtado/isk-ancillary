@@ -20,7 +20,7 @@ output:
 
 ## Data set
 
-We will use a modified version of the NFL Combine data set (ref needed). The data set can be downloaded from this link: [https://osf.io/tbgfh/](https://osf.io/tbgfh/)
+We will use a modified version of the NFL Combine data set (ref needed). The data set can be downloaded from this link: [https://osf.io/tbgfh/](https://osf.io/kj89u/)
 
 Note that you will be required to create filters when completing some of the required analysis for this assignment. For your convenience, visit the following link to learn how to create filters in `jamovi` - https://youtu.be/pij0KlFhITw
 
