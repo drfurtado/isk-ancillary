@@ -6,6 +6,7 @@ output:
   bookdown::html_document2:
     toc: true
     toc_float: true
+self_contained: false
 ---
 
 # Learning objectives {#learning-objectives}
