@@ -8,7 +8,6 @@ output:
     toc_float: true
 self_contained: false
 ---
-----
 
 # Learning objectives {#learning-objectives}
 
@@ -51,15 +50,15 @@ Although students are free to use the software of their choice, I recommend [`ja
 
 # Required steps {#steps}
 
-In a nutshell, you will be assigned a [research question](#appendix-a) and be given a data set. Then, after running the appropriate statistical model, you can proceed to write your research report.
+In a nutshell, you will be assigned a research question and be given a data set (link above). Then, after running the appropriate statistical model, you can proceed to write your research report.
 
 ## Preliminary information {#prelim-info}
 
-Before running the statistical test to answer your research question, you will be asked to complete these steps:
+Before running the statistical test to answer your research question, you will be asked to complete four steps:
 
 1. Identify the DV and IV
-2. State the Null ($H_0$) and the alternate hypotheses ($H_1$)
-3. Choose the statistical model to test your Null hypothesis ($H_0$)
+2. State the Null (Ho) and Research hypotheses (Ha)
+3. Choose the statistical model to test your Null hypothesis (Ho)
 4. Search related articles + 2-page summary
 
 ### Dependent (DV) and independent variable (IV)
@@ -109,7 +108,7 @@ Note that you must chose a statistical model for each research hypothesis `(Ha)`
 
 You will be asked to search and find at least *3 articles* related to your research question. These articles are to be used when writing the `Introduction` section of your report. Ensure to include these three sources under `References`.
 
-Once you find the articles, read, summarize and [create annotated bibliography entries for each](https://bit.ly/2YIGK2t). Note that you will be required to submit the links to the 3 articles and the annotated bibliography entries for each of the 3 articles before the [deadline](#deadlines).
+Once you find the articles, read and summarize them [create annotated bibliography entries for each](https://bit.ly/2YIGK2t). Note that you will be required to submit the links to the 3 articles and the annotated bibliography entries for each of the 3 articles before the [deadline](#deadlines).
 
 
 Then, proceed to write a 2-page summary that will be part of the `Introduction` section of the final project. Note that you will need to turn in the 2-page summary by the [deadline](#deadlines).
@@ -507,8 +506,5 @@ Points ___/100
    8.1 Preliminary info
    
 ```
-----
-# License
 
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://drfurtado.github.io/kin610/">KIN 610 Stats Course</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="http://www.drfurtado.us">Ovande Furtado Jr</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> 
 
