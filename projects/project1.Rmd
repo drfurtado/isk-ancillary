@@ -48,7 +48,7 @@ For the final project, I have modified the data set in the following ways:
 
 Although students are free to use the software of their choice, I recommend [`jamovi`](www.jamovi.org), which is covered extensively in my course.
 
-# Required steps
+# Required steps {#steps}
 
 In a nutshell, you will be assigned a research question and be given a data set (link above). Then, after running the appropriate statistical model, you can proceed to write your research report.
 
@@ -344,10 +344,10 @@ Hint: use `position_labels` for this analysis.
 
 | Due Date | What to do |
 |:---------|:---------------|
-|10/19/21| submit items 2-4 of [Preliminary Info](#prelim-info) |
-|10/26/21 | [submit 3 related articles](#articles) |
+|10/26/21 | [submit 3 related articles & annotated bibliography](#articles) |
+|11/09/21 | submit items 2-3 of [Preliminary Info](#prelim-info) |
 |11/02/21 | submit a 2-page introduction |
-|11/09/21 | submit an outline of the presentation* |
+|12/07/21 | submit an outline of the presentation* |
 |12/14/21 | present project results  |
 |12/16/21 | submit written report |
 
