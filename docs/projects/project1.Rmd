@@ -256,7 +256,7 @@ You will need to filter cases to perform this analysis so that only the values `
 
 ### Research Question #8
 
-n the general population, there is a strong positive correlation between `weight` and `speed`. In other words, the heavier the player the slower the individual is, and vice-versa.
+In the general population, there is a strong positive correlation between `weight` and `speed`. In other words, the heavier the player the slower the individual is, and vice-versa.
 
 Considering that defensive players do train speed during football practices, it would be interesting to verify whether college players have a similar pattern compared to the general population.
 
