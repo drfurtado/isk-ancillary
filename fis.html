@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Chapter 07: Fundamentals of Inferential Statistics</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Furtado JR., O" />
+    <script src="libs/header-attrs-2.11.22/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/tamu.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/tamu-fonts.css" rel="stylesheet" />
+    <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
+    <script src="libs/peerjs-1.3.1/peerjs.min.js"></script>
+    <script src="libs/tiny.toast-1.0.0/toast.min.js"></script>
+    <link href="libs/xaringanExtra-broadcast-0.2.6/broadcast.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-broadcast-0.2.6/broadcast.js"></script>
+    <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view-0.2.6/tile-view.js"></script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"b25f585a450b45dfbc2f99d21a03dade","expires":1}</script>
+    <script src="libs/himalaya-1.1.0/himalaya.js"></script>
+    <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
+    <script src="libs/editable-0.2.6/editable.js"></script>
+    <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset-0.2.6/panelset.js"></script>
+    <link href="libs/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-webcam-0.0.1/webcam.js"></script>
+    <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
+    <script src="libs/mark.js-8.11.1/mark.min.js"></script>
+    <link href="libs/xaringanExtra-search-0.0.1/search.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-search-0.0.1/search.js"></script>
+    <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":true,"autoSearch":true}) })</script>
+    <script src="libs/fabric-4.3.1/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble-0.0.1/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Chapter 07: Fundamentals of Inferential Statistics
+## ⚔<br/>Introduction to Statistics in Kinesiology
+### Furtado JR., O
+### Cal State Northridge
+### updated: 2022-02-16
+
+---
+
+
+
+
+
+
+<style>.shareagain-bar {
+--shareagain-foreground: rgb(255, 255, 255);
+--shareagain-background: rgba(0, 0, 0, 0.5);
+--shareagain-facebook: none;
+--shareagain-pinterest: none;
+--shareagain-pocket: none;
+--shareagain-reddit: none;
+}</style>
+
+
+
+
+```r
+xaringanExtra::use_webcam()
+```
+
+
+
+
+
+
+# From sample to population
+## - Inferential statistics: the process of estimating population parameters based on sample statistics.
+### 1. Difficult to access entire population
+### 2. Population estimation is made based on sample
+
+Statistic &gt; Parameter
+
+---
+# Parameter vs Statistic
+
+*Parameter* is a characteristic of the population, while *stastistic* is an estimate of a parameter based on the information obtained from a sample.
+
+| Measurement               | statistics    | parameter |
+| :---  | :----: | :----:   |   :----:      |
+| Population Proportion     | p             | P         |
+| Data points               | x             | X     |
+| Population mean           | `\(\bar{x}\)`     | `\(\mu\)`|
+| Standard deviation        | s           | `\(\sigma\)`|
+| Variance                  | s&lt;sup&gt;2 | `\(\sigma\)`&lt;sup&gt;2   |
+| Number of persons/objects | n             | N|
+| Correlation coefficient   | *r*            | `\(\rho\)`|
+
+Also:
+
+H&lt;sub&gt;0&lt;/sub&gt;: for **null hypothesis**
+
+H&lt;sub&gt;1&lt;/sub&gt;: for **alternate hypothesis**
+
+---
+# Sampling error
+
+## the amount of error in the estimate of a population parameter
+## Standard error of the mean (*SE&lt;sub&gt;m&lt;/sub&gt;*)
+
+`$$\sigma_{\bar{X}} = \frac{s}{\sqrt{N}}$$`
+
+(*SE&lt;sub&gt;m&lt;/sub&gt;*) = estimate of the amount of error when a sample mean ( `\(\bar{x}\)` ) is used to estimate the population mean ( `\(\mu\)` ).
+
+Since the `\(\mu\)` cannot be known, we use the `\(\bar{x}\)` and a estimate of the error (*SE&lt;sub&gt;m&lt;/sub&gt;*) we should to expect. 
+
+---
+# LOC and Probability error
+## Levels of confidence (LOC)
+- A percentage value that establishes the probability that a statement is correct
+
+## Probability error
+**Common values**:
+- at 68% LOC, probability of error = 32%
+- at 90% LOC, probability of error = 10%
+- at 95% LOC, probability of error = 5%
+
+---
+# Hypothesis testing
+
+
+
+
+
+.panelset[
+.panel[.panel-name[even]
+
+| id    | scores |
+| :---  | :----: |
+| 1     |   2   |
+| 2     |   4  |
+| 3     |   7  |
+| 4     |   11  |
+| 5     |   12  |
+| 6     |   14  |
+]
+.panel[.panel-name[odd]
+
+| id    | scores |
+| :---  | :----: |
+| 1     |   2   |
+| 2     |   4  |
+| 3     |   7  |
+| 4     |   11  |
+| 5     |   12  |
+| 6     |   14  |
+| 7     |   16  |
+]
+]
+
+---
+# Median, cont.
+## - Represents the score at the **50th percentile**
+
+--
+## - Divides the data set in two (visible in a boxplot)
+
+--
+## - If *N* is odd, **median** is the middle score&lt;sup&gt;1&lt;/sup&gt; 
+
+--
+## - If *N* is even, do one of the following:
+- Use the higher of the two middle scores
+- Compute the average of the two middle scores
+
+
+.footnote[
+[1] data must be ranked first.
+]
+
+---
+# Median (cont.)
+## When to use the **median**?
+
+### - use with ordinal data or cases of highly skewed distributions
+
+--
+### Important: not affected by extreme scores
+
+---
+# Mean 
+
+### The **mean**&lt;sup&gt;1&lt;/sup&gt; is the most popular index of central tendency
+
+#### Equation for the **sample** mean:
+\begin{align} \bar{x}=\frac{\sum x}{n} \end{align}
+
+#### Equation for the **population** mean:
+\begin{align} \mu=\frac{\sum x}{N} \end{align}
+
+.footnote[
+[1] equal to arithmetic average
+]
+
+---
+# Mean (cont.) 
+
+## The most sensitive of the central tendency indices
+### 1. affected by every score in the
+### 2. greatly affected by outliers
+
+--
+## Play important role on statistical inference
+
+--
+## Used with interval and ratio data&lt;sup&gt;1&lt;/sup&gt;
+
+.footnote[
+[1] In `jamovi`, interval and ratio = **continuous** data
+]
+
+---
+# Test
+
+.panelset[
+.panel[.panel-name[tab1]
+content tab1
+]
+.panel[.panel-name[tab2]
+content tab2
+]
+]
+
+
+---
+  
+  The holy passion of Friendship is of so sweet and steady
+and loyal and enduring a nature that it will last through
+a whole lifetime...
+
+???
+  
+  _if not asked to lend money_.
+
+--- Mark Twain
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -1,142 +1,84 @@
-<!DOCTYPE html>
-<html lang="" xml:lang="">
-  <head>
-    <title>Module 4: Descriptive Statistics</title>
-    <meta charset="utf-8" />
-    <meta name="author" content="Furtado JR., O" />
-    <script src="libs/header-attrs-2.11.3/header-attrs.js"></script>
-    <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
-    <script src="libs/peerjs-1.3.1/peerjs.min.js"></script>
-    <script src="libs/tiny.toast-1.0.0/toast.min.js"></script>
-    <link href="libs/xaringanExtra-broadcast-0.2.6/broadcast.css" rel="stylesheet" />
-    <script src="libs/xaringanExtra-broadcast-0.2.6/broadcast.js"></script>
-    <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
-    <script src="libs/tile-view-0.2.6/tile-view.js"></script>
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x201165031d84b87b1ec0231d18e3a25","expires":1}</script>
-    <script src="libs/himalaya-1.1.0/himalaya.js"></script>
-    <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
-    <script src="libs/editable-0.2.6/editable.js"></script>
-    <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
-    <script src="libs/panelset-0.2.6/panelset.js"></script>
-    <link href="libs/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
-    <script src="libs/xaringanExtra-webcam-0.0.1/webcam.js"></script>
-    <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
-    <script src="libs/mark.js-8.11.1/mark.min.js"></script>
-    <link href="libs/xaringanExtra-search-0.0.1/search.css" rel="stylesheet" />
-    <script src="libs/xaringanExtra-search-0.0.1/search.js"></script>
-    <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":true,"autoSearch":false}) })</script>
-    <script src="libs/fabric-4.3.1/fabric.min.js"></script>
-    <link href="libs/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
-    <script src="libs/xaringanExtra-scribble-0.0.1/scribble.js"></script>
-    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
-    <script src="libs/clipboard-2.0.6/clipboard.min.js"></script>
-    <link href="libs/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet" />
-    <script src="libs/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script>
-    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
-    <script src="libs/xaringanExtra-progressBar-0.0.1/progress-bar.js"></script>
-    <script src="libs/freezeframe-5.0.2/freezeframe.min.js"></script>
-    <script src="libs/xaringanExtra-freezeframe-0.0.1/freezeframe-init.js"></script>
-    <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":"img[src$=\"gif\"]","trigger":"click","overlay":false,"responsive":true,"warnings":true}</script>
-    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
-  </head>
-  <body>
-    <textarea id="source">
-class: center, middle, inverse, title-slide
-
-# Module 4: Descriptive Statistics
-## Introduction to Statistics in Kinesiology
-### Furtado JR., O
-### Cal State Northridge
-### updated: 2022-02-15
-
+---
+title: "Module 4: Descriptive Statistics"
+subtitle: "Introduction to Statistics in Kinesiology"
+author: "Furtado JR., O"
+institute: "Cal State Northridge"
+date: "updated: `r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    lib_dir: libs
+    nature:
+      ratio: "16:9"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: true
 ---
 
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_light(
+  base_font_size = "30px",
+  base_color = "#23395b",
+  header_font_google = google_font("PT Sans Narrow"),
+  text_font_google   = google_font("Exo 2", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+  
+)
+```
 
+```{r broadcast, echo=FALSE}
+xaringanExtra::use_broadcast()
+```
 
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
+```{r xaringan-editable, echo=FALSE}
+xaringanExtra::use_editable(expires = 1)
+```
+```{r style-share-again, echo=FALSE}
+xaringanExtra::style_share_again(
+  share_buttons = c("twitter", "linkedin")
+)
+```
+```{r xaringan-panelset, echo=FALSE}
+xaringanExtra::use_panelset()
+```
 
+```{r xaringan-tachyons, echo=FALSE}
+xaringanExtra::use_tachyons()
+```
 
-
-
-
-<style>.shareagain-bar {
---shareagain-foreground: rgb(255, 255, 255);
---shareagain-background: rgba(0, 0, 0, 0.5);
---shareagain-facebook: none;
---shareagain-pinterest: none;
---shareagain-pocket: none;
---shareagain-reddit: none;
-}</style>
-
-
-
-
-
-```r
+```{r}
 xaringanExtra::use_webcam()
 ```
 
+```{r xaringanExtra-search, echo=FALSE}
+xaringanExtra::use_search(show_icon = TRUE, auto_search = FALSE)
+```
 
+```{r xaringan-scribble, echo=FALSE}
+xaringanExtra::use_scribble()
+```
 
+```{r xaringan-logo, echo=FALSE}
+xaringanExtra::use_logo(
+  image_url = "https://cdn.freebiesupply.com/logos/large/2x/cal-state-northridge-matadors-logo-black-and-white.png"
+)
+```
 
+```{r xaringanExtra-clipboard, echo=FALSE}
+xaringanExtra::use_clipboard()
+```
 
-<div>
-<style type="text/css">.xaringan-extra-logo {
-width: 110px;
-height: 128px;
-z-index: 0;
-background-image: url(https://cdn.freebiesupply.com/logos/large/2x/cal-state-northridge-matadors-logo-black-and-white.png);
-background-size: contain;
-background-repeat: no-repeat;
-position: absolute;
-top:1em;right:1em;
-}
-</style>
-<script>(function () {
-  let tries = 0
-  function addLogo () {
-    if (typeof slideshow === 'undefined') {
-      tries += 1
-      if (tries < 10) {
-        setTimeout(addLogo, 100)
-      }
-    } else {
-      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
-        .forEach(function (slide) {
-          const logo = document.createElement('div')
-          logo.classList = 'xaringan-extra-logo'
-          logo.href = null
-          slide.appendChild(logo)
-        })
-    }
-  }
-  document.addEventListener('DOMContentLoaded', addLogo)
-})()</script>
-</div>
+```{r xaringanExtra, echo = FALSE}
+xaringanExtra::use_progress_bar(color = "#0051BA", location = "top")
+```
 
-
-
-<style>.xe__progress-bar__container {
-  top:0;
-  opacity: 1;
-  position:absolute;
-  right:0;
-  left: 0;
-}
-.xe__progress-bar {
-  height: 0.25em;
-  background-color: #0051BA;
-  width: calc(var(--slide-current) / var(--slide-total) * 100%);
-}
-.remark-visible .xe__progress-bar {
-  animation: xe__progress-bar__wipe 200ms forwards;
-  animation-timing-function: cubic-bezier(.86,0,.07,1);
-}
-@keyframes xe__progress-bar__wipe {
-  0% { width: calc(var(--slide-previous) / var(--slide-total) * 100%); }
-  100% { width: calc(var(--slide-current) / var(--slide-total) * 100%); }
-}</style>
-
-
+```{r xaringanExtra-freezeframe, echo=FALSE}
+xaringanExtra::use_freezeframe()
+```
 
 .bg-washed-grey.b--dark-black.ba.bw2.br3.shadow-5.ph4.mt5[
 It is not knowledge, but the act of learning, not possession but the act of getting there, which grants the greatest enjoyment.
@@ -158,14 +100,14 @@ Topics to be covered:
 ---
 ### Measures of central tendency - Mean
 
-- The **mean**&lt;sup&gt;1&lt;/sup&gt; is the most popular index of central tendency
+- The **mean**<sup>1</sup> is the most popular index of central tendency
 - The most sensitive of the central tendency indices
   - affected by every score in the
   - greatly affected by outliers
 --
 
 - Play important role on statistical inference
-- Used with interval and ratio data&lt;sup&gt;2&lt;/sup&gt;
+- Used with interval and ratio data<sup>2</sup>
 
 .footnote[jamovi considers interval and ration as **continuous**]
 ---
@@ -189,7 +131,7 @@ Topics to be covered:
 - Calculating the median does not take into consideration the value of other scores
 
 --
-- If *N* is odd, **median** is the middle score&lt;sup&gt;1&lt;/sup&gt; 
+- If *N* is odd, **median** is the middle score<sup>1</sup> 
 
 ---
 ### Measures of central tendency - Median
@@ -261,14 +203,14 @@ What is the median for this set of data?
 ---
 ### Relationship between the MCT
 
-&lt;center&gt;
-&lt;img src="https://www.dropbox.com/s/byt26and9d18d0r/mct-relationship.png?dl=1"&gt;
-&lt;/center&gt;
+<center>
+<img src="https://www.dropbox.com/s/byt26and9d18d0r/mct-relationship.png?dl=1">
+</center>
 
 ---
 ### Guidelines for which to use
 
-**Mode**: data are approximately normal &amp; you only need a rough estimate
+**Mode**: data are approximately normal & you only need a rough estimate
 
 **Median**: ordinal data, middle score is needed, most typical score is needed, data is badly skewed by extreme scores
 
@@ -296,9 +238,9 @@ See an example in the next slide or [click here](https://www.dropbox.com/s/vypo6
 #### Practice `jamovi`
 
 .pull-left[
-&lt;center&gt;
-&lt;img src="https://www.dropbox.com/s/vypo6h5r9zm9qp9/2022-02-10_22-43-15%20%281%29.gif?dl=1"&gt;
-&lt;/center&gt;
+<center>
+<img src="https://www.dropbox.com/s/vypo6h5r9zm9qp9/2022-02-10_22-43-15%20%281%29.gif?dl=1">
+</center>
 ]
 
 .pull-right[
@@ -326,20 +268,20 @@ Follow the instructions on the left to help with this practice exercise
 3. How the standard deviation and variance are alike- and how they are different
 
 ---
-### Measures of variability - Importance &amp; Symbols
+### Measures of variability - Importance & Symbols
 
 - Variability: reflects how scores differ from one another
 - Also called  spread or dispersion
 
 | Measurement               | statistics    | parameter |
 | :---  | :----: | :----:   |   :----:      |
-| Population Proportion     | p             | P         |
+| Proportion     | p             | P         |
 | Data points               | x             | X     |
-| Population mean           | `\(\bar{x}\)`     | `\(\mu\)`|
-| Standard deviation        | s           | `\(\sigma\)`|
-| Variance                  | s&lt;sup&gt;2 | `\(\sigma\)`&lt;sup&gt;2   |
+| Mean           | $\bar{x}$     | $\mu$|
+| Standard deviation        | s           | $\sigma$|
+| Variance                  | s<sup>2 | $\sigma$<sup>2   |
 | Number of persons/objects | n             | N|
-| Correlation coefficient   | *r*            | `\(\rho\)`|
+| Correlation coefficient   | *r*            | $\rho$|
 
 
 ---
@@ -374,7 +316,7 @@ Note: H is the highest score, L is the lowest score
  - Not affected by highly divergent  scores at the extremes (useful for skewed data)
 - Presents a typical picture, but it does not consider all information about the data.
  
-**Calculation: IQR = Q&lt;sub&gt;3&lt;/sub&gt; - Q&lt;sub&gt;1&lt;/sub&gt;**
+**Calculation: IQR = Q<sub>3</sub> - Q<sub>1</sub>**
 
 ---
 ### Measures of variability - Variance
@@ -395,9 +337,9 @@ Note: H is the highest score, L is the lowest score
 \begin{align} s^2=\frac{\sum(x-\bar{x})^2}{n-1} \end{align}
 
 ---
-&lt;center&gt;
-  &lt;img src="https://www.dropbox.com/s/ocf06abiuybus1b/var-calc-variance.png?dl=1"&gt;
-&lt;/center&gt;
+<center>
+  <img src="https://www.dropbox.com/s/ocf06abiuybus1b/var-calc-variance.png?dl=1">
+</center>
 - Calculating the distance of a raw score from the mean indicates variability (deviation).
 - The sum of deviations around the mean will always equal 0.
 - Absolute values show variability but cause a loss of information.
@@ -438,7 +380,7 @@ Note: H is the highest score, L is the lowest score
 Sample and population equation
 
 ---
-### Measures of variability - Why `\(n-1\)` ?
+### Measures of variability - Why $n-1$ ?
 
 - Samples rarely include the extreme scores.
 - Samples almost alwayts have less variability - adjustment needed
@@ -460,7 +402,7 @@ ___
 
 Equation:
 
-`\(V=\frac{s}{\bar{x}}\cdot 100\%\)`
+$V=\frac{s}{\bar{x}}\cdot 100\%$
 
 Example in the next slide
 
@@ -471,22 +413,22 @@ If students completed the push-up and sit-up tests and you want to verify in whi
 
 .pull-left[
 Push-up test 
-- `\(\bar{x}\)` = 25 
+- $\bar{x}$ = 25 
 - s = 5
 
 5/25 = 0.2 * 100 = 2% 
 
-`\(V=\frac{s}{\bar{x}}\cdot 100\%\)`
+$V=\frac{s}{\bar{x}}\cdot 100\%$
 ]
 
 .pull-right[
 Sit-up test 
-- `\(\bar{x}\)` = 30 
+- $\bar{x}$ = 30 
 - s = 10
 
 10/30 = 0.333 * 100 = 3.33%
 
-`\(V=\frac{s}{\bar{x}}\cdot 100\%\)`
+$V=\frac{s}{\bar{x}}\cdot 100\%$
 ]
 
 So, which of the two tests is more homogeneous (or consistent)?
@@ -527,9 +469,9 @@ Interpretation
  - 68 kg = Z score of −1
 ]
 .pull-right[
-&lt;center&gt;
-  &lt;img src="https://www.dropbox.com/s/n51n81kyykg18wf/zscore1.png?dl=1"&gt;
-&lt;/center&gt;
+<center>
+  <img src="https://www.dropbox.com/s/n51n81kyykg18wf/zscore1.png?dl=1">
+</center>
 ]
 
 ---
@@ -537,7 +479,7 @@ Interpretation
 
 Equation:
 
-`\(z_i = \frac{X_i - \bar{X}}{\hat\sigma}\)`
+$z_i = \frac{X_i - \bar{X}}{\hat\sigma}$
 
 Z-score associated with a raw score of 91
 
@@ -562,15 +504,15 @@ Z-score associated with a raw score of 68
 ]
 
 ---
-### Skewness &amp; Kurtosis
+### Skewness & Kurtosis
 .pull-left[
-&lt;center&gt;
-  &lt;img src="https://www.dropbox.com/s/x5btzsogiln6qxe/skew-kurt.png?dl=1"&gt;
-&lt;/center&gt;
+<center>
+  <img src="https://www.dropbox.com/s/x5btzsogiln6qxe/skew-kurt.png?dl=1">
+</center>
 
 Skewness: is a measure of asymmetry of a distribution curve
 
-`\(\mbox{skewness}(X) = \frac{1}{N \hat{\sigma}^3} \sum_{i=1}^N (X_i - \bar{X})^3\)`
+$\mbox{skewness}(X) = \frac{1}{N \hat{\sigma}^3} \sum_{i=1}^N (X_i - \bar{X})^3$
 
 ]
 
@@ -580,15 +522,15 @@ Skewness: is a measure of asymmetry of a distribution curve
 ]
 
 ---
-### Skewness &amp; Kurtosis
+### Skewness & Kurtosis
 .pull-left[
-&lt;center&gt;
-  &lt;img src="https://www.dropbox.com/s/duq651uoszno7ok/kurtosis-imag.png?dl=1"&gt;
-&lt;/center&gt;
+<center>
+  <img src="https://www.dropbox.com/s/duq651uoszno7ok/kurtosis-imag.png?dl=1">
+</center>
 
 Kurtosis: is a measure of the “pointiness” of a data set
 
-`\(\mbox{kurtosis}(X) = \frac{1}{N \hat\sigma^4} \sum_{i=1}^N \left( X_i - \bar{X} \right)^4  - 3\)`
+$\mbox{kurtosis}(X) = \frac{1}{N \hat\sigma^4} \sum_{i=1}^N \left( X_i - \bar{X} \right)^4  - 3$
 ]
 
 .pull-right[
@@ -601,40 +543,40 @@ Kurtosis: is a measure of the “pointiness” of a data set
 ]
 
 ---
-### Skewness &amp; Kurtosis - Z-scores
+### Skewness & Kurtosis - Z-scores
 
 .pull-left[
 - Z scores used to quantify the amount of skewness and kurtosis in a set of data
 - We convert raw skewness and kurtosis scores to Z scores!
 - Take the raw skewness and kurtosis scores and divide them by their respective standard errors (a type of standard deviation)
-- The numbers **6** in the SE&lt;sub&gt;skew&lt;/sub&gt; equation and **24** in the SE&lt;sub&gt;kurt&lt;/sub&gt; equation, are constants
+- The numbers **6** in the SE<sub>skew</sub> equation and **24** in the SE<sub>kurt</sub> equation, are constants
 ]
 .pull-right[
-&lt;center&gt;
-  &lt;img src="https://www.dropbox.com/s/1g51m7nu23i1vdm/se-skew_kurt.png?dl=1"&gt;
-&lt;/center&gt;
-Z&lt;sub&gt;skew&lt;/sub&gt; = Skewness / SE&lt;sub&gt;skewness&lt;/sub&gt;
+<center>
+  <img src="https://www.dropbox.com/s/1g51m7nu23i1vdm/se-skew_kurt.png?dl=1">
+</center>
+Z<sub>skew</sub> = Skewness / SE<sub>skewness</sub>
 
-Z&lt;sub&gt;kurt&lt;/sub&gt; = Kurtosis / SE&lt;sub&gt;kurtosis&lt;/sub&gt;
+Z<sub>kurt</sub> = Kurtosis / SE<sub>kurtosis</sub>
 ]
 
 ---
-### Skewness &amp; Kurtosis - interpretation
+### Skewness & Kurtosis - interpretation
 
-If values of **Z&lt;sub&gt;skew&lt;/sub&gt;** fall within +- 2.0 z-cores, then the distribution is approximating normality as far as SKEWNESS is concerned.
+If values of **Z<sub>skew</sub>** fall within +- 2.0 z-cores, then the distribution is approximating normality as far as SKEWNESS is concerned.
 
-If values of **Z&lt;sub&gt;kurt&lt;/sub&gt;** fall within +- 2.0 z-scores, then the distribution of scores is approximating normality as far as KURTOSIS is concerned.
+If values of **Z<sub>kurt</sub>** fall within +- 2.0 z-scores, then the distribution of scores is approximating normality as far as KURTOSIS is concerned.
 
 Else, the distribution of scores would be deviating from normality as far as...
 
-&gt; Example in the next slide
+> Example in the next slide
 
 ---
 #### Example
 
-&lt;center&gt;
-  &lt;img src="https://www.dropbox.com/s/hvkgt0x34dtph1o/exemple-calc-zkurt_zskew.png?dl=1"&gt;
-&lt;/center&gt;
+<center>
+  <img src="https://www.dropbox.com/s/hvkgt0x34dtph1o/exemple-calc-zkurt_zskew.png?dl=1">
+</center>
 
 What is the conclusion here?
 
@@ -650,127 +592,3 @@ While in class, we will use jamovi to calculate:
 - measures of central tendency
 - variability
 - skewness and kurtosis
-    </textarea>
-<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
-<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
-<script>var slideshow = remark.create({
-"ratio": "16:9",
-"highlightStyle": "github",
-"highlightLines": true,
-"countIncrementalSlides": true
-});
-if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
-  window.dispatchEvent(new Event('resize'));
-});
-(function(d) {
-  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
-  if (!r) return;
-  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
-  d.head.appendChild(s);
-})(document);
-
-(function(d) {
-  var el = d.getElementsByClassName("remark-slides-area");
-  if (!el) return;
-  var slide, slides = slideshow.getSlides(), els = el[0].children;
-  for (var i = 1; i < slides.length; i++) {
-    slide = slides[i];
-    if (slide.properties.continued === "true" || slide.properties.count === "false") {
-      els[i - 1].className += ' has-continuation';
-    }
-  }
-  var s = d.createElement("style");
-  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
-  d.head.appendChild(s);
-})(document);
-// delete the temporary CSS (for displaying all slides initially) when the user
-// starts to view slides
-(function() {
-  var deleted = false;
-  slideshow.on('beforeShowSlide', function(slide) {
-    if (deleted) return;
-    var sheets = document.styleSheets, node;
-    for (var i = 0; i < sheets.length; i++) {
-      node = sheets[i].ownerNode;
-      if (node.dataset["target"] !== "print-only") continue;
-      node.parentNode.removeChild(node);
-    }
-    deleted = true;
-  });
-})();
-(function() {
-  "use strict"
-  // Replace <script> tags in slides area to make them executable
-  var scripts = document.querySelectorAll(
-    '.remark-slides-area .remark-slide-container script'
-  );
-  if (!scripts.length) return;
-  for (var i = 0; i < scripts.length; i++) {
-    var s = document.createElement('script');
-    var code = document.createTextNode(scripts[i].textContent);
-    s.appendChild(code);
-    var scriptAttrs = scripts[i].attributes;
-    for (var j = 0; j < scriptAttrs.length; j++) {
-      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
-    }
-    scripts[i].parentElement.replaceChild(s, scripts[i]);
-  }
-})();
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
-// adds .remark-code-has-line-highlighted class to <pre> parent elements
-// of code chunks containing highlighted lines with class .remark-code-line-highlighted
-(function(d) {
-  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
-  const preParents = [];
-  const findPreParent = function(line, p = 0) {
-    if (p > 1) return null; // traverse up no further than grandparent
-    const el = line.parentElement;
-    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
-  };
-
-  for (let line of hlines) {
-    let pre = findPreParent(line);
-    if (pre && !preParents.includes(pre)) preParents.push(pre);
-  }
-  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
-})(document);</script>
-
-<script>
-slideshow._releaseMath = function(el) {
-  var i, text, code, codes = el.getElementsByTagName('code');
-  for (i = 0; i < codes.length;) {
-    code = codes[i];
-    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
-      text = code.textContent;
-      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
-          /^\$\$(.|\s)+\$\$$/.test(text) ||
-          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
-        code.outerHTML = code.innerHTML;  // remove <code></code>
-        continue;
-      }
-    }
-    i++;
-  }
-};
-slideshow._releaseMath(document);
-</script>
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-(function () {
-  var script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
-  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
-    script.src  = script.src.replace(/^https?:/, '');
-  document.getElementsByTagName('head')[0].appendChild(script);
-})();
-</script>
-  </body>
-</html>

@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Module 4: Descriptive Statistics</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Furtado JR., O" />
+    <script src="libs/header-attrs-2.11.22/header-attrs.js"></script>
+    <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
+    <script src="libs/peerjs-1.3.1/peerjs.min.js"></script>
+    <script src="libs/tiny.toast-1.0.0/toast.min.js"></script>
+    <link href="libs/xaringanExtra-broadcast-0.2.6/broadcast.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-broadcast-0.2.6/broadcast.js"></script>
+    <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view-0.2.6/tile-view.js"></script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x33cef27bf624b4a9eb9b2abb2def16e","expires":1}</script>
+    <script src="libs/himalaya-1.1.0/himalaya.js"></script>
+    <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
+    <script src="libs/editable-0.2.6/editable.js"></script>
+    <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset-0.2.6/panelset.js"></script>
+    <link href="libs/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-webcam-0.0.1/webcam.js"></script>
+    <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
+    <script src="libs/mark.js-8.11.1/mark.min.js"></script>
+    <link href="libs/xaringanExtra-search-0.0.1/search.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-search-0.0.1/search.js"></script>
+    <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":true,"autoSearch":false}) })</script>
+    <script src="libs/fabric-4.3.1/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble-0.0.1/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <script src="libs/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="libs/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
+    <script src="libs/xaringanExtra-progressBar-0.0.1/progress-bar.js"></script>
+    <script src="libs/freezeframe-5.0.2/freezeframe.min.js"></script>
+    <script src="libs/xaringanExtra-freezeframe-0.0.1/freezeframe-init.js"></script>
+    <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":"img[src$=\"gif\"]","trigger":"click","overlay":false,"responsive":true,"warnings":true}</script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Module 4: Descriptive Statistics
+## Introduction to Statistics in Kinesiology
+### Furtado JR., O
+### Cal State Northridge
+### updated: 2022-02-16
+
+---
+
+
+
+
+
+
+
+
+<style>.shareagain-bar {
+--shareagain-foreground: rgb(255, 255, 255);
+--shareagain-background: rgba(0, 0, 0, 0.5);
+--shareagain-facebook: none;
+--shareagain-pinterest: none;
+--shareagain-pocket: none;
+--shareagain-reddit: none;
+}</style>
+
+
+
+
+
+```r
+xaringanExtra::use_webcam()
+```
+
+
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(https://cdn.freebiesupply.com/logos/large/2x/cal-state-northridge-matadors-logo-black-and-white.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+<style>.xe__progress-bar__container {
+  top:0;
+  opacity: 1;
+  position:absolute;
+  right:0;
+  left: 0;
+}
+.xe__progress-bar {
+  height: 0.25em;
+  background-color: #0051BA;
+  width: calc(var(--slide-current) / var(--slide-total) * 100%);
+}
+.remark-visible .xe__progress-bar {
+  animation: xe__progress-bar__wipe 200ms forwards;
+  animation-timing-function: cubic-bezier(.86,0,.07,1);
+}
+@keyframes xe__progress-bar__wipe {
+  0% { width: calc(var(--slide-previous) / var(--slide-total) * 100%); }
+  100% { width: calc(var(--slide-current) / var(--slide-total) * 100%); }
+}</style>
+
+
+
+.bg-washed-grey.b--dark-black.ba.bw2.br3.shadow-5.ph4.mt5[
+It is not knowledge, but the act of learning, not possession but the act of getting there, which grants the greatest enjoyment.
+
+.tr[
+— Gauss, C.
+]]
+
+---
+### Overview
+
+Topics to be covered:
+
+- Measures of central tendency
+- Measures of variability
+- Skewness and kurtosis
+- Standard scores
+
+---
+### Measures of central tendency - Mean
+
+- The **mean**&lt;sup&gt;1&lt;/sup&gt; is the most popular index of central tendency
+- The most sensitive of the central tendency indices
+  - affected by every score in the
+  - greatly affected by outliers
+--
+
+- Play important role on statistical inference
+- Used with interval and ratio data&lt;sup&gt;2&lt;/sup&gt;
+
+.footnote[jamovi considers interval and ration as **continuous**]
+---
+#### Equation for the **sample** mean:
+\begin{align} \bar{x}=\frac{\sum x}{n} \end{align}
+
+#### Equation for the **population** mean:
+\begin{align} \mu=\frac{\sum x}{N} \end{align}
+
+.footnote[
+[1] equal to arithmetic average
+[2] In `jamovi`, interval and ratio = **continuous** data
+]
+
+---
+### Measures of central tendency - Median
+
+- Represents the score at the **50th percentile**
+- Divides the data set in two
+- Considered the “typical” score because it best represents the majority of other values
+- Calculating the median does not take into consideration the value of other scores
+
+--
+- If *N* is odd, **median** is the middle score&lt;sup&gt;1&lt;/sup&gt; 
+
+---
+### Measures of central tendency - Median
+
+- If *N* is even, do one of the following:
+  - Use the higher of the two middle scores
+  - Compute the average of the two middle scores
+  
+--
+- Use with ordinal data or cases of highly skewed distributions
+- Important: not affected by extreme scores
+
+.footnote[
+[1] data must be ranked first.
+]
+
+---
+### Measures of central tendency - Median
+
+.panelset[
+.panel[.panel-name[When distribution is EVEN]
+
+| id    | scores |
+| :---  | :----: |
+| 1     |   2   |
+| 2     |   4  |
+| 3     |   7  |
+| 4     |   11  |
+| 5     |   12  |
+| 6     |   14  |
+]
+
+.panel[.panel-name[When distribution is ODD]
+
+| id    | scores |
+| :---  | :----: |
+| 1     |   2   |
+| 2     |   4  |
+| 3     |   7  |
+| 4     |   11  |
+| 5     |   12  |
+| 6     |   14  |
+| 7     |   16  |
+]
+]
+
+???
+
+What is the median for this set of data?
+
+---
+### Measures of central tendency - Mode
+
+- Score that occurs most frequently
+- No formula to calculate the mode
+- A distribution may have more than one mode (bimodal or multimodal)
+
+--
+- Advantages
+ - Easy to determine
+ - Quick estimate of center
+ - With normal distributions provides a fair description of central tendency (all three measures are similar)
+
+--
+- Disadvantages
+ - Terminal statistic: lack of info that can be used for further calculations
+ - Completely disregards extremes
+
+---
+### Relationship between the MCT
+
+&lt;center&gt;
+&lt;img src="https://www.dropbox.com/s/byt26and9d18d0r/mct-relationship.png?dl=1"&gt;
+&lt;/center&gt;
+
+---
+### Guidelines for which to use
+
+**Mode**: data are approximately normal &amp; you only need a rough estimate
+
+**Median**: ordinal data, middle score is needed, most typical score is needed, data is badly skewed by extreme scores
+
+**Mean**: data are approximately normal, interval or ratio data, all available information needs to be considered, further calculations are to be made
+
+---
+### Measures of central tendency - `Practice`
+
+It's time to apply what you have learned and calculate/get the `mean`, `median`, and `mode` for the following data set:
+
+```
+8, 31, 32, 56, 56
+```
+
+To do so, open `jamovi` online via [https://cloud.jamovi.org](https://cloud.jamovi.org)
+
+- Then, proceed to type in the scores provided above into column B. 
+- Next, rename this column to **scores**
+- Also rename column A to **ID** and type in values from 1-5
+- Finally, delete column C
+
+See an example in the next slide or [click here](https://www.dropbox.com/s/vypo6h5r9zm9qp9/2022-02-10_22-43-15%20%281%29.gif?dl=0) - feel free to zoom in and out
+
+---
+#### Practice `jamovi`
+
+.pull-left[
+&lt;center&gt;
+&lt;img src="https://www.dropbox.com/s/vypo6h5r9zm9qp9/2022-02-10_22-43-15%20%281%29.gif?dl=1"&gt;
+&lt;/center&gt;
+]
+
+.pull-right[
+Follow the instructions on the left to help with this practice exercise
+]
+
+---
+### Measure of central tendency - Summary
+
+- Measures of central tendency: Broadly speaking, central tendency measures tell you where the data are. There’s three measures that are typically reported in the literature: the mean, median and mode.
+- Measures of variability: In contrast, measures of variability tell you about how “spread out” the data are. The key measures are: range, standard deviation, and interquartile range.
+- Measures of skewness and kurtosis: We also looked at assymetry in a variable’s distribution (skew) and pointness (kurtosis).
+- Getting group summaries of variables in jamovi: Since this book focuses on doing data analysis in jamovi, we spent a bit of time talking about how descriptive statistics are computed for different subgroups.
+- Standard scores: The z-score is a slightly unusual beast. It’s not quite a descriptive statistic, and not quite an inference. Make sure you understand that section. It’ll come up again later.
+
+
+
+
+
+---
+### Measures of variability - Overview
+
+1. Why variability is valuable as a descriptive tool
+2. How to compute the range, the standard deviation, and the variance
+3. How the standard deviation and variance are alike- and how they are different
+
+---
+### Measures of variability - Importance &amp; Symbols
+
+- Variability: reflects how scores differ from one another
+- Also called  spread or dispersion
+
+| Measurement               | statistics    | parameter |
+| :---  | :----: | :----:   |   :----:      |
+| Proportion     | p             | P         |
+| Data points               | x             | X     |
+| Mean           | `\(\bar{x}\)`     | `\(\mu\)`|
+| Standard deviation        | s           | `\(\sigma\)`|
+| Variance                  | s&lt;sup&gt;2 | `\(\sigma\)`&lt;sup&gt;2   |
+| Number of persons/objects | n             | N|
+| Correlation coefficient   | *r*            | `\(\rho\)`|
+
+
+---
+### Measures of variability - What is it?
+
+- A measure of the spread or dispersion of a set of data.
+- Builds on some of the fundamental concepts of parametric statistics.
+- When we know both central tendency and variability, we can compare sets of data.
+- Four measures of variability:
+ - Range
+ - Interquartile Range
+ - Variance
+ - Standard Deviation
+
+---
+### Measures of variability - Range
+
+- Range is the most general estimate of variability
+- There are 2 types of range, although the most commonly used is the exclusive range
+- General Formula for Range
+ - Also known as the Exclusive Range
+ - Range = H – L 
+
+Note: H is the highest score, L is the lowest score
+
+---
+### Measures of variability - Interquartile range
+
+- Often used to analyze ordinal, or ratio data interval data when highly skewed. 
+- More interested in the middle scores than in the extremes scores
+- The difference between the raw scores at the 75th and 25th percentile.
+ - Not affected by highly divergent  scores at the extremes (useful for skewed data)
+- Presents a typical picture, but it does not consider all information about the data.
+ 
+**Calculation: IQR = Q&lt;sub&gt;3&lt;/sub&gt; - Q&lt;sub&gt;1&lt;/sub&gt;**
+
+---
+### Measures of variability - Variance
+
+- Previous two methods consider only 2 points of data to determine variability
+- How about the remaining of the data?
+ - Distance of each raw score from the mean of the data (deviation)
+- Variance is more useful than range and IQR
+- Allows us to compare the overall variability of two data sets.
+
+---
+#### Equation for the population variance
+
+\begin{align} \sigma^2=\frac{\sum(x-\mu)^2}{N} \end{align}
+
+#### Equation for the sample variance
+
+\begin{align} s^2=\frac{\sum(x-\bar{x})^2}{n-1} \end{align}
+
+---
+&lt;center&gt;
+  &lt;img src="https://www.dropbox.com/s/ocf06abiuybus1b/var-calc-variance.png?dl=1"&gt;
+&lt;/center&gt;
+- Calculating the distance of a raw score from the mean indicates variability (deviation).
+- The sum of deviations around the mean will always equal 0.
+- Absolute values show variability but cause a loss of information.
+- Squaring the deviations is a better method.
+- Taking the average of the squared deviations from the mean = variance.
+
+---
+### Measures of variability - Standard Deviation
+
+- Calculating variance alone creates a greater magnitude of variability than the raw data alone allows (squaring deviation scores)
+- Bring values for the variance **in line with the unit values of the original raw data**
+- Standard Deviation = the square root of the variance
+ - Estimate of the population standard deviation
+- This allows for a score that is **standardized** with the value of the original raw data.
+
+---
+### Measures of variability - Standard Deviation
+
+- Most frequently used measure of variability
+- SD = s= average amount of variability in a set of scores
+- What do these symbols represent?
+
+**See equations in the next slide**
+
+---
+#### Equation for the population standard deviation
+
+\begin{align} \sigma=\sqrt{\frac{\sum(x-\mu)^2}{N}} \end{align}
+
+#### Equation for the sample standard deviation
+
+\begin{align} s=\sqrt{\frac{\sum(x-\bar{x})^2}{n-1}} \end{align}
+
+.bg-washed-grey.b--dark-black.ba.bw1.br1.shadow-1.ph1.mt1[What happens if you *square* the standard deviation?
+]
+
+???
+Sample and population equation
+
+---
+### Measures of variability - Why `\(n-1\)` ?
+
+- Samples rarely include the extreme scores.
+- Samples almost alwayts have less variability - adjustment needed
+- Standard deviation is an estimate of the POPULATION standard deviation
+- To make it  an “unbiased estimate” you must subtract 1 from n
+ - This artificially inflates the SD (it makes it bigger, unbiased) because it makes the denominator smaller
+
+.bg-washed-grey.b--dark-black.ba.bw2.br3.shadow-5.ph2.mt2[Biased estimates are appropriate if your intent is only to describe the characteristics of the sample. But if you intend to use the sample as an estimate of a population parameter, then it’s best to calculate the unbiased estimate.
+]
+
+---
+### Measures of variability - CoV
+
+- What if one needs to compare standard deviations of two data sets that are in different measurement units?
+
+--
+Solution: normalize the standard deviations
+___
+
+Equation:
+
+`\(V=\frac{s}{\bar{x}}\cdot 100\%\)`
+
+Example in the next slide
+
+---
+#### Example
+
+If students completed the push-up and sit-up tests and you want to verify in which test has less variability (is more homogeneous). Below are the results:
+
+.pull-left[
+Push-up test 
+- `\(\bar{x}\)` = 25 
+- s = 5
+
+5/25 = 0.2 * 100 = 2% 
+
+`\(V=\frac{s}{\bar{x}}\cdot 100\%\)`
+]
+
+.pull-right[
+Sit-up test 
+- `\(\bar{x}\)` = 30 
+- s = 10
+
+10/30 = 0.333 * 100 = 3.33%
+
+`\(V=\frac{s}{\bar{x}}\cdot 100\%\)`
+]
+
+So, which of the two tests is more homogeneous (or consistent)?
+
+???
+Sit-up test, since CoV is less (2%)
+
+---
+### Measures of variability - final notes
+
+- Standard deviation is computed as the average distance from the mean
+- The larger the standard deviation the more spread out the values are
+- Like the mean, the standard deviation is sensitive to extreme scores
+- If s = 0, then there is no variability among scores and the scores are essentially identical in value
+- While the formulas are quite similar…the two are also quite different.
+
+Interpretation
+- Standard deviation is stated in original units
+- Variance is stated in units that are squared
+ - Which do you think is easier to interpret???
+
+---
+### Standard scores
+
+- The normal curve plots the score on the X-axis and an index of how common or frequent a score is on the Y-axis
+- The standard deviation tells something particularly useful in the context of the normal curve
+ - Standardizing scores helps us make sense of scores in relation to others
+ - An example of this is Z scores
+
+---
+### Z-scores
+
+.pull-left[
+- Z score—a raw score expressed in standard deviation units
+ - 1 SD = 11 kg
+ - Mean of data set is 79 kg
+ - 91 kg = Z score of +1 since it is 1 standard deviation above the mean
+ - 68 kg = Z score of −1
+]
+.pull-right[
+&lt;center&gt;
+  &lt;img src="https://www.dropbox.com/s/n51n81kyykg18wf/zscore1.png?dl=1"&gt;
+&lt;/center&gt;
+]
+
+---
+#### Calculation
+
+Equation:
+
+`\(z_i = \frac{X_i - \bar{X}}{\hat\sigma}\)`
+
+Z-score associated with a raw score of 91
+
+**Z = 91-79 / 11 = + 1**
+
+Z-score associated with a raw score of 68
+
+**Z = 68-79 / 11 = -1**
+
+---
+### Z scores and stardard scores
+
+.pull-left[
+- Z score of 0 is equal to the mean of the distribution
+- Z score of 1 is equal to one standard deviation
+- The sign of Z score indicates the direction from the mean where − is below the mean and + is above the mean
+]
+.pull-right[
+- Which of the following is a better score in comparison to the population?
+ - Z = −1.3 on long jump or
+ - Z = −0.50 on gymnastics scores?
+]
+
+---
+### Skewness &amp; Kurtosis
+.pull-left[
+&lt;center&gt;
+  &lt;img src="https://www.dropbox.com/s/x5btzsogiln6qxe/skew-kurt.png?dl=1"&gt;
+&lt;/center&gt;
+
+Skewness: is a measure of asymmetry of a distribution curve
+
+`\(\mbox{skewness}(X) = \frac{1}{N \hat{\sigma}^3} \sum_{i=1}^N (X_i - \bar{X})^3\)`
+
+]
+
+.pull-right[
+- Positive SD: more extremely large values than extremely small ones (right panel)
+- Negatively SD: data tend to have a lot of extreme small values (i.e., the lower tail is “longer” than the upper tail) and not so many extremely large values (left panel)
+]
+
+---
+### Skewness &amp; Kurtosis
+.pull-left[
+&lt;center&gt;
+  &lt;img src="https://www.dropbox.com/s/duq651uoszno7ok/kurtosis-imag.png?dl=1"&gt;
+&lt;/center&gt;
+
+Kurtosis: is a measure of the “pointiness” of a data set
+
+`\(\mbox{kurtosis}(X) = \frac{1}{N \hat\sigma^4} \sum_{i=1}^N \left( X_i - \bar{X} \right)^4  - 3\)`
+]
+
+.pull-right[
+
+| informal term |	technical name | kurtosis value |
+| ---- | ---- | ---- |
+|“too flat”|platykurtic|negative|
+|“just pointy enough”|mesokurtic|	zero|
+|“too pointy”|leptokurtic|positive|
+]
+
+---
+### Skewness &amp; Kurtosis - Z-scores
+
+.pull-left[
+- Z scores used to quantify the amount of skewness and kurtosis in a set of data
+- We convert raw skewness and kurtosis scores to Z scores!
+- Take the raw skewness and kurtosis scores and divide them by their respective standard errors (a type of standard deviation)
+- The numbers **6** in the SE&lt;sub&gt;skew&lt;/sub&gt; equation and **24** in the SE&lt;sub&gt;kurt&lt;/sub&gt; equation, are constants
+]
+.pull-right[
+&lt;center&gt;
+  &lt;img src="https://www.dropbox.com/s/1g51m7nu23i1vdm/se-skew_kurt.png?dl=1"&gt;
+&lt;/center&gt;
+Z&lt;sub&gt;skew&lt;/sub&gt; = Skewness / SE&lt;sub&gt;skewness&lt;/sub&gt;
+
+Z&lt;sub&gt;kurt&lt;/sub&gt; = Kurtosis / SE&lt;sub&gt;kurtosis&lt;/sub&gt;
+]
+
+---
+### Skewness &amp; Kurtosis - interpretation
+
+If values of **Z&lt;sub&gt;skew&lt;/sub&gt;** fall within +- 2.0 z-cores, then the distribution is approximating normality as far as SKEWNESS is concerned.
+
+If values of **Z&lt;sub&gt;kurt&lt;/sub&gt;** fall within +- 2.0 z-scores, then the distribution of scores is approximating normality as far as KURTOSIS is concerned.
+
+Else, the distribution of scores would be deviating from normality as far as...
+
+&gt; Example in the next slide
+
+---
+#### Example
+
+&lt;center&gt;
+  &lt;img src="https://www.dropbox.com/s/hvkgt0x34dtph1o/exemple-calc-zkurt_zskew.png?dl=1"&gt;
+&lt;/center&gt;
+
+What is the conclusion here?
+
+???
+
+For both skewness and kurtosis, the distribution of scores are approximating normality since the zskew and zkurt fall within +- 2.0 z-scores
+
+---
+### More jamovi practice
+
+While in class, we will use jamovi to calculate:
+
+- measures of central tendency
+- variability
+- skewness and kurtosis
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

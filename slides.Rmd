@@ -6,7 +6,7 @@ title: "Slides"
 
 Below you will find the slides created to accompany this e-book.
 
-| Topic                  | HTML | PDF |
-|:-----------------------|:-----|:----|
-| Descriptive Statistics | [Click Here](slides/decriptive-stats.html) | Soon |
-|                        |      |     |
+| Topic                  | HTML | PDF | PPTX |
+|:-----------------------|:-----|:----|:----|
+| Descriptive Statistics | [HTML](slides/decriptive-stats.html) | [PDF](slides/descriptive-stats.pdf) | [PPTX](slides/descriptive-stats.pptx) |
+
