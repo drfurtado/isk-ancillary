@@ -2,11 +2,11 @@
 title: "Slides"
 ---
 
-----
+------------------------------------------------------------------------
 
 Below you will find the slides created to accompany this e-book.
 
-| Topic                        | HTML                   | PDF  |
-|:-----------------------------|:-----------------------|:-----|
-| Measures of central tendency | [Link](slide-mct.html) | Coming soon |
-|                              |                        |      |
+| Topic                  | HTML | PDF |
+|:-----------------------|:-----|:----|
+| Descriptive Statistics | [click](slides/descriptive-stats.html) | Soon |
+|                        |      |     |
