@@ -6,13 +6,23 @@ institute: "Cal State Northridge"
 date: "updated: `r Sys.Date()`"
 output:
   xaringan::moon_reader:
-    css: [default, tamu, tamu-fonts]
+    css: xaringan-themer.css
     lib_dir: libs
     nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: true
 ---
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_light(
+  base_color = "#23395b",
+  header_font_google = google_font("Roboto Condensed"),
+  text_font_google   = google_font("Roboto Condensed", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+)
+```
 
 ```{r broadcast, echo=FALSE}
 xaringanExtra::use_broadcast()
