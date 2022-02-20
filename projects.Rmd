@@ -18,6 +18,6 @@ In this example, each student receive a data set and a research question and hav
 6. Create tables and figures to illustrate the findings
 7. Prepare a research report
 
-[**Complete this project**](./projects/project1.html) 
+[**Complete this project**](./projects/project1.html)
 
 

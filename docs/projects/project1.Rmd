@@ -4,11 +4,15 @@ author: "Furtado, JR., O"
 date: "`r Sys.Date()`"
 output:
   bookdown::html_document2:
+     toc: true
+     toc_float: true
+  bookdown::pdf_document2:
+    keep_tex: true
+  bookdown::word_document2:
     toc: true
     toc_float: true
-self_contained: false
+self_contained: true
 ---
-----
 
 # Learning objectives {#learning-objectives}
 

@@ -1,5 +1,6 @@
 name: "Introduction to Stats in Kinesiology | Furtado, JR., O."
 output_dir: "docs"
+include: ["import.R"]
 navbar:
   title: "ISK Ancillary"
   type: inverse
@@ -7,14 +8,15 @@ navbar:
     - text: "Home"
       icon: fa-home
       href: index.html
-#    - text: "About"
-#      icon: fa-info
-#      href: about.html
+    - text: "Datasets"
+      icon: fa-info
+      href: datasets.html
+    - text: "Slides"
+      icon: fa-info
+      href: slides.html
     - text: "Assignments"
       icon: fa-gear
       menu:
-        - text: "Slides"
-          href: slides.html
         - text: "Labs"
           href: labs.html
         - text: "Projects"
@@ -22,3 +24,7 @@ navbar:
   right:
     - icon: fa-book fa-lg
       href: https://drfurtado.github.io/isk/
+output:
+  html_document:
+    theme: cosmo
+    css: styles.css

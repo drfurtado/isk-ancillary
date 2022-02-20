@@ -1,9 +1,0 @@
----
-title: "Tutorials"
----
-
-Find below several tutorials students can study to learn how to run the statistical analyses covered in the ISK e-book.
-
-| Topic | Link |
-| :------|:------|
-| sdsdsd| asas|

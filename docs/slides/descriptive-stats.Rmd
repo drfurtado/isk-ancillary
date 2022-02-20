@@ -15,6 +15,18 @@ output:
       countIncrementalSlides: true
 ---
 
+```{r, load_refs, include=FALSE, cache=FALSE}
+library(RefManageR)
+BibOptions(check.entries = FALSE,
+           bib.style = "authoryear",
+           cite.style = "alphabetic",
+           style = "markdown",
+           hyperlink = FALSE,
+           dashed = FALSE)
+myBib <- ReadBib("../assets/myBib.bib", check = FALSE)
+```
+
+
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
 style_mono_light(
@@ -102,7 +114,7 @@ Topics to be covered:
 
 - The **mean**<sup>1</sup> is the most popular index of central tendency
 - The most sensitive of the central tendency indices
-  - affected by every score in the
+  - affected by every score in the data set
   - greatly affected by outliers
 --
 
@@ -592,3 +604,12 @@ While in class, we will use jamovi to calculate:
 - measures of central tendency
 - variability
 - skewness and kurtosis
+
+
+
+---
+### References
+
+```{r refs, echo=FALSE, results="asis"}
+PrintBibliography(myBib)
+```
