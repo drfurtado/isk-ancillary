@@ -1,0 +1,232 @@
+---
+title: "Module: Displaying Data"
+subtitle: "Introduction to Statistics in Kinesiology"
+author: "Furtado JR., O"
+institute: "Cal State Northridge"
+date: "updated: `r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    lib_dir: libs
+    nature:
+      ratio: "16:9"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: true
+---
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_light(
+  base_font_size = "30px",
+  base_color = "#23395b",
+  header_font_google = google_font("PT Sans Narrow"),
+  text_font_google   = google_font("Exo 2", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+  
+)
+```
+
+```{r broadcast, echo=FALSE}
+xaringanExtra::use_broadcast()
+```
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
+```{r xaringan-editable, echo=FALSE}
+xaringanExtra::use_editable(expires = 1)
+```
+```{r style-share-again, echo=FALSE}
+xaringanExtra::style_share_again(
+  share_buttons = c("twitter", "linkedin")
+)
+```
+```{r xaringan-panelset, echo=FALSE}
+xaringanExtra::use_panelset()
+```
+
+```{r xaringan-tachyons, echo=FALSE}
+xaringanExtra::use_tachyons()
+```
+
+```{r}
+xaringanExtra::use_webcam()
+```
+
+```{r xaringanExtra-search, echo=FALSE}
+xaringanExtra::use_search(show_icon = TRUE, auto_search = FALSE)
+```
+
+```{r xaringan-scribble, echo=FALSE}
+xaringanExtra::use_scribble()
+```
+
+```{r xaringan-logo, echo=FALSE}
+xaringanExtra::use_logo(
+  image_url = "https://cdn.freebiesupply.com/logos/large/2x/cal-state-northridge-matadors-logo-black-and-white.png"
+)
+```
+
+```{r xaringanExtra-clipboard, echo=FALSE}
+xaringanExtra::use_clipboard()
+```
+
+```{r xaringanExtra, echo = FALSE}
+xaringanExtra::use_progress_bar(color = "#0051BA", location = "top")
+```
+
+```{r xaringanExtra-freezeframe, echo=FALSE}
+xaringanExtra::use_freezeframe()
+```
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{css, echo=FALSE}
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+```
+
+```{r}
+library(ggplot2movies)
+op <- options("width"=250) # large number to trick head, otherwise see next slide
+head(movies)
+options(op) # set options back to default
+```
+
+---
+
+```{r}
+head(movies) # head with default width, note text gets wrapped. Though you can still scroll horizontally, as an effect of setting `pre`
+```
+
+---
+.bg-washed-grey.b--dark-black.ba.bw2.br3.shadow-5.ph4.mt5[
+It is not knowledge, but the act of learning, not possession but the act of getting there, which grants the greatest enjoyment.
+
+.tr[
+— Gauss, C.
+]]
+
+---
+## Overview
+
+Topics to be covered:
+
+---
+## Data set
+
+Download the data set from the link below. You will need the data set to complete the `jamovi` exercises. 
+
+Data set: https://bit.ly/iskdata
+
+Note: for more information about the data set above, click visit link below:
+
+---
+## Histograms 
+
+- simplest and most useful ways of visualizing data
+  - overall impression of the data set 
+  - use when data are interval or ratio
+- possible values are divided up into bins and then count the number of observations that fall within each bin  
+
+---
+
+<img src="https://www.dropbox.com/s/thafobz4dgb0lsi/hist-split-density.png?dl=1">
+
+---
+### jamovi practice
+
+- Open the `iskdata` with jamovi
+  - `Exploration` --> `Descriptives` and click the `Histogram` check box
+  - Check `Density` for a density curve - allows for a smoother distribution
+- Observations that falls outside this range is plotted as a circle or dot instead of being covered by the whiskers, and is commonly referred to as an outlier.
+
+---
+### Traditional Boxplots
+.pull-left[
+- more suited for interval or ratio scale data
+- simple visual depiction of the median, the interquartile range, and the range of the data
+- 1.5 IQR and third quartile + 1.5 IQR respectively
+	- these values can be used in a simple outlier detection technique (Tukey’s fences) — observations lying outside of these “fences” can be considered outliers
+]
+.pull-right[
+
+![](https://lsj.readthedocs.io/en/latest/_images/lsj_boxplot1.svg)
+
+_Box plot of the afl.margins variable from the aflsmallmargins data set plotted in jamovi
+]
+
+---
+### Violin Boxplots
+
+.pull-left[
+- show the kernel probability density of the data at different values
+- median (a white dot on the violin plot)
+- interquartile range (the black bar in the center of violin)
+- the lower/upper adjacent values (the black lines stretched from the bar) — defined as first quartile
+]
+.pull-right[
+
+![](https://lsj.readthedocs.io/en/latest/_images/lsj_boxplot2.svg)
+_Violin plot of the afl.margins variable from the aflsmallmargins file plotted in jamovi, alsow showing a box plot and data points_
+]
+
+---
+.pull-left[
+![](https://lsj.readthedocs.io/en/latest/_images/lsj_boxplot1.svg)
+]
+
+.pull-right[
+![](https://lsj.readthedocs.io/en/latest/_images/lsj_boxplot2.svg)
+]
+
+Kernel density estimation is a fundamental data smoothing problem where inferences about the population are made, based on a finite data sample.
+
+---
+### Boxplots
+
+- Simple visual depiction of the median, the IQR, and the range
+- Used for data exploration - continuous variable, split by a categorical variable
+  - compare the distributions for each category
+- Helpful for detecting outliers in the data set
+
+---
+### Boxplots in `jamovi`
+
+- `Exploration` --> `Descriptives` and click the `Box plot` check box
+
+---
+Results
+
+```{r echo=FALSE}
+jmv::descriptives(
+    formula = time_ms ~ sex,
+    data = data,
+    hist = TRUE,
+    dens = TRUE,
+    missing = FALSE,
+    median = FALSE,
+    min = FALSE,
+    max = FALSE)
+```
+
+
+---
+### Boxplots - Interpretation
+
+- thick line in the middle of the box is the median
+- the box itself spans the range from the 25th (Q1) percentile to the 75th (Q3) percentile
+- the “whiskers” go out to the most extreme data point that doesn’t exceed a certain bound
+- this value is 1.5 times the interquartile range (IQR), calculated as 25th percentile - (1.5 * IQR) for the lower boundary, and 75th percentile + (1.5 * IQR) for the upper boundary. 
+
+---
+### Box plots `jamovi` example
+
+

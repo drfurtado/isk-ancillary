@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Module: Displaying Data</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Furtado JR., O" />
+    <script src="libs/header-attrs-2.11/header-attrs.js"></script>
+    <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
+    <script src="libs/peerjs-1.3.1/peerjs.min.js"></script>
+    <script src="libs/tiny.toast-1.0.0/toast.min.js"></script>
+    <link href="libs/xaringanExtra-broadcast-0.2.6/broadcast.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-broadcast-0.2.6/broadcast.js"></script>
+    <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view-0.2.6/tile-view.js"></script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"ab29a1b2e03849d8bb078eca8c3781f5","expires":1}</script>
+    <script src="libs/himalaya-1.1.0/himalaya.js"></script>
+    <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
+    <script src="libs/editable-0.2.6/editable.js"></script>
+    <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset-0.2.6/panelset.js"></script>
+    <link href="libs/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-webcam-0.0.1/webcam.js"></script>
+    <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
+    <script src="libs/mark.js-8.11.1/mark.min.js"></script>
+    <link href="libs/xaringanExtra-search-0.0.1/search.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-search-0.0.1/search.js"></script>
+    <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":true,"autoSearch":false}) })</script>
+    <script src="libs/fabric-4.3.1/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble-0.0.1/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <script src="libs/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="libs/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
+    <script src="libs/xaringanExtra-progressBar-0.0.1/progress-bar.js"></script>
+    <script src="libs/freezeframe-5.0.2/freezeframe.min.js"></script>
+    <script src="libs/xaringanExtra-freezeframe-0.0.1/freezeframe-init.js"></script>
+    <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":"img[src$=\"gif\"]","trigger":"click","overlay":false,"responsive":true,"warnings":true}</script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Module: Displaying Data
+## Introduction to Statistics in Kinesiology
+### Furtado JR., O
+### Cal State Northridge
+### updated: 2022-02-21
+
+---
+
+
+
+
+
+
+
+
+<style>.shareagain-bar {
+--shareagain-foreground: rgb(255, 255, 255);
+--shareagain-background: rgba(0, 0, 0, 0.5);
+--shareagain-facebook: none;
+--shareagain-pinterest: none;
+--shareagain-pocket: none;
+--shareagain-reddit: none;
+}</style>
+
+
+
+
+
+```r
+xaringanExtra::use_webcam()
+```
+
+
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(https://cdn.freebiesupply.com/logos/large/2x/cal-state-northridge-matadors-logo-black-and-white.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+<style>.xe__progress-bar__container {
+  top:0;
+  opacity: 1;
+  position:absolute;
+  right:0;
+  left: 0;
+}
+.xe__progress-bar {
+  height: 0.25em;
+  background-color: #0051BA;
+  width: calc(var(--slide-current) / var(--slide-total) * 100%);
+}
+.remark-visible .xe__progress-bar {
+  animation: xe__progress-bar__wipe 200ms forwards;
+  animation-timing-function: cubic-bezier(.86,0,.07,1);
+}
+@keyframes xe__progress-bar__wipe {
+  0% { width: calc(var(--slide-previous) / var(--slide-total) * 100%); }
+  100% { width: calc(var(--slide-current) / var(--slide-total) * 100%); }
+}</style>
+
+
+
+
+
+
+&lt;style type="text/css"&gt;
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+&lt;/style&gt;
+
+
+```r
+library(ggplot2movies)
+op &lt;- options("width"=250) # large number to trick head, otherwise see next slide
+head(movies)
+```
+
+```
+## # A tibble: 6 × 24
+##   title                     year length budget rating votes    r1    r2    r3    r4    r5    r6    r7    r8    r9   r10 mpaa  Action Animation Comedy Drama Documentary Romance Short
+##   &lt;chr&gt;                    &lt;int&gt;  &lt;int&gt;  &lt;int&gt;  &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;int&gt;     &lt;int&gt;  &lt;int&gt; &lt;int&gt;       &lt;int&gt;   &lt;int&gt; &lt;int&gt;
+## 1 $                         1971    121     NA    6.4   348   4.5   4.5   4.5   4.5  14.5  24.5  24.5  14.5   4.5   4.5 ""         0         0      1     1           0       0     0
+## 2 $1000 a Touchdown         1939     71     NA    6      20   0    14.5   4.5  24.5  14.5  14.5  14.5   4.5   4.5  14.5 ""         0         0      1     0           0       0     0
+## 3 $21 a Day Once a Month    1941      7     NA    8.2     5   0     0     0     0     0    24.5   0    44.5  24.5  24.5 ""         0         1      0     0           0       0     1
+## 4 $40,000                   1996     70     NA    8.2     6  14.5   0     0     0     0     0     0     0    34.5  45.5 ""         0         0      1     0           0       0     0
+## 5 $50,000 Climax Show, The  1975     71     NA    3.4    17  24.5   4.5   0    14.5  14.5   4.5   0     0     0    24.5 ""         0         0      0     0           0       0     0
+## 6 $pent                     2000     91     NA    4.3    45   4.5   4.5   4.5  14.5  14.5  14.5   4.5   4.5  14.5  14.5 ""         0         0      0     1           0       0     0
+```
+
+```r
+options(op) # set options back to default
+```
+
+---
+
+
+```r
+head(movies) # head with default width, note text gets wrapped. Though you can still scroll horizontally, as an effect of setting `pre`
+```
+
+```
+## # A tibble: 6 × 24
+##   title    year length budget rating votes    r1    r2    r3    r4    r5    r6    r7
+##   &lt;chr&gt;   &lt;int&gt;  &lt;int&gt;  &lt;int&gt;  &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1 $        1971    121     NA    6.4   348   4.5   4.5   4.5   4.5  14.5  24.5  24.5
+## 2 $1000 …  1939     71     NA    6      20   0    14.5   4.5  24.5  14.5  14.5  14.5
+## 3 $21 a …  1941      7     NA    8.2     5   0     0     0     0     0    24.5   0  
+## 4 $40,000  1996     70     NA    8.2     6  14.5   0     0     0     0     0     0  
+## 5 $50,00…  1975     71     NA    3.4    17  24.5   4.5   0    14.5  14.5   4.5   0  
+## 6 $pent    2000     91     NA    4.3    45   4.5   4.5   4.5  14.5  14.5  14.5   4.5
+## # … with 11 more variables: r8 &lt;dbl&gt;, r9 &lt;dbl&gt;, r10 &lt;dbl&gt;, mpaa &lt;chr&gt;,
+## #   Action &lt;int&gt;, Animation &lt;int&gt;, Comedy &lt;int&gt;, Drama &lt;int&gt;, Documentary &lt;int&gt;,
+## #   Romance &lt;int&gt;, Short &lt;int&gt;
+```
+
+---
+.bg-washed-grey.b--dark-black.ba.bw2.br3.shadow-5.ph4.mt5[
+It is not knowledge, but the act of learning, not possession but the act of getting there, which grants the greatest enjoyment.
+
+.tr[
+— Gauss, C.
+]]
+
+---
+## Overview
+
+Topics to be covered:
+
+---
+## Data set
+
+Download the data set from the link below. You will need the data set to complete the `jamovi` exercises. 
+
+Data set: https://bit.ly/iskdata
+
+Note: for more information about the data set above, click visit link below:
+
+---
+## Histograms 
+
+- simplest and most useful ways of visualizing data
+  - overall impression of the data set 
+  - use when data are interval or ratio
+- possible values are divided up into bins and then count the number of observations that fall within each bin  
+
+---
+
+&lt;img src="https://www.dropbox.com/s/thafobz4dgb0lsi/hist-split-density.png?dl=1"&gt;
+
+---
+### jamovi practice
+
+- Open the `iskdata` with jamovi
+  - `Exploration` --&gt; `Descriptives` and click the `Histogram` check box
+  - Check `Density` for a density curve - allows for a smoother distribution
+- Observations that falls outside this range is plotted as a circle or dot instead of being covered by the whiskers, and is commonly referred to as an outlier.
+
+---
+### Traditional Boxplots
+.pull-left[
+- more suited for interval or ratio scale data
+- simple visual depiction of the median, the interquartile range, and the range of the data
+- 1.5 IQR and third quartile + 1.5 IQR respectively
+	- these values can be used in a simple outlier detection technique (Tukey’s fences) — observations lying outside of these “fences” can be considered outliers
+]
+.pull-right[
+
+![](https://lsj.readthedocs.io/en/latest/_images/lsj_boxplot1.svg)
+
+_Box plot of the afl.margins variable from the aflsmallmargins data set plotted in jamovi
+]
+
+---
+### Violin Boxplots
+
+.pull-left[
+- show the kernel probability density of the data at different values
+- median (a white dot on the violin plot)
+- interquartile range (the black bar in the center of violin)
+- the lower/upper adjacent values (the black lines stretched from the bar) — defined as first quartile
+]
+.pull-right[
+
+![](https://lsj.readthedocs.io/en/latest/_images/lsj_boxplot2.svg)
+_Violin plot of the afl.margins variable from the aflsmallmargins file plotted in jamovi, alsow showing a box plot and data points_
+]
+
+---
+.pull-left[
+![](https://lsj.readthedocs.io/en/latest/_images/lsj_boxplot1.svg)
+]
+
+.pull-right[
+![](https://lsj.readthedocs.io/en/latest/_images/lsj_boxplot2.svg)
+]
+
+Kernel density estimation is a fundamental data smoothing problem where inferences about the population are made, based on a finite data sample.
+
+---
+### Boxplots
+
+- Simple visual depiction of the median, the IQR, and the range
+- Used for data exploration - continuous variable, split by a categorical variable
+  - compare the distributions for each category
+- Helpful for detecting outliers in the data set
+
+---
+### Boxplots in `jamovi`
+
+- `Exploration` --&gt; `Descriptives` and click the `Box plot` check box
+
+---
+Results
+
+
+```
+## 
+##  DESCRIPTIVES
+## 
+##  Descriptives                                 
+##  ──────────────────────────────────────────── 
+##                          sex       time_ms    
+##  ──────────────────────────────────────────── 
+##    N                     Female          30   
+##                          Male            47   
+##    Mean                  Female    273.3133   
+##                          Male      258.2319   
+##    Standard deviation    Female    39.00446   
+##                          Male      55.53153   
+##  ────────────────────────────────────────────
+```
+
+![](ch05-displaying-data_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
+
+
+---
+### Boxplots - Interpretation
+
+- thick line in the middle of the box is the median
+- the box itself spans the range from the 25th (Q1) percentile to the 75th (Q3) percentile
+- the “whiskers” go out to the most extreme data point that doesn’t exceed a certain bound
+- this value is 1.5 times the interquartile range (IQR), calculated as 25th percentile - (1.5 * IQR) for the lower boundary, and 75th percentile + (1.5 * IQR) for the upper boundary. 
+
+---
+### Box plots `jamovi` example
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
