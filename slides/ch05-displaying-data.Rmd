@@ -137,96 +137,104 @@ Note: for more information about the data set above, click visit link below:
 - possible values are divided up into bins and then count the number of observations that fall within each bin  
 
 ---
+```{r eval=FALSE, include=FALSE}
+jjstatsplot::jjhistostats(
+    data = data,
+    dep = time_ms,
+    grvar = sex,
+    title = "Reaction Time for Male and Females",
+    resultssubtitle = FALSE,
+    normalcurve = TRUE)
+```
+---
+Histograms created using the core package in `jamovi`
 
-<img src="https://www.dropbox.com/s/thafobz4dgb0lsi/hist-split-density.png?dl=1">
+<img width="600px" height="500" src="https://www.dropbox.com/s/0nibw6n4i7puxdq/hist-mf.png?dl=1">
 
 ---
-### jamovi practice
+Histograms created using the jjstatsplot module in `jamovi`
+
+<img src="https://www.dropbox.com/s/jhqyt6o229helce/hist-ggstatsplot-mf.png?dl=1">
+
+---
+### Histogram - jamovi practice
 
 - Open the `iskdata` with jamovi
   - `Exploration` --> `Descriptives` and click the `Histogram` check box
   - Check `Density` for a density curve - allows for a smoother distribution
+
 - Observations that falls outside this range is plotted as a circle or dot instead of being covered by the whiskers, and is commonly referred to as an outlier.
 
 ---
 ### Traditional Boxplots
+
 .pull-left[
-- more suited for interval or ratio scale data
-- simple visual depiction of the median, the interquartile range, and the range of the data
-- 1.5 IQR and third quartile + 1.5 IQR respectively
-	- these values can be used in a simple outlier detection technique (Tukey’s fences) — observations lying outside of these “fences” can be considered outliers
+- suited for `interval` or `ratio` scale data
+- `median`: line in the middle of the box  
+- box upper and lower bounds: 75th and 25th percentiles, respectively
 ]
 .pull-right[
 
-![](https://lsj.readthedocs.io/en/latest/_images/lsj_boxplot1.svg)
-
-_Box plot of the afl.margins variable from the aflsmallmargins data set plotted in jamovi
+<img src="https://www.dropbox.com/s/3jqub0juwo1wf1e/boxplot-mf.png?dl=1">
 ]
+
+---
+### Traditional Boxplots, cont
+
+.pull-left[
+- two ends of the vertical lines: most extreme data points but do not exceed a certain bound
+- calculated as 25th percentile - (1.5 * IQR) for the lower boundary, and 75th percentile + (1.5 * IQR) for the upper boundary
+- observations lying outside of these “fences” can be considered outliers
+]
+.pull-right[
+
+<img src="https://www.dropbox.com/s/3jqub0juwo1wf1e/boxplot-mf.png?dl=1">
+]
+
+---
+using filters in `jamovi` to inspect outliers
+
+.pull-left[
+- focus on one particular case = below 100ms
+-filter data to inspect value
+
+]
+.pull-right[
+
+<img src="https://www.dropbox.com/s/3jqub0juwo1wf1e/boxplot-mf.png?dl=1">
+]
+
 
 ---
 ### Violin Boxplots
 
 .pull-left[
-- show the kernel probability density of the data at different values
-- median (a white dot on the violin plot)
-- interquartile range (the black bar in the center of violin)
-- the lower/upper adjacent values (the black lines stretched from the bar) — defined as first quartile
+simmilar to traditional boxplots, but
+- shows the kernel probability density (KPD) of the data at different values
+- median (horizontal bar inside the box); square dot (mean)
 ]
 .pull-right[
-
-![](https://lsj.readthedocs.io/en/latest/_images/lsj_boxplot2.svg)
-_Violin plot of the afl.margins variable from the aflsmallmargins file plotted in jamovi, alsow showing a box plot and data points_
+<img src="https://www.dropbox.com/s/5ps00fns3p78qy5/boxplot-viol-mf.png?dl=1">
 ]
 
+.footnote[KPD estimation - fundamental data smoothing problem where inferences about the population are made, based on a finite data sample.]
+
 ---
+Boxplots `jamovi` example
 .pull-left[
-![](https://lsj.readthedocs.io/en/latest/_images/lsj_boxplot1.svg)
+<img height="" width="" src="https://www.dropbox.com/s/940k8rm2r6il2qv/jamovi-how2-boxplot.png?dl=1">
 ]
-
 .pull-right[
-![](https://lsj.readthedocs.io/en/latest/_images/lsj_boxplot2.svg)
+- move variables (1,2)
+- expand `Plots`(3)
+- Check desided options (4)
+ - for a traditional boxplot: uncheck `Violin`
 ]
-
-Kernel density estimation is a fundamental data smoothing problem where inferences about the population are made, based on a finite data sample.
-
 ---
-### Boxplots
+References
 
-- Simple visual depiction of the median, the IQR, and the range
-- Used for data exploration - continuous variable, split by a categorical variable
-  - compare the distributions for each category
-- Helpful for detecting outliers in the data set
-
----
-### Boxplots in `jamovi`
-
-- `Exploration` --> `Descriptives` and click the `Box plot` check box
-
----
-Results
-
-```{r echo=FALSE}
-jmv::descriptives(
-    formula = time_ms ~ sex,
-    data = data,
-    hist = TRUE,
-    dens = TRUE,
-    missing = FALSE,
-    median = FALSE,
-    min = FALSE,
-    max = FALSE)
-```
-
-
----
-### Boxplots - Interpretation
-
-- thick line in the middle of the box is the median
-- the box itself spans the range from the 25th (Q1) percentile to the 75th (Q3) percentile
-- the “whiskers” go out to the most extreme data point that doesn’t exceed a certain bound
-- this value is 1.5 times the interquartile range (IQR), calculated as 25th percentile - (1.5 * IQR) for the lower boundary, and 75th percentile + (1.5 * IQR) for the upper boundary. 
-
----
-### Box plots `jamovi` example
-
+- The jamovi project (2022). jamovi. (Version 2.3) [Computer Software]. Retrieved from https://www.jamovi.org.
+- R Core Team (2021). R: A Language and environment for statistical computing. (Version 4.1) [Computer software]. Retrieved from https://cran.r-project.org. (R packages retrieved from MRAN snapshot 2022-01-01).
+- Wickham, H., Chang, W., Henry, L., Pedersen, T. L., Takahashi, K., Wilke, C., Woo, K., & - RStudio (2018). ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. [R package]. Retrieved from https://CRAN.R-project.org/package=ggplot2.
+- Patil, I. (2018). ggstatsplot: 'ggplot2' Based Plots with Statistical Details. [R package]. Retrieved from https://CRAN.R-project.org/package=ggstatsplot.
 
