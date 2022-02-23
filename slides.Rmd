@@ -9,4 +9,5 @@ Below you will find the slides created to accompany this e-book.
 | Topic                  | HTML | PDF | PPTX |
 |:-----------------------|:-----|:----|:----|
 | Descriptive Statistics | [HTML](slides/decriptive-stats.html) | [PDF](slides/descriptive-stats.pdf) | [PPTX](slides/descriptive-stats.pptx) |
+| Displaying Data | [HTML](slides/ch05-displaying-data.html) | [PDF](slides/ch05-displaying-data.pdf) | Soon |
 
