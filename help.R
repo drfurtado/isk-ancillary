@@ -1,3 +1,5 @@
+
+
 # demo
 https://slides.yihui.org/xaringan/#1
 
@@ -27,3 +29,22 @@ a whole lifetime...
 
 --- Mark Twain
 
+insert image
+.center[![description of the image](https://www.dropbox.com/s/en1ipqso8g9gc54/610-ds-jamovi-mct.png?dl=1)]
+
+<center>
+  <img src="">
+</center>
+  
+For example .grey[grey] will make text grey.
+
+.bg-washed-grey.b--dark-black.ba.bw2.br3.shadow-5.ph4.mt5[
+Text here
+]
+
+
+| Col1 | Col2 | Col3 |
+|------|------|------|
+|      |      |      |
+|      |      |      |
+|      |      |      |

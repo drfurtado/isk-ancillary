@@ -1,0 +1,240 @@
+---
+title: "Module: Displaying Data"
+subtitle: "Introduction to Statistics in Kinesiology"
+author: "Furtado JR., O"
+institute: "Cal State Northridge"
+date: "updated: `r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    lib_dir: libs
+    nature:
+      ratio: "16:9"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: true
+---
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_light(
+  base_font_size = "30px",
+  base_color = "#23395b",
+  header_font_google = google_font("PT Sans Narrow"),
+  text_font_google   = google_font("Exo 2", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+  
+)
+```
+
+```{r broadcast, echo=FALSE}
+xaringanExtra::use_broadcast()
+```
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
+```{r xaringan-editable, echo=FALSE}
+xaringanExtra::use_editable(expires = 1)
+```
+```{r style-share-again, echo=FALSE}
+xaringanExtra::style_share_again(
+  share_buttons = c("twitter", "linkedin")
+)
+```
+```{r xaringan-panelset, echo=FALSE}
+xaringanExtra::use_panelset()
+```
+
+```{r xaringan-tachyons, echo=FALSE}
+xaringanExtra::use_tachyons()
+```
+
+```{r}
+xaringanExtra::use_webcam()
+```
+
+```{r xaringanExtra-search, echo=FALSE}
+xaringanExtra::use_search(show_icon = TRUE, auto_search = FALSE)
+```
+
+```{r xaringan-scribble, echo=FALSE}
+xaringanExtra::use_scribble()
+```
+
+```{r xaringan-logo, echo=FALSE}
+xaringanExtra::use_logo(
+  image_url = "https://cdn.freebiesupply.com/logos/large/2x/cal-state-northridge-matadors-logo-black-and-white.png"
+)
+```
+
+```{r xaringanExtra-clipboard, echo=FALSE}
+xaringanExtra::use_clipboard()
+```
+
+```{r xaringanExtra, echo = FALSE}
+xaringanExtra::use_progress_bar(color = "#0051BA", location = "top")
+```
+
+```{r xaringanExtra-freezeframe, echo=FALSE}
+xaringanExtra::use_freezeframe()
+```
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{css, echo=FALSE}
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+```
+
+```{r}
+library(ggplot2movies)
+op <- options("width"=250) # large number to trick head, otherwise see next slide
+head(movies)
+options(op) # set options back to default
+```
+
+---
+
+```{r}
+head(movies) # head with default width, note text gets wrapped. Though you can still scroll horizontally, as an effect of setting `pre`
+```
+
+---
+.bg-washed-grey.b--dark-black.ba.bw2.br3.shadow-5.ph4.mt5[
+It is not knowledge, but the act of learning, not possession but the act of getting there, which grants the greatest enjoyment.
+
+.tr[
+— Gauss, C.
+]]
+
+---
+## Overview
+
+Topics to be covered:
+
+---
+## Data set
+
+Download the data set from the link below. You will need the data set to complete the `jamovi` exercises. 
+
+Data set: https://bit.ly/iskdata
+
+Note: for more information about the data set above, click visit link below:
+
+---
+## Histograms 
+
+- simplest and most useful ways of visualizing data
+  - overall impression of the data set 
+  - use when data are interval or ratio
+- possible values are divided up into bins and then count the number of observations that fall within each bin  
+
+---
+```{r eval=FALSE, include=FALSE}
+jjstatsplot::jjhistostats(
+    data = data,
+    dep = time_ms,
+    grvar = sex,
+    title = "Reaction Time for Male and Females",
+    resultssubtitle = FALSE,
+    normalcurve = TRUE)
+```
+---
+Histograms created using the core package in `jamovi`
+
+<img width="600px" height="500" src="https://www.dropbox.com/s/0nibw6n4i7puxdq/hist-mf.png?dl=1">
+
+---
+Histograms created using the jjstatsplot module in `jamovi`
+
+<img src="https://www.dropbox.com/s/jhqyt6o229helce/hist-ggstatsplot-mf.png?dl=1">
+
+---
+### Histogram - jamovi practice
+
+- Open the `iskdata` with jamovi
+  - `Exploration` --> `Descriptives` and click the `Histogram` check box
+  - Check `Density` for a density curve - allows for a smoother distribution
+
+- Observations that falls outside this range is plotted as a circle or dot instead of being covered by the whiskers, and is commonly referred to as an outlier.
+
+---
+### Traditional Boxplots
+
+.pull-left[
+- suited for `interval` or `ratio` scale data
+- `median`: line in the middle of the box  
+- box upper and lower bounds: 75th and 25th percentiles, respectively
+]
+.pull-right[
+
+<img src="https://www.dropbox.com/s/3jqub0juwo1wf1e/boxplot-mf.png?dl=1">
+]
+
+---
+### Traditional Boxplots, cont
+
+.pull-left[
+- two ends of the vertical lines: most extreme data points but do not exceed a certain bound
+- calculated as 25th percentile - (1.5 * IQR) for the lower boundary, and 75th percentile + (1.5 * IQR) for the upper boundary
+- observations lying outside of these “fences” can be considered outliers
+]
+.pull-right[
+
+<img src="https://www.dropbox.com/s/3jqub0juwo1wf1e/boxplot-mf.png?dl=1">
+]
+
+---
+using filters in `jamovi` to inspect outliers
+
+.pull-left[
+- focus on one particular case = below 100ms
+-filter data to inspect value
+
+]
+.pull-right[
+
+<img src="https://www.dropbox.com/s/3jqub0juwo1wf1e/boxplot-mf.png?dl=1">
+]
+
+
+---
+### Violin Boxplots
+
+.pull-left[
+simmilar to traditional boxplots, but
+- shows the kernel probability density (KPD) of the data at different values
+- median (horizontal bar inside the box); square dot (mean)
+]
+.pull-right[
+<img src="https://www.dropbox.com/s/5ps00fns3p78qy5/boxplot-viol-mf.png?dl=1">
+]
+
+.footnote[KPD estimation - fundamental data smoothing problem where inferences about the population are made, based on a finite data sample.]
+
+---
+Boxplots `jamovi` example
+.pull-left[
+<img height="" width="" src="https://www.dropbox.com/s/940k8rm2r6il2qv/jamovi-how2-boxplot.png?dl=1">
+]
+.pull-right[
+- move variables (1,2)
+- expand `Plots`(3)
+- Check desided options (4)
+ - for a traditional boxplot: uncheck `Violin`
+]
+---
+References
+
+- The jamovi project (2022). jamovi. (Version 2.3) [Computer Software]. Retrieved from https://www.jamovi.org.
+- R Core Team (2021). R: A Language and environment for statistical computing. (Version 4.1) [Computer software]. Retrieved from https://cran.r-project.org. (R packages retrieved from MRAN snapshot 2022-01-01).
+- Wickham, H., Chang, W., Henry, L., Pedersen, T. L., Takahashi, K., Wilke, C., Woo, K., & - RStudio (2018). ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. [R package]. Retrieved from https://CRAN.R-project.org/package=ggplot2.
+- Patil, I. (2018). ggstatsplot: 'ggplot2' Based Plots with Statistical Details. [R package]. Retrieved from https://CRAN.R-project.org/package=ggstatsplot.
+

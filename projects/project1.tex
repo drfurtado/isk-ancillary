@@ -1,0 +1,678 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\title{KIN-610 - Stats Project}
+\author{Furtado, JR., O}
+\date{2022-02-19}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={KIN-610 - Stats Project},
+  pdfauthor={Furtado, JR., O},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\hypertarget{learning-objectives}{%
+\section{Learning objectives}\label{learning-objectives}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Identify variables from a research question statement
+\item
+  Formulate hypotheses from a research question statement
+\item
+  Identify the appropriate statistical procedure to test the formulated hypothesis
+\item
+  Conduct statistical analysis in \texttt{jamovi}
+\item
+  Interpret the results of the data analysis
+\item
+  Create tables and figures to illustrate the findings
+\item
+  Prepare a research report
+\end{enumerate}
+
+\hypertarget{data}{%
+\section{Data}\label{data}}
+
+\hypertarget{data-set}{%
+\subsection{Data set}\label{data-set}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \href{https://osf.io/bf58v/}{Link} to download the data set
+\item
+  \href{https://osf.io/sg46v/}{Link} to download the data codebook
+\end{enumerate}
+
+\hypertarget{data-info}{%
+\subsection{Data Information}\label{data-info}}
+
+The date for this project come from the \href{https://en.wikipedia.org/wiki/NFL_Scouting_Combine}{NFL Scouting Combine}. The NFL Combine is held prior to the draft every year, testing players in the 40 yard dash, vertical jump, bench press, broad jump, shuttle, and three cone drill.
+
+The description of each drill can be \href{https://nflcombineresults.com/nfl-combine-drills-101-what-each-drill-measures/}{found here} and \href{https://www.espn.com/nfl/draft2018/story/_/id/22587931/guide-nfl-draft-combine-drills-todd-mcshay-numbers-know-40-yard-dash-short-shuttle-bench-press}{here}. Please, \href{https://protips.dickssportinggoods.com/sports-and-activities/football/football-101-football-positions-and-their-roles}{click here} to learn about football positions.
+
+\begin{quote}
+Note: This is NOT a true random sample since not everyone from the study population had the same chance to be included in the sample. This is important when deciding the appropriate statistical procedure (model) needed to test the hypothesis(ses).
+\end{quote}
+
+\hypertarget{data-modifications}{%
+\subsection{Data modifications}\label{data-modifications}}
+
+For the final project, I have modified the data set in the following ways:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Extra variables were created for each dependent variable and random numbers were generated for these variables. Thus, the data for the ``pos-test'' variables are fabricated.
+\item
+  Scores were also fabricated using the test's population mean and standard deviation for the Wonderlic\footnote{Wonderlic test - Wikipedia.'' \url{https://en.wikipedia.org/wiki/Wonderlic_test}. Accessed 21 Oct.~2020.} variable. Due to privacy, the data for this variable are not publicly available.
+\end{enumerate}
+
+\hypertarget{statistical-package}{%
+\subsection{Statistical package}\label{statistical-package}}
+
+Although students are free to use the software of their choice, I recommend \href{www.jamovi.org}{\texttt{jamovi}}, which is covered extensively in my course.
+
+\hypertarget{steps}{%
+\section{Required steps}\label{steps}}
+
+In a nutshell, you will be assigned a \protect\hyperlink{appendix-a}{research question} and be given a data set. Then, after running the appropriate statistical model, you can proceed to write your research report.
+
+\hypertarget{prelim-info}{%
+\subsection{Preliminary information}\label{prelim-info}}
+
+Before running the statistical test to answer your research question, you will be asked to complete these steps:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Identify the DV and IV
+\item
+  State the Null (\(H_0\)) and the alternate hypotheses (\(H_1\))
+\item
+  Choose the statistical model to test your Null hypothesis (\(H_0\))
+\item
+  Search related articles + 2-page summary
+\end{enumerate}
+
+\hypertarget{dependent-dv-and-independent-variable-iv}{%
+\subsubsection{Dependent (DV) and independent variable (IV)}\label{dependent-dv-and-independent-variable-iv}}
+
+The assignment of research question will be done on the first day of class and a record of the assignment will be available on Canvas (Modules \textgreater{} Project Information).
+
+Once you are assigned a number, refer to \protect\hyperlink{appendix-b}{Appendix B} to identify the research question associated with your assigned \#.
+
+Once the research question is identified, proceed to identify the independent and dependent variables.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  For the DV, identify whether it is \emph{continuous} or \emph{discrete} (nominal or ordinal).
+\item
+  For the IV, identify the levels associated with it (i.,e. sex - two levels; males and females)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Whenever applicable, run the normality plots with tests to verify whether the distribution of scores for the dependent variable is approximating or deviating from normality. Use this information to decide whether you will need to use a parametric or non-parametric test (i., e. independent-samples t-test vs Mann-Whitney test). If you do, then provide the information under Data Analysis.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{hypothesisses-for-each-of-the-dependent-variables}{%
+\subsubsection{Hypothesis(ses) for each of the dependent variable(s)}\label{hypothesisses-for-each-of-the-dependent-variables}}
+
+A hypothesis for each of the DVs must be formulated. First, state your prediction; i.e., \texttt{10-year-old\ girls\ will\ overperform\ 10-year-old\ boys\ on\ the\ skill\ of\ skipping}.
+
+Next, you must decide whether you will be testing your hypothesis using the one-tailed or the two-tailed test. Once this is decided, you are ready to state the \texttt{Ho} (Null) and the \texttt{H1} (alternate Hypothesis). Below is an example of two-tailed test (non-directional hypothesis):
+
+\begin{itemize}
+\tightlist
+\item
+  Ho: 10-year-old girls and boys perform similarly on the skill of skipping
+\item
+  Ha: 10-year-old girls and boys will perform differently on the skill of skipping
+\end{itemize}
+
+Notice above that \texttt{Ha} was stated as non-directional (two-tailed) because, even though we predicted that girls will do better than boys, we are uncertain of this prediction. Thus, the recommendation is to choose the two-tailed test.
+
+Recall that you should only use a directional hypothesis (one-tailed) if you have strong evidence of the direction of the effect (refer to our textbook about one- and two-tailed tests).
+
+\hypertarget{choose-the-appropriate-statistical-model-to-test-the-hypothesisses}{%
+\subsubsection{Choose the appropriate statistical model to test the hypothesis(ses)}\label{choose-the-appropriate-statistical-model-to-test-the-hypothesisses}}
+
+State the statistical procedure (i.e., ANOVA, Spearman rho) you selected to test the hypothesis(ses) and explain the rationale for choosing the procedure(s).
+
+Recall that the selection of the procedure will depend on several factors, including but not limited to, \texttt{1)} the nature of the dependent variable (continuous, discrete), \texttt{2)} the level (nominal, ordinal, scale), \texttt{3)} the number of DVs/IVs. In addition, because the sample you are using is not a \texttt{true\ random\ sample}, normality cannot be assumed by default. You must run the normality plots with tests for each dependent variable and report it appropriately.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Note that you must chose a statistical model for each research hypothesis \texttt{(Ha)} formulated.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{articles}{%
+\subsubsection{Search for related articles}\label{articles}}
+
+You will be asked to search and find at least \emph{3 articles} related to your research question. These articles are to be used when writing the \texttt{Introduction} section of your report. Ensure to include these three sources under \texttt{References}.
+
+Once you find the articles, read, summarize and \href{https://bit.ly/2YIGK2t}{create annotated bibliography entries for each}. Note that you will be required to submit the links to the 3 articles and the annotated bibliography entries for each of the 3 articles before the \protect\hyperlink{deadlines}{deadline}.
+
+Then, proceed to write a 2-page summary that will be part of the \texttt{Introduction} section of the final project. Note that you will need to turn in the 2-page summary by the \protect\hyperlink{deadlines}{deadline}.
+
+\hypertarget{structure-of-the-report}{%
+\section{Structure of the Report}\label{structure-of-the-report}}
+
+Once the preliminary information is gathered, and after running the appropriate statistical model to test your hypothesis(ses), you can proceed to write your research report following the APA Style.
+
+\begin{quote}
+IMPORTANT: You will be required to follow the example proposed by Dr.~McLeod (\url{https://bit.ly/3fptZzD}).
+\end{quote}
+
+\begin{verbatim}
+1. Title
+2. Abstract
+3. Introduction
+4. Method
+   a. Participants
+   b. Design
+   c. Statistical Analysis
+   d. Materials
+   e. Procedures
+5. Results
+6. Discussion
+7. References
+8. Appendix
+   8.1 Preliminary info
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Hint 1: Please download and read this article (\url{https://bit.ly/31skJ5I}) that covers the best practices of Methods/Results/Conclusion write-ups.
+
+Hint 2: Ensure to phrase your results following the APA Style (\url{https://bit.ly/2HirVLv})
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{appendices}{%
+\section{Appendices}\label{appendices}}
+
+\hypertarget{appendix-a}{%
+\subsection{Appendix A: Correlation reference criteria}\label{appendix-a}}
+
+When evaluating the size of a bivariate correlation, please use Cohen (1988)
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Coefficient Value & Strength of Association \\
+\midrule
+\endhead
+0.1 \textless{} \emph{r} \textless{} .3 & small correlation \\
+0.3 \textless{} \emph{r} \textless{} .5 & medium/moderate correlation \\
+\emph{r} \textgreater{} .5 & Large/strong correlation \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{appendix-b}{%
+\subsection{Appendix B: Research Questions}\label{appendix-b}}
+
+\hypertarget{research-question-1}{%
+\subsubsection{Research Question \#1}\label{research-question-1}}
+
+It has been reported that players from \texttt{Iowa\ State} work harder during practice compared to players from any other college teams in the country.
+
+Since you had access to players from another university in the State of Iowa \texttt{(University\ of\ Iowa)}, you decided to test this hypothesis.
+
+As a group, do players from \texttt{Iowa\ State\ (70)} perform better than players from \texttt{Iowa\ University\ (69)} on the \textbf{Bench Press} (\texttt{bench\_press\_post)} test? How about for \textbf{vertical Leap} (\texttt{vert\_leap\_post})?
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+You will need to filter cases to perform this analysis so that only values \texttt{69} and \texttt{70} is selected for \texttt{college}. Notice that you will need to run the analysis for bench press and vertical leap.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{research-question-2}{%
+\subsubsection{Research Question \#2}\label{research-question-2}}
+
+Research has shown that in the general population there is a \texttt{negative} and \texttt{moderate\ to\ high} correlation between \texttt{weight} and \texttt{performance\ on\ the\ test\ of}Broad Jump`. In other words, the heavier the person, the poorer the performance on the test, and vice-versa.
+
+Assume that you are specially interested in football players that play as \texttt{Defensive\ Ends\ (3)}. Is there a relationship between \texttt{Weight} and \texttt{Broad\ Jump\ (pre)} scores among \texttt{Defensive\ Ends\ (3)}?
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+You will need to filter cases to perform this analysis so that only value \texttt{3} is selected/checked for \texttt{position}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{research-question-3}{%
+\subsubsection{Research Question \#3}\label{research-question-3}}
+
+Defensive players are known to be stronger than those playing on other positions. But how about if we compare defensive players among themselves from different positions?
+
+Are Defensive \texttt{Tacklers\ (4)}, \texttt{Linebackers\ (10)}, and \texttt{Cornerbacks\ (2)} different when it comes to \texttt{bench\ press\ (pre)} scores?
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+You will need to filter cases to perform this analysis so that only the values \texttt{4}, \texttt{10} and \texttt{2} are selected/checked for \texttt{position}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{research-question-4}{%
+\subsubsection{Research Question \#4}\label{research-question-4}}
+
+As an athletic trainer working for the NFL Scouting Combine, you decided to test the effectiveness of a program you developed to improve players' \texttt{agility}. If deemed effective, the program could eventually be sold to NFL professional teams.
+
+To test the effectiveness of the program, you invited players from \texttt{Ohio\ State\ University} to participate in this 2-week program (3 hours everyday). At the end of the 2-week period, players were re-tested on the \texttt{20-yard\ Shuttle} and the \texttt{3-cone\ Drill}.
+
+Do players from \texttt{Ohio\ State\ University\ (127)} improve their scores on the \texttt{20-yard\ Shuttle} from pre to post-test? How about for the \texttt{3-cone\ Drill}?
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+You will need to filter cases to perform this analysis so that only the value \texttt{127} is selected/checked for \texttt{college}. Notice that you will need to run the analysis for 20-yard Shuttle and 3-cone Drill.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{research-question-5}{%
+\subsubsection{Research Question \#5}\label{research-question-5}}
+
+There is evidence that \texttt{Wide\ Receivers} and \texttt{Running\ Backs} have a higher incidence of concussion compared to players from other football positions. Over the years, this may negatively affect the players' cognitive ability. For instance, how would they compare to \texttt{Quarterbacks}, who arguably are less likely to suffer concussions during a football match.
+
+How do players playing as \texttt{Wide\ Receivers\ (22)}, \texttt{Running\ Backs\ (18)} and \texttt{Quarterbacks\ (17)} compare on the Wonderlic scores? For this analysis, please, \textbf{ONLY use the data for 2020 data}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+You will need to filter cases to perform this analysis so that only the values \texttt{17}, \texttt{18} and \texttt{22} are selected/checked for \texttt{position}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{research-question-6}{%
+\subsubsection{Research Question \#6}\label{research-question-6}}
+
+Quarterbacks must have excellent decision-making skills and act quickly under pressure during game plays.
+
+Since the Wonderlic\footnote{\url{https://en.wikipedia.org/wiki/Wonderlic_test}} test assesses cognitive ability under pressure, an interesting question is whether QBs are above average when it comes to cognitive ability.
+
+According to the test developers, the average (mean) score on the Wonderlic test is 20 and the median score is (19).
+
+Do QBs tested in 2018, 2019, and 2019 perform better than the general population on the Wonderlic Cognitive ability test?
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+You will need to filter cases to perform this analysis so that only the value \texttt{17}, is selected/checked for \texttt{position}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{research-question-7}{%
+\subsubsection{Research Question \#7}\label{research-question-7}}
+
+It has been \href{https://www.cbssports.com/nfl/news/nfl-draft-combine-the-highest-and-lowest-wonderlic-test-scores-ever-recorded/}{reported} that as a group, \texttt{Offensive\ Tackles} perform better than \texttt{Full\ Backs} on the \texttt{Wonderlic\ test}.
+
+Test the hypothesis that OT (15) players tested in 2018, 2019, and 2020 perform differently than FB (6) players on the Wonderlic Cognitive Ability test.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+You will need to filter cases to perform this analysis so that only the values \texttt{5} and \texttt{15} are selected/checked for \texttt{position}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{research-question-8}{%
+\subsubsection{Research Question \#8}\label{research-question-8}}
+
+In the general population, there is a strong positive correlation between \texttt{weight} and \texttt{speed}. In other words, the heavier the player the slower the individual is, and vice-versa.
+
+Considering that defensive players do train speed during football practices, it would be interesting to verify whether college players have a similar pattern compared to the general population.
+
+Is there a correlation between \texttt{weight} and \texttt{speed} among football \texttt{Defensive\ Tackles\ (4)}? How about \texttt{Defensive\ Ends\ (3)}?
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+For this analysis, use the variables \texttt{Weight} and \texttt{40-yard\ Dash\ Pretest}, and filter cases so that only positions \texttt{3} and \texttt{4} are selected/checked.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{research-question-9}{%
+\subsubsection{Research Question \#9}\label{research-question-9}}
+
+As a Motor Behaviorist, you work for the NFL Scouting Combine and see the opportunity to collect data and test some of the research questions you have in mind.
+
+In 2020, you designed a program to help players improve their \texttt{speed}.
+
+\texttt{Quarterbacks\ (17)} from all attending colleges were selected to be part of the intervention. Test the hypothesis that the players would improve from pre to post-test on the \texttt{40-yard\ Dash}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+For this analysis, use the variables \texttt{40-yard\ Dash}, and filter cases so that only position \texttt{17} is selected/checked. Also, note that this study involves only players who were tested in \texttt{2020}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{research-question-10}{%
+\subsubsection{Research Question \#10}\label{research-question-10}}
+
+As a Motor Behaviorist, you work for the NFL Scouting Combine and see the opportunity to collect data and test some of the research questions you have in mind.
+
+In \texttt{2020}, you designed a program to help players improve their \texttt{speed} scores.
+
+\texttt{Running\ Backs\ (18)} from all attending colleges were selected to be part of the intervention. Test the hypothesis that the players would improve from pre to post-test on the \texttt{40-yard\ Dash}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+For this analysis, use the variable \texttt{40-yard\ Dash}, and filter cases so that only position \texttt{18} is selected/checked. Also, note that this study involves only players who were tested in \texttt{2020}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{research-question-11}{%
+\subsubsection{Research Question \#11}\label{research-question-11}}
+
+As a Motor Behaviorist, you work for the NFL Scouting Combine and see the opportunity to collect data and test some of the research questions you have in mind.
+
+In 2020, you designed a program to help players improve their \texttt{agility}.
+
+\texttt{Quarterbacks\ (17)} from all attending colleges were selected to be part of the intervention. Test the hypothesis that the players would improve from pre to post-test on the \texttt{3-cone\ Drill}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+For this analysis, use the variable \texttt{3-cone\ Drill}, and filter cases so that only position \texttt{17} is selected/checked. Also, note that this study involves only players who were tested in \texttt{2020}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{research-question-12}{%
+\subsubsection{Research Question \#12}\label{research-question-12}}
+
+As a Motor Behaviorist, you work for the NFL Scouting Combine and see the opportunity to collect data and test some of the research questions you have in mind.
+
+In 2020, you designed a program to help players improve their \texttt{agility}.
+
+\texttt{Running\ Backs\ (18)} from all attending colleges were selected to be part of the intervention. Test the hypothesis that the players would improve from pre to post-test on the \texttt{3-cone\ Drill}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+For this analysis, use the variable \texttt{3-cone\ Drill}, and filter cases so that only position \texttt{18} is selected/checked. Also, note that this study involves only players who were tested in \texttt{2020}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{research-question-13}{%
+\subsubsection{Research Question \#13}\label{research-question-13}}
+
+In football, the size of a player's hand may make a difference at a decisive moment during a game. Test the hypothesis that \texttt{Wide\ Receivers\ (WR)}, \texttt{Quarterbacks\ (QB)}, and \texttt{Defensive\ Lines\ (DT)} will show differences in the size of their hands. Your prediction is that \texttt{WR} and \texttt{QB} players will have significantly larger hands compared to \texttt{DT} players and \texttt{WR} and \texttt{QB} players will show no differences in the size of their hands when compared.
+
+\hypertarget{research-question-14}{%
+\subsubsection{Research Question \#14}\label{research-question-14}}
+
+Certain football positions require players to perform extraordinary moves. \texttt{Wide\ Receivers} (WR) must show blazing speed and strong hand-eye coordination. But in some situations during a football game, \texttt{WR} must jump over players who try to tackle them.
+
+Test the hypothesis that \texttt{WR} will perform differently when compared to \texttt{Quarterbacks} (QB) and \texttt{Defensive\ Line} (DT) players on the test of \texttt{Broad-Jump} (broad\_jump\_post). Your prediction is that \texttt{WR} will overperform both \texttt{QB} and \texttt{DL} players and the last two positions will not show difference when compared.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Hint: use \texttt{position\_labels} for this analysis.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{deadlines}{%
+\subsection{Appendix C: Deadlines}\label{deadlines}}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Due Date & What to do \\
+\midrule
+\endhead
+10/26/21 & \protect\hyperlink{articles}{submit 3 related articles \& annotated bibliography} \\
+11/09/21 & submit items 2-3 of \protect\hyperlink{prelim-info}{Preliminary Info} \\
+11/02/21 & submit a 2-page introduction \\
+12/07/21 & submit an outline of the presentation* \\
+12/14/21 & present project results \\
+12/16/21 & submit written report \\
+\bottomrule
+\end{longtable}
+
+*Presentation will be on \textbf{12/14/21}
+
+\hypertarget{templates}{%
+\section{Templates}\label{templates}}
+
+Below you will find the templates you are to use when submitting the required assignments related to the final project.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Copy the content of each template
+\item
+  Open \href{http://docs.google.com}{Google Docs} and paste the content into the body of the blank document - Do NOT change the font type or size
+\item
+  Proceed to complete the assignment, then click on ``File\textgreater Download\textgreater PDF Document''
+\item
+  Finally, submit the PDF file via Canvas
+\end{enumerate}
+
+\hypertarget{preliminary-info-part-1---variables-hypotheses-and-model}{%
+\subsection{Preliminary info (Part 1) - Variables, Hypotheses, and Model}\label{preliminary-info-part-1---variables-hypotheses-and-model}}
+
+\begin{verbatim}
+Cal State Northridge - Kinesiology
+KIN-610 - Dr. Furtado
+Points: ___/30
+
+YOUR RESEAERCH QUESTION
+Type here...
+
+
+DEPENDENT AND INDEPENDENT VARIABLES (10 points)
+
+IV: 
+Levels of the IV:
+Scale:
+
+DV:
+Scale:
+
+HYPOTHESES (10 points)
+
+State your prediction (i.e., boys will perform better than gilrs on the skill of kicking)
+Type here...
+
+Type of hypothesis (e.g., directional vs non-directional)
+
+State the null hyphothsis (Ho)
+Type here...
+
+State the alternative (aka research hypothesis) hyphothsis (Ha)
+Type here...
+
+STATISTICAL MODEL (10 points)
+
+State the statistical model (test) that you chose to test the hypothesis
+Type here...
+
+Reason 1 for choosing the test:
+Reason 2 for choosing the test:
+Reason 3 for choosing the test:
+\end{verbatim}
+
+\hypertarget{preliminary-info-part-2---articles-and-annotated-bibliography-entries}{%
+\subsection{Preliminary info (Part 2) - Articles and annotated bibliography entries}\label{preliminary-info-part-2---articles-and-annotated-bibliography-entries}}
+
+\begin{verbatim}
+Cal State Northridge - Kinesiology
+KIN-610 - Dr. Furtado
+Points ___/30
+
+YOUR RESEAERCH QUESTION
+Type here...
+
+Link to 1st article:
+URL here....
+
+Annotated bibliography entry:
+Type text here...
+
+
+Link to 2nd article:
+URL here....
+
+Annotated bibliography entry:
+Type text here...
+
+
+Link to 3rd article:
+URL here....
+
+Annotated bibliography entry:
+Type text here...
+
+Note: visit the following link to learn about annotated bibliography
+entries and samples: https://bit.ly/2YIGK2t
+\end{verbatim}
+
+\hypertarget{two-page-summary-introduction-for-the-final-written-report}{%
+\subsection{Two-page summary (Introduction for the final written report)}\label{two-page-summary-introduction-for-the-final-written-report}}
+
+\begin{verbatim}
+Cal State Northridge - Kinesiology
+KIN-610 - Dr. Furtado
+Points ___/20
+
+YOUR RESEAERCH QUESTION
+Type here...
+
+Type your summary here...
+
+Note: This assignment will become the "Introduction" section of your final 
+project's written report.
+\end{verbatim}
+
+\hypertarget{presentation-outline}{%
+\subsection{Presentation outline}\label{presentation-outline}}
+
+\begin{verbatim}
+Cal State Northridge - Kinesiology
+KIN-610 - Dr. Furtado
+Points ___/10
+
+1. Title slide
+2. Background (info from your introduction)
+3. Purpose
+4. Prediction and Hypotheses
+5. Method
+   a. Participants
+   b. Design
+   c. Statistical Analysis
+   d. Materials
+   e. Procedures
+6. Results
+7. Conclusion
+8. References
+\end{verbatim}
+
+\hypertarget{written-report}{%
+\subsection{Written report}\label{written-report}}
+
+\begin{verbatim}
+Cal State Northridge - Kinesiology
+KIN-610 - Dr. Furtado
+Points ___/100
+*Refer to Canvas for the eval rubric
+
+
+1. Title
+2. Abstract
+3. Introduction
+4. Method
+   a. Participants
+   b. Design
+   c. Statistical Analysis
+   d. Materials
+   e. Procedures
+5. Results
+6. Discussion
+7. References
+8. Appendix
+   8.1 Preliminary info
+   
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{license}{%
+\section{License}\label{license}}
+
+KIN 610 Stats Course by Ovande Furtado Jr is licensed under CC BY-NC-SA 4.0
+
+\end{document}

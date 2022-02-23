@@ -11,7 +11,7 @@
 
 <meta name="author" content="Furtado, JR., O" />
 
-<meta name="date" content="2021-10-27" />
+<meta name="date" content="2022-02-19" />
 
 <title>KIN-610 - Stats Project</title>
 
@@ -243,11 +243,12 @@ div.tocify {
 
 <h1 class="title toc-ignore">KIN-610 - Stats Project</h1>
 <h4 class="author">Furtado, JR., O</h4>
-<h4 class="date">2021-10-27</h4>
+<h4 class="date">2022-02-19</h4>
 
 </div>
 
 
+<p><a href="./index.html">&lt; Back to ISK-Ancillary</a></p>
 <div id="learning-objectives" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Learning objectives</h1>
 <ol style="list-style-type: decimal">
@@ -277,8 +278,8 @@ div.tocify {
 <p>Note: This is NOT a true random sample since not everyone from the study population had the same chance to be included in the sample. This is important when deciding the appropriate statistical procedure (model) needed to test the hypothesis(ses).</p>
 </blockquote>
 </div>
-<div id="data-modification" class="section level2" number="2.3">
-<h2><span class="header-section-number">2.3</span> Data modification</h2>
+<div id="data-modifications" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Data modifications</h2>
 <p>For the final project, I have modified the data set in the following ways:</p>
 <ol style="list-style-type: decimal">
 <li><p>Extra variables were created for each dependent variable and random numbers were generated for these variables. Thus, the data for the “pos-test” variables are fabricated.</p></li>
@@ -292,19 +293,19 @@ div.tocify {
 </div>
 <div id="steps" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Required steps</h1>
+<p>In a nutshell, you will be assigned a <a href="#appendix-a">research question</a> and be given a data set. Then, after running the appropriate statistical model, you can proceed to write your research report.</p>
+<div id="prelim-info" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Preliminary information</h2>
+<p>Before running the statistical test to answer your research question, you will be asked to complete these steps:</p>
 <ol style="list-style-type: decimal">
 <li>Identify the DV and IV</li>
-<li>State the Null (Ho) and Research hypotheses (Ha)</li>
-<li>Choose the statistical model to test your Null hypothesis (Ho)</li>
-<li>Search related articles</li>
-<li>Using the articles in item 4, write a 2-page summary</li>
+<li>State the Null (<span class="math inline">\(H_0\)</span>) and the alternate hypotheses (<span class="math inline">\(H_1\)</span>)</li>
+<li>Choose the statistical model to test your Null hypothesis (<span class="math inline">\(H_0\)</span>)</li>
+<li>Search related articles + 2-page summary</li>
 </ol>
-<hr />
-<p><em>Note: Steps 1-3 need to be completed first. Then, you will complete step 4 and step 5 in two separate assignments. Refer to <a href="#appendix-c">Appendix C</a> for more information</em></p>
-<hr />
-<div id="variables" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> Variables</h2>
-<p>You will be assigned a research question on the first day of class and a record of the assignment will be available on Canvas (Modules &gt; Project Information).</p>
+<div id="dependent-dv-and-independent-variable-iv" class="section level3" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Dependent (DV) and independent variable (IV)</h3>
+<p>The assignment of research question will be done on the first day of class and a record of the assignment will be available on Canvas (Modules &gt; Project Information).</p>
 <p>Once you are assigned a number, refer to <a href="#appendix-b">Appendix B</a> to identify the research question associated with your assigned #.</p>
 <p>Once the research question is identified, proceed to identify the independent and dependent variables.</p>
 <ol style="list-style-type: lower-alpha">
@@ -312,12 +313,12 @@ div.tocify {
 <li><p>For the IV, identify the levels associated with it (i.,e. sex - two levels; males and females)</p></li>
 </ol>
 <hr />
-<p><em>Whenever applicable, run the normality plots with tests to verify whether the distribution of scores for the dependent variable is approximating or deviating from normality. Use this information to decide whether you will need to use a parametric or non-parametric test (i., e. independent-samples t-test vs Mann-Whitney test). If you do, then provide the information under Data Analysis.</em></p>
+<p>Whenever applicable, run the normality plots with tests to verify whether the distribution of scores for the dependent variable is approximating or deviating from normality. Use this information to decide whether you will need to use a parametric or non-parametric test (i., e. independent-samples t-test vs Mann-Whitney test). If you do, then provide the information under Data Analysis.</p>
 <hr />
 </div>
-<div id="hypothesis" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> Hypothesis(ses)</h2>
-<p>A hypothesis for each of the DVs must be formulated. First, state your prediction; i.e., <em>10-year-old girls will overperform 10-year-old boys on the skill of skipping</em>.</p>
+<div id="hypothesisses-for-each-of-the-dependent-variables" class="section level3" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Hypothesis(ses) for each of the dependent variable(s)</h3>
+<p>A hypothesis for each of the DVs must be formulated. First, state your prediction; i.e., <code>10-year-old girls will overperform 10-year-old boys on the skill of skipping</code>.</p>
 <p>Next, you must decide whether you will be testing your hypothesis using the one-tailed or the two-tailed test. Once this is decided, you are ready to state the <code>Ho</code> (Null) and the <code>H1</code> (alternate Hypothesis). Below is an example of two-tailed test (non-directional hypothesis):</p>
 <ul>
 <li>Ho: 10-year-old girls and boys perform similarly on the skill of skipping</li>
@@ -326,37 +327,28 @@ div.tocify {
 <p>Notice above that <code>Ha</code> was stated as non-directional (two-tailed) because, even though we predicted that girls will do better than boys, we are uncertain of this prediction. Thus, the recommendation is to choose the two-tailed test.</p>
 <p>Recall that you should only use a directional hypothesis (one-tailed) if you have strong evidence of the direction of the effect (refer to our textbook about one- and two-tailed tests).</p>
 </div>
-<div id="procedure" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> Statistical procedure</h2>
+<div id="choose-the-appropriate-statistical-model-to-test-the-hypothesisses" class="section level3" number="3.1.3">
+<h3><span class="header-section-number">3.1.3</span> Choose the appropriate statistical model to test the hypothesis(ses)</h3>
 <p>State the statistical procedure (i.e., ANOVA, Spearman rho) you selected to test the hypothesis(ses) and explain the rationale for choosing the procedure(s).</p>
 <p>Recall that the selection of the procedure will depend on several factors, including but not limited to, <code>1)</code> the nature of the dependent variable (continuous, discrete), <code>2)</code> the level (nominal, ordinal, scale), <code>3)</code> the number of DVs/IVs. In addition, because the sample you are using is not a <code>true random sample</code>, normality cannot be assumed by default. You must run the normality plots with tests for each dependent variable and report it appropriately.</p>
 <hr />
-<p><em>Note 1: You must chose a statistical model for each research hypothesis <code>(Ha)</code> formulated.</em></p>
-<p><em>Note 2: Visit <a href="https://stats.idre.ucla.edu/other/mult-pkg/whatstat/">this link</a> for a guide on choosing the correct procedure. For a more comprehensive article on this topic, please take the time to read <a href="https://www.scribbr.com/statistics/statistical-tests/">this article</a>.</em></p>
+<p>Note that you must chose a statistical model for each research hypothesis <code>(Ha)</code> formulated.</p>
 <hr />
 </div>
-<div id="articles" class="section level2" number="3.4">
-<h2><span class="header-section-number">3.4</span> Search for related articles</h2>
+<div id="articles" class="section level3" number="3.1.4">
+<h3><span class="header-section-number">3.1.4</span> Search for related articles</h3>
 <p>You will be asked to search and find at least <em>3 articles</em> related to your research question. These articles are to be used when writing the <code>Introduction</code> section of your report. Ensure to include these three sources under <code>References</code>.</p>
-<p>Once you find the articles, read and summarize them, then <a href="https://bit.ly/2YIGK2t">create annotated bibliography entries for each</a>.</p>
-<p><strong>Submit the following through Canvas:</strong></p>
-<ol style="list-style-type: decimal">
-<li>the URL address (links) pointing to each article online</li>
-<li>the annotated bibliography entries for each of the 3 articles before the <a href="#deadlines">deadline</a>.</li>
-</ol>
+<p>Once you find the articles, read, summarize and <a href="https://bit.ly/2YIGK2t">create annotated bibliography entries for each</a>. Note that you will be required to submit the links to the 3 articles and the annotated bibliography entries for each of the 3 articles before the <a href="#deadlines">deadline</a>.</p>
+<p>Then, proceed to write a 2-page summary that will be part of the <code>Introduction</code> section of the final project. Note that you will need to turn in the 2-page summary by the <a href="#deadlines">deadline</a>.</p>
 </div>
-<div id="summary" class="section level2" number="3.5">
-<h2><span class="header-section-number">3.5</span> Two-page summary</h2>
-<p>Write a 2-page summary that will be part of the <code>Introduction</code> section of the final project. Note that this assignment is due one week after the <a href="#deadlines">submission</a> of the related articles.</p>
-<hr />
 </div>
 </div>
 <div id="structure-of-the-report" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> Structure of the Report</h1>
-<p>Once the steps above are completed, and after running the appropriate statistical model to test your hypothesis(ses), you can proceed to write your research report following the APA Style.</p>
-<hr />
-<p><em>IMPORTANT: You will be required to follow the example proposed by Dr. McLeod (<a href="https://bit.ly/3fptZzD" class="uri">https://bit.ly/3fptZzD</a>).</em></p>
-<hr />
+<p>Once the preliminary information is gathered, and after running the appropriate statistical model to test your hypothesis(ses), you can proceed to write your research report following the APA Style.</p>
+<blockquote>
+<p>IMPORTANT: You will be required to follow the example proposed by Dr. McLeod (<a href="https://bit.ly/3fptZzD" class="uri">https://bit.ly/3fptZzD</a>).</p>
+</blockquote>
 <pre><code>1. Title
 2. Abstract
 3. Introduction
@@ -413,7 +405,7 @@ div.tocify {
 <p>Since you had access to players from another university in the State of Iowa <code>(University of Iowa)</code>, you decided to test this hypothesis.</p>
 <p>As a group, do players from <code>Iowa State (70)</code> perform better than players from <code>Iowa University (69)</code> on the <strong>Bench Press</strong> (<code>bench_press_post)</code> test? How about for <strong>vertical Leap</strong> (<code>vert_leap_post</code>)?</p>
 <hr />
-<p><em>You will need to filter cases to perform this analysis so that only values <code>69</code> and <code>70</code> is selected for <code>college</code>. Notice that you will need to run the analysis for bench press and vertical leap.</em></p>
+<p>You will need to filter cases to perform this analysis so that only values <code>69</code> and <code>70</code> is selected for <code>college</code>. Notice that you will need to run the analysis for bench press and vertical leap.</p>
 <hr />
 </div>
 <div id="research-question-2" class="section level3" number="5.2.2">
@@ -421,7 +413,7 @@ div.tocify {
 <p>Research has shown that in the general population there is a <code>negative</code> and <code>moderate to high</code> correlation between <code>weight</code> and <code>performance on the test of</code>Broad Jump`. In other words, the heavier the person, the poorer the performance on the test, and vice-versa.</p>
 <p>Assume that you are specially interested in football players that play as <code>Defensive Ends (3)</code>. Is there a relationship between <code>Weight</code> and <code>Broad Jump (pre)</code> scores among <code>Defensive Ends (3)</code>?</p>
 <hr />
-<p><em>You will need to filter cases to perform this analysis so that only value <code>3</code> is selected/checked for <code>position</code>.</em></p>
+<p>You will need to filter cases to perform this analysis so that only value <code>3</code> is selected/checked for <code>position</code>.</p>
 <hr />
 </div>
 <div id="research-question-3" class="section level3" number="5.2.3">
@@ -429,7 +421,7 @@ div.tocify {
 <p>Defensive players are known to be stronger than those playing on other positions. But how about if we compare defensive players among themselves from different positions?</p>
 <p>Are Defensive <code>Tacklers (4)</code>, <code>Linebackers (10)</code>, and <code>Cornerbacks (2)</code> different when it comes to <code>bench press (pre)</code> scores?</p>
 <hr />
-<p><em>You will need to filter cases to perform this analysis so that only the values <code>4</code>, <code>10</code> and <code>2</code> are selected/checked for <code>position</code>.</em></p>
+<p>You will need to filter cases to perform this analysis so that only the values <code>4</code>, <code>10</code> and <code>2</code> are selected/checked for <code>position</code>.</p>
 <hr />
 </div>
 <div id="research-question-4" class="section level3" number="5.2.4">
@@ -438,7 +430,7 @@ div.tocify {
 <p>To test the effectiveness of the program, you invited players from <code>Ohio State University</code> to participate in this 2-week program (3 hours everyday). At the end of the 2-week period, players were re-tested on the <code>20-yard Shuttle</code> and the <code>3-cone Drill</code>.</p>
 <p>Do players from <code>Ohio State University (127)</code> improve their scores on the <code>20-yard Shuttle</code> from pre to post-test? How about for the <code>3-cone Drill</code>?</p>
 <hr />
-<p><em>You will need to filter cases to perform this analysis so that only the value <code>127</code> is selected/checked for <code>college</code>. Notice that you will need to run the analysis for 20-yard Shuttle and 3-cone Drill.</em></p>
+<p>You will need to filter cases to perform this analysis so that only the value <code>127</code> is selected/checked for <code>college</code>. Notice that you will need to run the analysis for 20-yard Shuttle and 3-cone Drill.</p>
 <hr />
 </div>
 <div id="research-question-5" class="section level3" number="5.2.5">
@@ -446,17 +438,17 @@ div.tocify {
 <p>There is evidence that <code>Wide Receivers</code> and <code>Running Backs</code> have a higher incidence of concussion compared to players from other football positions. Over the years, this may negatively affect the players’ cognitive ability. For instance, how would they compare to <code>Quarterbacks</code>, who arguably are less likely to suffer concussions during a football match.</p>
 <p>How do players playing as <code>Wide Receivers (22)</code>, <code>Running Backs (18)</code> and <code>Quarterbacks (17)</code> compare on the Wonderlic scores? For this analysis, please, <strong>ONLY use the data for 2020 data</strong>.</p>
 <hr />
-<p><em>You will need to filter cases to perform this analysis so that only the values <code>17</code>, <code>18</code> and <code>22</code> are selected/checked for <code>position</code>.</em></p>
+<p>You will need to filter cases to perform this analysis so that only the values <code>17</code>, <code>18</code> and <code>22</code> are selected/checked for <code>position</code>.</p>
 <hr />
 </div>
 <div id="research-question-6" class="section level3" number="5.2.6">
 <h3><span class="header-section-number">5.2.6</span> Research Question #6</h3>
 <p>Quarterbacks must have excellent decision-making skills and act quickly under pressure during game plays.</p>
 <p>Since the Wonderlic<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> test assesses cognitive ability under pressure, an interesting question is whether QBs are above average when it comes to cognitive ability.</p>
-<p>According to the test developers, the average (mean) score on the Wonderlic test is <code>20</code> and the median score is <code>19</code>.</p>
+<p>According to the test developers, the average (mean) score on the Wonderlic test is 20 and the median score is (19).</p>
 <p>Do QBs tested in 2018, 2019, and 2019 perform better than the general population on the Wonderlic Cognitive ability test?</p>
 <hr />
-<p><em>You will need to filter cases to perform this analysis so that only the value <code>17</code>, is selected/checked for <code>position</code>.</em></p>
+<p>You will need to filter cases to perform this analysis so that only the value <code>17</code>, is selected/checked for <code>position</code>.</p>
 <hr />
 </div>
 <div id="research-question-7" class="section level3" number="5.2.7">
@@ -464,16 +456,16 @@ div.tocify {
 <p>It has been <a href="https://www.cbssports.com/nfl/news/nfl-draft-combine-the-highest-and-lowest-wonderlic-test-scores-ever-recorded/">reported</a> that as a group, <code>Offensive Tackles</code> perform better than <code>Full Backs</code> on the <code>Wonderlic test</code>.</p>
 <p>Test the hypothesis that OT (15) players tested in 2018, 2019, and 2020 perform differently than FB (6) players on the Wonderlic Cognitive Ability test.</p>
 <hr />
-<p><em>You will need to filter cases to perform this analysis so that only the values <code>5</code> and <code>15</code> are selected/checked for <code>position</code>.</em></p>
+<p>You will need to filter cases to perform this analysis so that only the values <code>5</code> and <code>15</code> are selected/checked for <code>position</code>.</p>
 <hr />
 </div>
 <div id="research-question-8" class="section level3" number="5.2.8">
 <h3><span class="header-section-number">5.2.8</span> Research Question #8</h3>
-<p>n the general population, there is a strong positive correlation between <code>weight</code> and <code>speed</code>. In other words, the heavier the player the slower the individual is, and vice-versa.</p>
+<p>In the general population, there is a strong positive correlation between <code>weight</code> and <code>speed</code>. In other words, the heavier the player the slower the individual is, and vice-versa.</p>
 <p>Considering that defensive players do train speed during football practices, it would be interesting to verify whether college players have a similar pattern compared to the general population.</p>
 <p>Is there a correlation between <code>weight</code> and <code>speed</code> among football <code>Defensive Tackles (4)</code>? How about <code>Defensive Ends (3)</code>?</p>
 <hr />
-<p><em>For this analysis, use the variables <code>Weight</code> and <code>40-yard Dash Pretest</code>, and filter cases so that only positions <code>3</code> and <code>4</code> are selected/checked.</em></p>
+<p>For this analysis, use the variables <code>Weight</code> and <code>40-yard Dash Pretest</code>, and filter cases so that only positions <code>3</code> and <code>4</code> are selected/checked.</p>
 <hr />
 </div>
 <div id="research-question-9" class="section level3" number="5.2.9">
@@ -482,7 +474,7 @@ div.tocify {
 <p>In 2020, you designed a program to help players improve their <code>speed</code>.</p>
 <p><code>Quarterbacks (17)</code> from all attending colleges were selected to be part of the intervention. Test the hypothesis that the players would improve from pre to post-test on the <code>40-yard Dash</code>.</p>
 <hr />
-<p><em>For this analysis, use the variables <code>40-yard Dash</code>, and filter cases so that only position <code>17</code> is selected/checked. Also, note that this study involves only players who were tested in <code>2020</code>.</em></p>
+<p>For this analysis, use the variables <code>40-yard Dash</code>, and filter cases so that only position <code>17</code> is selected/checked. Also, note that this study involves only players who were tested in <code>2020</code>.</p>
 <hr />
 </div>
 <div id="research-question-10" class="section level3" number="5.2.10">
@@ -491,7 +483,7 @@ div.tocify {
 <p>In <code>2020</code>, you designed a program to help players improve their <code>speed</code> scores.</p>
 <p><code>Running Backs (18)</code> from all attending colleges were selected to be part of the intervention. Test the hypothesis that the players would improve from pre to post-test on the <code>40-yard Dash</code>.</p>
 <hr />
-<p><em>For this analysis, use the variable <code>40-yard Dash</code>, and filter cases so that only position <code>18</code> is selected/checked. Also, note that this study involves only players who were tested in <code>2020</code>.</em></p>
+<p>For this analysis, use the variable <code>40-yard Dash</code>, and filter cases so that only position <code>18</code> is selected/checked. Also, note that this study involves only players who were tested in <code>2020</code>.</p>
 <hr />
 </div>
 <div id="research-question-11" class="section level3" number="5.2.11">
@@ -500,7 +492,7 @@ div.tocify {
 <p>In 2020, you designed a program to help players improve their <code>agility</code>.</p>
 <p><code>Quarterbacks (17)</code> from all attending colleges were selected to be part of the intervention. Test the hypothesis that the players would improve from pre to post-test on the <code>3-cone Drill</code>.</p>
 <hr />
-<p><em>For this analysis, use the variable <code>3-cone Drill</code>, and filter cases so that only position <code>17</code> is selected/checked. Also, note that this study involves only players who were tested in <code>2020</code>.</em></p>
+<p>For this analysis, use the variable <code>3-cone Drill</code>, and filter cases so that only position <code>17</code> is selected/checked. Also, note that this study involves only players who were tested in <code>2020</code>.</p>
 <hr />
 </div>
 <div id="research-question-12" class="section level3" number="5.2.12">
@@ -509,7 +501,7 @@ div.tocify {
 <p>In 2020, you designed a program to help players improve their <code>agility</code>.</p>
 <p><code>Running Backs (18)</code> from all attending colleges were selected to be part of the intervention. Test the hypothesis that the players would improve from pre to post-test on the <code>3-cone Drill</code>.</p>
 <hr />
-<p><em>For this analysis, use the variable <code>3-cone Drill</code>, and filter cases so that only position <code>18</code> is selected/checked. Also, note that this study involves only players who were tested in <code>2020</code>.</em></p>
+<p>For this analysis, use the variable <code>3-cone Drill</code>, and filter cases so that only position <code>18</code> is selected/checked. Also, note that this study involves only players who were tested in <code>2020</code>.</p>
 <hr />
 </div>
 <div id="research-question-13" class="section level3" number="5.2.13">
@@ -521,7 +513,7 @@ div.tocify {
 <p>Certain football positions require players to perform extraordinary moves. <code>Wide Receivers</code> (WR) must show blazing speed and strong hand-eye coordination. But in some situations during a football game, <code>WR</code> must jump over players who try to tackle them.</p>
 <p>Test the hypothesis that <code>WR</code> will perform differently when compared to <code>Quarterbacks</code> (QB) and <code>Defensive Line</code> (DT) players on the test of <code>Broad-Jump</code> (broad_jump_post). Your prediction is that <code>WR</code> will overperform both <code>QB</code> and <code>DL</code> players and the last two positions will not show difference when compared.</p>
 <hr />
-<p><em>Hint: use <code>position_labels</code> for this analysis.</em></p>
+<p>Hint: use <code>position_labels</code> for this analysis.</p>
 <hr />
 </div>
 </div>
@@ -536,19 +528,19 @@ div.tocify {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">10/19/21</td>
-<td align="left">submit <a href="#steps">items 1-3</a></td>
-</tr>
-<tr class="even">
 <td align="left">10/26/21</td>
-<td align="left"><a href="#articles">submit 3 related articles</a></td>
-</tr>
-<tr class="odd">
-<td align="left">11/02/21</td>
-<td align="left">submit a 2-page <a href="#summary">summary</a></td>
+<td align="left"><a href="#articles">submit 3 related articles &amp; annotated bibliography</a></td>
 </tr>
 <tr class="even">
 <td align="left">11/09/21</td>
+<td align="left">submit items 2-3 of <a href="#prelim-info">Preliminary Info</a></td>
+</tr>
+<tr class="odd">
+<td align="left">11/02/21</td>
+<td align="left">submit a 2-page introduction</td>
+</tr>
+<tr class="even">
+<td align="left">12/07/21</td>
 <td align="left">submit an outline of the presentation*</td>
 </tr>
 <tr class="odd">
@@ -707,8 +699,14 @@ Points ___/100
 8. Appendix
    8.1 Preliminary info
    </code></pre>
-<p>Test reference</p>
+<hr />
 </div>
+</div>
+<div id="license" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> License</h1>
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+<a property="dct:title" rel="cc:attributionURL" href="https://drfurtado.github.io/kin610/">KIN 610 Stats Course</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="http://www.drfurtado.us">Ovande Furtado Jr</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxMy4wLjIsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDE0OTQ4KSAgLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMC8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy1TVkctMjAwMTA5MDQvRFREL3N2ZzEwLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMCIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNjRweCIgaGVpZ2h0PSI2NHB4IiB2aWV3Qm94PSI1LjUgLTMuNSA2NCA2NCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyA1LjUgLTMuNSA2NCA2NCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8Y2lyY2xlIGZpbGw9IiNGRkZGRkYiIGN4PSIzNy43ODUiIGN5PSIyOC41MDEiIHI9IjI4LjgzNiIvPg0KCTxwYXRoIGQ9Ik0zNy40NDEtMy41YzguOTUxLDAsMTYuNTcyLDMuMTI1LDIyLjg1Nyw5LjM3MmMzLjAwOCwzLjAwOSw1LjI5NSw2LjQ0OCw2Ljg1NywxMC4zMTQNCgkJYzEuNTYxLDMuODY3LDIuMzQ0LDcuOTcxLDIuMzQ0LDEyLjMxNGMwLDQuMzgxLTAuNzczLDguNDg2LTIuMzE0LDEyLjMxM2MtMS41NDMsMy44MjgtMy44Miw3LjIxLTYuODI4LDEwLjE0Mw0KCQljLTMuMTIzLDMuMDg1LTYuNjY2LDUuNDQ4LTEwLjYyOSw3LjA4NmMtMy45NjEsMS42MzgtOC4wNTcsMi40NTctMTIuMjg1LDIuNDU3cy04LjI3Ni0wLjgwOC0xMi4xNDMtMi40MjkNCgkJYy0zLjg2Ni0xLjYxOC03LjMzMy0zLjk2MS0xMC40LTcuMDI3Yy0zLjA2Ny0zLjA2Ni01LjQtNi41MjQtNy0xMC4zNzJTNS41LDMyLjc2Nyw1LjUsMjguNWMwLTQuMjI5LDAuODA5LTguMjk1LDIuNDI4LTEyLjINCgkJYzEuNjE5LTMuOTA1LDMuOTcyLTcuNCw3LjA1Ny0xMC40ODZDMjEuMDgtMC4zOTQsMjguNTY1LTMuNSwzNy40NDEtMy41eiBNMzcuNTU3LDIuMjcyYy03LjMxNCwwLTEzLjQ2NywyLjU1My0xOC40NTgsNy42NTcNCgkJYy0yLjUxNSwyLjU1My00LjQ0OCw1LjQxOS01LjgsOC42Yy0xLjM1NCwzLjE4MS0yLjAyOSw2LjUwNS0yLjAyOSw5Ljk3MmMwLDMuNDI5LDAuNjc1LDYuNzM0LDIuMDI5LDkuOTEzDQoJCWMxLjM1MywzLjE4MywzLjI4NSw2LjAyMSw1LjgsOC41MTZjMi41MTQsMi40OTYsNS4zNTEsNC4zOTksOC41MTUsNS43MTVjMy4xNjEsMS4zMTQsNi40NzYsMS45NzEsOS45NDMsMS45NzENCgkJYzMuNDI4LDAsNi43NS0wLjY2NSw5Ljk3My0xLjk5OWMzLjIxOS0xLjMzNSw2LjEyMS0zLjI1Nyw4LjcxMy01Ljc3MWM0Ljk5LTQuODc2LDcuNDg0LTEwLjk5LDcuNDg0LTE4LjM0NA0KCQljMC0zLjU0My0wLjY0OC02Ljg5NS0xLjk0My0xMC4wNTdjLTEuMjkzLTMuMTYyLTMuMTgtNS45OC01LjY1NC04LjQ1OEM1MC45ODQsNC44NDQsNDQuNzk1LDIuMjcyLDM3LjU1NywyLjI3MnogTTM3LjE1NiwyMy4xODcNCgkJbC00LjI4NywyLjIyOWMtMC40NTgtMC45NTEtMS4wMTktMS42MTktMS42ODUtMmMtMC42NjctMC4zOC0xLjI4Ni0wLjU3MS0xLjg1OC0wLjU3MWMtMi44NTYsMC00LjI4NiwxLjg4NS00LjI4Niw1LjY1Nw0KCQljMCwxLjcxNCwwLjM2MiwzLjA4NCwxLjA4NSw0LjExM2MwLjcyNCwxLjAyOSwxLjc5MSwxLjU0NCwzLjIwMSwxLjU0NGMxLjg2NywwLDMuMTgxLTAuOTE1LDMuOTQ0LTIuNzQzbDMuOTQyLDINCgkJYy0wLjgzOCwxLjU2My0yLDIuNzkxLTMuNDg2LDMuNjg2Yy0xLjQ4NCwwLjg5Ni0zLjEyMywxLjM0My00LjkxNCwxLjM0M2MtMi44NTcsMC01LjE2My0wLjg3NS02LjkxNS0yLjYyOQ0KCQljLTEuNzUyLTEuNzUyLTIuNjI4LTQuMTktMi42MjgtNy4zMTNjMC0zLjA0OCwwLjg4Ni01LjQ2NiwyLjY1Ny03LjI1N2MxLjc3MS0xLjc5LDQuMDA5LTIuNjg2LDYuNzE1LTIuNjg2DQoJCUMzMi42MDQsMTguNTU4LDM1LjQ0MSwyMC4xMDEsMzcuMTU2LDIzLjE4N3ogTTU1LjYxMywyMy4xODdsLTQuMjI5LDIuMjI5Yy0wLjQ1Ny0wLjk1MS0xLjAyLTEuNjE5LTEuNjg2LTINCgkJYy0wLjY2OC0wLjM4LTEuMzA3LTAuNTcxLTEuOTE0LTAuNTcxYy0yLjg1NywwLTQuMjg3LDEuODg1LTQuMjg3LDUuNjU3YzAsMS43MTQsMC4zNjMsMy4wODQsMS4wODYsNC4xMTMNCgkJYzAuNzIzLDEuMDI5LDEuNzg5LDEuNTQ0LDMuMjAxLDEuNTQ0YzEuODY1LDAsMy4xOC0wLjkxNSwzLjk0MS0yLjc0M2w0LDJjLTAuODc1LDEuNTYzLTIuMDU3LDIuNzkxLTMuNTQxLDMuNjg2DQoJCWMtMS40ODYsMC44OTYtMy4xMDUsMS4zNDMtNC44NTcsMS4zNDNjLTIuODk2LDAtNS4yMDktMC44NzUtNi45NDEtMi42MjljLTEuNzM2LTEuNzUyLTIuNjAyLTQuMTktMi42MDItNy4zMTMNCgkJYzAtMy4wNDgsMC44ODUtNS40NjYsMi42NTgtNy4yNTdjMS43Ny0xLjc5LDQuMDA4LTIuNjg2LDYuNzEzLTIuNjg2QzUxLjExNywxOC41NTgsNTMuOTM4LDIwLjEwMSw1NS42MTMsMjMuMTg3eiIvPg0KPC9nPg0KPC9zdmc+DQo="><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxMy4wLjIsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDE0OTQ4KSAgLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMC8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy1TVkctMjAwMTA5MDQvRFREL3N2ZzEwLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMCIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNjRweCIgaGVpZ2h0PSI2NHB4IiB2aWV3Qm94PSI1LjUgLTMuNSA2NCA2NCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyA1LjUgLTMuNSA2NCA2NCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8Y2lyY2xlIGZpbGw9IiNGRkZGRkYiIGN4PSIzNy42MzciIGN5PSIyOC44MDYiIHI9IjI4LjI3NiIvPg0KCTxnPg0KCQk8cGF0aCBkPSJNMzcuNDQzLTMuNWM4Ljk4OCwwLDE2LjU3LDMuMDg1LDIyLjc0Miw5LjI1N0M2Ni4zOTMsMTEuOTY3LDY5LjUsMTkuNTQ4LDY5LjUsMjguNWMwLDguOTkxLTMuMDQ5LDE2LjQ3Ni05LjE0NSwyMi40NTYNCgkJCUM1My44NzksNTcuMzE5LDQ2LjI0Miw2MC41LDM3LjQ0Myw2MC41Yy04LjY0OSwwLTE2LjE1My0zLjE0NC0yMi41MTQtOS40M0M4LjY0NCw0NC43ODQsNS41LDM3LjI2Miw1LjUsMjguNQ0KCQkJYzAtOC43NjEsMy4xNDQtMTYuMzQyLDkuNDI5LTIyLjc0MkMyMS4xMDEtMC40MTUsMjguNjA0LTMuNSwzNy40NDMtMy41eiBNMzcuNTU3LDIuMjcyYy03LjI3NiwwLTEzLjQyOCwyLjU1My0xOC40NTcsNy42NTcNCgkJCWMtNS4yMiw1LjMzNC03LjgyOSwxMS41MjUtNy44MjksMTguNTcyYzAsNy4wODYsMi41OSwxMy4yMiw3Ljc3LDE4LjM5OGM1LjE4MSw1LjE4MiwxMS4zNTIsNy43NzEsMTguNTE0LDcuNzcxDQoJCQljNy4xMjMsMCwxMy4zMzQtMi42MDcsMTguNjI5LTcuODI4YzUuMDI5LTQuODM4LDcuNTQzLTEwLjk1Miw3LjU0My0xOC4zNDNjMC03LjI3Ni0yLjU1My0xMy40NjUtNy42NTYtMTguNTcxDQoJCQlDNTAuOTY3LDQuODI0LDQ0Ljc5NSwyLjI3MiwzNy41NTcsMi4yNzJ6IE00Ni4xMjksMjAuNTU3djEzLjA4NWgtMy42NTZ2MTUuNTQyaC05Ljk0NFYzMy42NDNoLTMuNjU2VjIwLjU1Nw0KCQkJYzAtMC41NzIsMC4yLTEuMDU3LDAuNTk5LTEuNDU3YzAuNDAxLTAuMzk5LDAuODg3LTAuNiwxLjQ1Ny0wLjZoMTMuMTQ0YzAuNTMzLDAsMS4wMSwwLjIsMS40MjgsMC42DQoJCQlDNDUuOTE4LDE5LjUsNDYuMTI5LDE5Ljk4Niw0Ni4xMjksMjAuNTU3eiBNMzMuMDQyLDEyLjMyOWMwLTMuMDA4LDEuNDg1LTQuNTE0LDQuNDU4LTQuNTE0czQuNDU3LDEuNTA0LDQuNDU3LDQuNTE0DQoJCQljMCwyLjk3MS0xLjQ4Niw0LjQ1Ny00LjQ1Nyw0LjQ1N1MzMy4wNDIsMTUuMywzMy4wNDIsMTIuMzI5eiIvPg0KCTwvZz4NCjwvZz4NCjwvc3ZnPg0K"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxMy4wLjIsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDE0OTQ4KSAgLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMC8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy1TVkctMjAwMTA5MDQvRFREL3N2ZzEwLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMCIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNjRweCIgaGVpZ2h0PSI2NHB4IiB2aWV3Qm94PSI1LjUgLTMuNSA2NCA2NCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyA1LjUgLTMuNSA2NCA2NCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8Y2lyY2xlIGZpbGw9IiNGRkZGRkYiIGN4PSIzNy40NyIgY3k9IjI4LjczNiIgcj0iMjkuNDcxIi8+DQoJPGc+DQoJCTxwYXRoIGQ9Ik0zNy40NDItMy41YzguOTksMCwxNi41NzEsMy4wODUsMjIuNzQzLDkuMjU2QzY2LjM5MywxMS45MjgsNjkuNSwxOS41MDksNjkuNSwyOC41YzAsOC45OTItMy4wNDgsMTYuNDc2LTkuMTQ1LDIyLjQ1OA0KCQkJQzUzLjg4LDU3LjMyLDQ2LjI0MSw2MC41LDM3LjQ0Miw2MC41Yy04LjY4NiwwLTE2LjE5LTMuMTYyLTIyLjUxMy05LjQ4NUM4LjY0NCw0NC43MjgsNS41LDM3LjIyNSw1LjUsMjguNQ0KCQkJYzAtOC43NjIsMy4xNDQtMTYuMzQzLDkuNDI5LTIyLjc0M0MyMS4xLTAuNDE0LDI4LjYwNC0zLjUsMzcuNDQyLTMuNXogTTEyLjcsMTkuODcyYy0wLjk1MiwyLjYyOC0xLjQyOSw1LjUwNS0xLjQyOSw4LjYyOQ0KCQkJYzAsNy4wODYsMi41OSwxMy4yMiw3Ljc3LDE4LjRjNS4yMTksNS4xNDQsMTEuMzkxLDcuNzE1LDE4LjUxNCw3LjcxNWM3LjIwMSwwLDEzLjQwOS0yLjYwOCwxOC42My03LjgyOQ0KCQkJYzEuODY3LTEuNzksMy4zMzItMy42NTcsNC4zOTgtNS42MDJsLTEyLjA1Ni01LjM3MWMtMC40MjEsMi4wMi0xLjQzOSwzLjY2Ny0zLjA1Nyw0Ljk0MmMtMS42MjIsMS4yNzYtMy41MzUsMi4wMTEtNS43NDQsMi4yDQoJCQl2NC45MTVoLTMuNzE0di00LjkxNWMtMy41NDMtMC4wMzYtNi43ODItMS4zMTItOS43MTQtMy44MjdsNC40LTQuNDU3YzIuMDk0LDEuOTQyLDQuNDc2LDIuOTEzLDcuMTQzLDIuOTEzDQoJCQljMS4xMDQsMCwyLjA0OC0wLjI0NiwyLjgzLTAuNzQzYzAuNzgtMC40OTQsMS4xNzItMS4zMTIsMS4xNzItMi40NTdjMC0wLjgwMS0wLjI4Ny0xLjQ0OC0wLjg1OC0xLjk0M2wtMy4wODUtMS4zMTVsLTMuNzcxLTEuNzE1DQoJCQlsLTUuMDg2LTIuMjI5TDEyLjcsMTkuODcyeiBNMzcuNTU3LDIuMjE0Yy03LjI3NiwwLTEzLjQyOCwyLjU3MS0xOC40NTcsNy43MTRjLTEuMjU4LDEuMjU4LTIuNDM5LDIuNjg2LTMuNTQzLDQuMjg3TDI3Ljc4NiwxOS43DQoJCQljMC41MzMtMS42NzYsMS41NDItMy4wMTksMy4wMjktNC4wMjhjMS40ODQtMS4wMDksMy4yMTgtMS41NzEsNS4yLTEuNjg2VjkuMDcxaDMuNzE1djQuOTE1YzIuOTM0LDAuMTUzLDUuNiwxLjE0Myw4LDIuOTcxDQoJCQlsLTQuMTcyLDQuMjg2Yy0xLjc5My0xLjI1Ny0zLjYxOS0xLjg4NS01LjQ4Ni0xLjg4NWMtMC45OTEsMC0xLjg3NiwwLjE5MS0yLjY1NiwwLjU3MWMtMC43ODEsMC4zODEtMS4xNzIsMS4wMjktMS4xNzIsMS45NDMNCgkJCWMwLDAuMjY3LDAuMDk1LDAuNTMzLDAuMjg1LDAuOGw0LjA1NywxLjgzbDIuOCwxLjI1N2w1LjE0NCwyLjI4NWwxNi4zOTcsNy4zMTRjMC41MzUtMi4yNDgsMC44MDEtNC41MzMsMC44MDEtNi44NTcNCgkJCWMwLTcuMzUzLTIuNTUyLTEzLjU0My03LjY1Ni0xOC41NzNDNTEuMDA1LDQuNzg1LDQ0LjgzMSwyLjIxNCwzNy41NTcsMi4yMTR6Ii8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo="><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxMy4wLjIsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDE0OTQ4KSAgLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMC8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy1TVkctMjAwMTA5MDQvRFREL3N2ZzEwLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMCIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNjRweCIgaGVpZ2h0PSI2NHB4IiB2aWV3Qm94PSI1LjUgLTMuNSA2NCA2NCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyA1LjUgLTMuNSA2NCA2NCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8Y2lyY2xlIGZpbGw9IiNGRkZGRkYiIGN4PSIzNi45NDQiIGN5PSIyOC42MzEiIHI9IjI5LjEwNSIvPg0KCTxnPg0KCQk8cGF0aCBkPSJNMzcuNDQzLTMuNWM4Ljk1MSwwLDE2LjUzMSwzLjEwNSwyMi43NDIsOS4zMTVDNjYuMzkzLDExLjk4Nyw2OS41LDE5LjU0OCw2OS41LDI4LjVjMCw4Ljk1NC0zLjA0OSwxNi40NTctOS4xNDUsMjIuNTE0DQoJCQlDNTMuOTE4LDU3LjMzOCw0Ni4yNzksNjAuNSwzNy40NDMsNjAuNWMtOC42NDksMC0xNi4xNTMtMy4xNDMtMjIuNTE0LTkuNDI5QzguNjQ0LDQ0Ljc4Niw1LjUsMzcuMjY0LDUuNSwyOC41MDENCgkJCWMwLTguNzIzLDMuMTQ0LTE2LjI4NSw5LjQyOS0yMi42ODVDMjEuMTM4LTAuMzk1LDI4LjY0My0zLjUsMzcuNDQzLTMuNXogTTM3LjU1NywyLjI3MmMtNy4yNzYsMC0xMy40MjgsMi41NzItMTguNDU3LDcuNzE1DQoJCQljLTUuMjIsNS4yOTYtNy44MjksMTEuNDY3LTcuODI5LDE4LjUxM2MwLDcuMTI1LDIuNTksMTMuMjU3LDcuNzcsMTguNGM1LjE4MSw1LjE4MiwxMS4zNTIsNy43NzEsMTguNTE0LDcuNzcxDQoJCQljNy4xMjMsMCwxMy4zMzQtMi42MDksMTguNjI5LTcuODI4YzUuMDI5LTQuODc2LDcuNTQzLTEwLjk5LDcuNTQzLTE4LjM0M2MwLTcuMzEzLTIuNTUzLTEzLjQ4NS03LjY1Ni0xOC41MTMNCgkJCUM1MS4wMDQsNC44NDIsNDQuODMyLDIuMjcyLDM3LjU1NywyLjI3MnogTTIzLjI3MSwyMy45ODVjMC42MDktMy45MjQsMi4xODktNi45NjIsNC43NDItOS4xMTQNCgkJCWMyLjU1Mi0yLjE1Miw1LjY1Ni0zLjIyOCw5LjMxNC0zLjIyOGM1LjAyNywwLDkuMDI5LDEuNjIsMTIsNC44NTZjMi45NzEsMy4yMzgsNC40NTcsNy4zOTEsNC40NTcsMTIuNDU3DQoJCQljMCw0LjkxNS0xLjU0Myw5LTQuNjI3LDEyLjI1NmMtMy4wODgsMy4yNTYtNy4wODYsNC44ODYtMTIuMDAyLDQuODg2Yy0zLjYxOSwwLTYuNzQzLTEuMDg1LTkuMzcxLTMuMjU3DQoJCQljLTIuNjI5LTIuMTcyLTQuMjA5LTUuMjU3LTQuNzQzLTkuMjU3SDMxLjFjMC4xOSwzLjg4NiwyLjUzMyw1LjgyOSw3LjAyOSw1LjgyOWMyLjI0NiwwLDQuMDU3LTAuOTcyLDUuNDI4LTIuOTE0DQoJCQljMS4zNzMtMS45NDIsMi4wNTktNC41MzQsMi4wNTktNy43NzFjMC0zLjM5MS0wLjYyOS01Ljk3MS0xLjg4NS03Ljc0M2MtMS4yNTgtMS43NzEtMy4wNjYtMi42NTctNS40My0yLjY1Nw0KCQkJYy00LjI2OCwwLTYuNjY3LDEuODg1LTcuMiw1LjY1NmgyLjM0M2wtNi4zNDIsNi4zNDNsLTYuMzQzLTYuMzQzTDIzLjI3MSwyMy45ODVMMjMuMjcxLDIzLjk4NXoiLz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg=="></a>
+</p>
 </div>
 <div class="footnotes">
 <hr />
