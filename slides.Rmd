@@ -10,4 +10,6 @@ Below you will find the slides created to accompany this e-book.
 |:-----------------------|:-----|:----|:----|
 | Descriptive Statistics | [HTML](slides/decriptive-stats.html) | [PDF](slides/descriptive-stats.pdf) | [PPTX](slides/descriptive-stats.pptx) |
 | Displaying Data | [HTML](slides/ch05-displaying-data.html) | [PDF](slides/ch05-displaying-data.pdf) | Soon |
+| Introduction to probability | [HTML](https://drfurtado.github.io/sydney_xaringan/#1) | [PDF](https://drfurtado.github.io/sydney_xaringan/index.pdf) | Soon |
+
 
