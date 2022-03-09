@@ -105,6 +105,10 @@ It is not knowledge, but the act of learning, not possession but the act of gett
 ## Overview
 
 Topics to be covered:
+- Histograms
+- Boxplots
+- Bar charts
+- Contingency tables
 
 ---
 ## Data set

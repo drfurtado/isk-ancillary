@@ -1,0 +1,116 @@
+---
+title: "Introduction to Probability"
+subtitle: "Introduction to Statistics in Kinesiology"
+author: "Furtado JR., O"
+institute: "Cal State Northridge"
+date: "updated: `r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    lib_dir: libs
+    nature:
+      ratio: "16:9"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: true
+---
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_light(
+  base_font_size = "30px",
+  base_color = "#23395b",
+  header_font_google = google_font("PT Sans Narrow"),
+  text_font_google   = google_font("Exo 2", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+  
+)
+```
+
+```{r broadcast, echo=FALSE}
+xaringanExtra::use_broadcast()
+```
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
+```{r xaringan-editable, echo=FALSE}
+xaringanExtra::use_editable(expires = 1)
+```
+```{r style-share-again, echo=FALSE}
+xaringanExtra::style_share_again(
+  share_buttons = c("twitter", "linkedin")
+)
+```
+```{r xaringan-panelset, echo=FALSE}
+xaringanExtra::use_panelset()
+```
+
+```{r xaringan-tachyons, echo=FALSE}
+xaringanExtra::use_tachyons()
+```
+
+```{r}
+xaringanExtra::use_webcam()
+```
+
+```{r xaringanExtra-search, echo=FALSE}
+xaringanExtra::use_search(show_icon = TRUE, auto_search = FALSE)
+```
+
+```{r xaringan-scribble, echo=FALSE}
+xaringanExtra::use_scribble()
+```
+
+```{r xaringan-logo, echo=FALSE}
+xaringanExtra::use_logo(
+  image_url = "https://cdn.freebiesupply.com/logos/large/2x/cal-state-northridge-matadors-logo-black-and-white.png"
+)
+```
+
+```{r xaringanExtra-clipboard, echo=FALSE}
+xaringanExtra::use_clipboard()
+```
+
+```{r xaringanExtra, echo = FALSE}
+xaringanExtra::use_progress_bar(color = "#0051BA", location = "top")
+```
+
+```{r xaringanExtra-freezeframe, echo=FALSE}
+xaringanExtra::use_freezeframe()
+```
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{css, echo=FALSE}
+pre {
+  background: #FFBB33;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+```
+
+---
+.bg-washed-grey.b--dark-black.ba.bw2.br3.shadow-5.ph4.mt5[
+It is not knowledge, but the act of learning, not possession but the act of getting there, which grants the greatest enjoyment.
+
+.tr[
+— Gauss, C.
+]]
+
+---
+## Overview
+
+Topics to be covered:
+- 
+
+---
+## Data set
+
+Download the data set from the link below. You will need the data set to complete the `jamovi` exercises. 
+
+Data set: https://bit.ly/iskdata
+

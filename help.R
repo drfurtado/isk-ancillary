@@ -48,3 +48,15 @@ Text here
 |      |      |      |
 |      |      |      |
 |      |      |      |
+  
+  
+## Convert to other file formats
+
+# install.packages("remotes")
+
+# load the library
+library(xaringanBuilder)
+
+# convert files to desired file formats
+build_pdf("filename.Rmd") # _html, _gif, _mp4, _png
+
