@@ -2,4 +2,8 @@
 title: "Introduction to Statistics in Kinesiology"
 ---
 
-This site was created to house the ancillary material for the [Introduction to Statistics in Kinesiology e-book](https://drfurtado.github.io/isk/).
+This web resource is an ancillary to the the [Introduction to Statistics in Kinesiology textbook](https://drfurtado.github.io/isk/), which is currently under development.  
+
+The book is released under a creative commons CC BY-SA 4.0 licence. 
+
+If you have any questions, please contact the author directly. 

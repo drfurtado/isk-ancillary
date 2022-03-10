@@ -1,0 +1,328 @@
+---
+title: "Module 6: Introduction to Probability"
+subtitle: "California State University - Northridge"
+author: "Ovande Furtado, Jr., Ph.D."
+date: "22 February, 2021"
+output:
+  xaringan::moon_reader:
+    css: ["default", "assets/sydney-fonts.css", "assets/sydney.css"]
+    self_contained: false # if true, fonts will be stored locally
+    seal: true # show a title slide with YAML information
+    includes:
+      in_header: "assets/mathjax-equation-numbers.html"
+    nature:
+      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+      navigation:
+        scroll: false # disable slide transitions by scrolling
+---
+```{r message=FALSE, cache=FALSE, include=FALSE, load_refs, echo=FALSE}
+library(RefManageR)
+BibOptions(check.entries = FALSE, 
+           bib.style = "authoryear", 
+           cite.style = 'authoryear', 
+           style = "markdown",
+           hyperlink = FALSE, 
+           dashed = FALSE)
+myBib <- ReadBib("assets/example.bib", check = FALSE)
+top_icon = function(x) {
+  icons::icon_style(
+    icons::fontawesome(x),
+    position = "fixed", top = 10, right = 10
+  )
+}
+```
+
+```{r include=FALSE}
+icons::download_fontawesome()
+```
+
+---
+# What is probability?
+----
+
+.pull-left[
+**The frequentist view**
+- more dominant approach in statistics and **defines probability as a long-run frequency**
+- flip a fair coin over and over again, and as _N_ grows large (approaches infinity, denoted _N_ → ∞) the proportion of heads will converge to 50%.
+- the proportion of heads fluctuates wildly, starting at 0.00 and rising as high as 0.80.
+- with more and more of the values actually being pretty close to the “right” answer of 0.50
+
+]
+.pull-right[
+<img src="https://lsj.readthedocs.io/en/latest/_images/lsj_frequentistProb.svg">
+
+]
+
+---
+# What is probability?
+----
+
+.pull-left[
+**The Bayesian view**
+- is often called the subjectivist view
+- an event is seen as the **degree of belief** that an intelligent and rational agent assigns to that truth of that event
+- probabilities don’t exist in the world but rather in the thoughts and assumptions of people and other intelligent beings
+]
+.pull-right[
+Problem: how to operationalize “degree of belief”?
+
+.content-box-blue[Example: If someone offers me a bet that if it rains tomorrow then I win $5, but if it doesn’t rain I lose $5. Clearly, from my perspective, this is a pretty good bet. On the other hand, if I think that the probability of rain is only 40% then it’s a bad bet to take. So we can operationalise the notion of a “subjective probability” in terms of what bets I’m willing to accept.
+]
+]
+
+???
+You don’t need to be limited to those events that are repeatable. The main disadvantage (to many people) is that we can’t be purely objective. Specifying a probability requires us to specify an entity that has the relevant degree of belief. This entity might be a human, an alien, a robot, or even a statistician. But there has to be an intelligent agent out there that believes in things. To many people this is uncomfortable, it seems to make probability arbitrary.
+
+---
+# Probability and inferential stats
+----
+<br>
+.pull-left[
+
+.content-box-blue[
+Do 7-9 year-old boys perform better than girls on the skill of kicking a stationary ball.fn[1]
+]
+<br>
+.content-box-red[
+To answer the question above, we can randomly draw a sample from the population (_N_ = 100), and using the tools of **probability**, try to infer what we learn from the sample to the population. This is called **inferential statistics**.
+]
+]
+.pull.right[
+
+
+
+]
+.footnote[
+[1] At this age level, there is no reason for boys and girls perform differently in kicking
+]
+
+---
+# Statistics and probability
+----
+.content-box-blue[
+Probability theory is “the doctrine of chances”. It’s a branch of mathematics that tells you how often different kinds of events will happen. Questions one may ask:]
+- What are the chances of a fair coin coming up heads 10 times in a row?
+	- if we know the coin is far - 50% chance a flip will result in “heads”
+- If I roll a six sided dice twice, how likely is it that I’ll roll two sixes?
+	- chance of rolling a 6 on a single die is 1 in 6
+- probabilistic questions start with a `known model` of the world
+
+---
+# Statistics and probability, cont.
+----
+- Model: _P_(heads) = 0.5 
+  - the probability of “heads” is 0.5.fn[1]
+
+- In `probability theory`, the model is known but the data are not
+
+.font80[.content-box-gray[
+1. The probability of "heads" is known if ones flips a fair coin. But the data does not exist, at least one collects the data.]]
+
+- In `statistics` we do not know the truth about the world. We have the data and we want to learn the truth about the world
+
+.font80[.content-box-gray[
+1. If my friend flips a coin 10 times and gets 10 heads are they playing a trick on me?
+2. Data suggest 7-9-year-old boys perform better than girls on the skill of kicking. Is it true in the population?]]
+
+.footnote[
+[1] probability ranges from 0 - 1
+]
+
+---
+# Probability distributions
+----
+
+.pull-left[
+- elementary event (X) --> Pair of trousers
+  - the outcome of any observation (i.e., put on a pair) will be `one` and only `one` of these events  
+- The set of possible events is called **sample space**
+.font80[
+- assigning probability to events:
+  - the bigger the value of P(X), the more likely the event is to occur
+    - P(X) = 0 it means the event X is impossible
+    - P(X) = 1 it means that event X is certain to occur
+    - P(X) = 0.5 it means that event X occurs half of the time.
+]
+]
+
+.pull-right[
+
+| Which trousers? | Label | Probability |
+|-----------------|-------|-------------|
+| Blue jeans      | X1    | P(X1) = 0.5 |
+| Grey jeans      | X2    | P(X2) = 0.3 |
+| Black jeans     | X3    | P(X3) = 0.1 |
+| Black suit      | X4    | P(X4) = 0   |
+| Blue tracksuit  | X5    | P(X5) = 0.1 |
+
+.font80[Each of the events has a probability that lies between 0 and 1, and if we add up the probability of all events they sum to 1
+]
+<br>
+.content-box-red[
+The probabilities of the elementary events need to add up to 1, and this is known as the **law of total probability**.
+]
+]
+
+---
+# How about distributions?
+----
+.pull-left[
+<img src="https://lsj.readthedocs.io/en/latest/_images/lsj_pantsDistribution.svg">
+]
+.pull-right[
+.content-box-blue[Visual depiction of the “trousers” probability distribution. There are five “elementary events”, corresponding to the five pairs of trousers that I own. Each event has some probability of occurring: this probability is a number between 0 to 1. The sum of these probabilities is 1.
+]
+<br>
+.content-box-red[
+===>
+
+more about distribution on the next section...
+]
+]
+
+---
+# The Normal Distribution
+----
+
+.pull-left[
+- is described using two parameters: the mean of the distribution µ and the standard deviation of the distribution σ.
+- The notation that we sometimes use to say that a variable X is normally distributed is as follows:
+
+`X ~ Normal(µ, σ)`
+
+- smooth curve instead of “histogram-like” bars - continuous data
+- different from the binomial distribution - Discrete variables allow only 3, 4, 5, not 3.8
+]
+.pull-right[
+<img src="https://lsj.readthedocs.io/en/latest/_images/lsj_standardNormal.svg">
+.font75[The normal distribution with mean μ = 0 and standard deviation σ = 1. The x-axis corresponds to the value of some variable, and the y-axis tells us something about how likely we are to observe that value.]
+]
+
+---
+# The Normal Distribution
+----
+
+.pull-left[
+Illustration of what happens when you change the mean of a normal distribution. The solid line depicts a normal distribution with a mean of μ = 4. 
+
+The dashed line shows a normal distribution with a mean of μ = 7. In both cases, the standard deviation is σ = 1. 
+
+Not surprisingly, the two distributions have the same shape, but the dashed line is shifted to the right.
+]
+
+.pull-right[
+<img src="https://lsj.readthedocs.io/en/latest/_images/lsj_meanShiftNormal.svg">
+]
+
+---
+# The Normal Distribution
+----
+
+.pull-left[
+
+Illustration of what happens when you change the standard deviation of a normal distribution. Both distributions plotted in this figure have a mean of μ = 5, but they have different standard deviations. 
+The solid line plots a distribution with standard deviation σ = 1, and the dashed line shows a distribution with standard deviation σ = 2. 
+
+As a consequence, both distributions are “centred” on the same spot, but the dashed line is wider than the solid one.
+]
+
+.pull-right[
+<img src="https://lsj.readthedocs.io/en/latest/_images/lsj_scaleShiftNormal.svg">
+
+]
+
+---
+# The Normal Distribution
+----
+
+<img src="https://lsj.readthedocs.io/en/latest/_images/lsj_normAreaSD.svg">
+
+The area under the curve tells you the probability that an observation falls within a particular range. The solid lines plot normal distributions with mean μ = 0 and standard deviation σ = 1. The shaded areas illustrate “areas under the curve” for two important cases. In panel a, we can see that there is a 68.3% chance that an observation will fall within one standard deviation of the mean. In panel b, we see that there is a 95.4% chance that an observation will fall within two standard deviations of the mean.
+
+---
+# The Normal Distribution
+----
+
+<img src="https://lsj.readthedocs.io/en/latest/_images/lsj_normAreaOther.svg">
+
+.content-box-blue[
+Two more examples of the “area under the curve” idea. There is a 15.9% chance that an observation is one standard deviation below the mean or smaller (left panel), and a 34.1% chance that the observation is somewhere between one standard deviation below the mean and the mean (right panel). Notice that if you add these two numbers together you get 15.9% + 34.1% = 50%. For normally distributed data, there is a 50% chance that an observation falls below the mean. And of course that also implies that there is a 50% chance that it falls above the mean.
+]
+
+
+---
+# The _t_-Distribution
+----
+
+.pull-left[
+<img src="https://lsj.readthedocs.io/en/latest/_images/lsj_tDist.svg">
+.font70[t-distribution with 3 degrees of freedom (solid line). It looks similar to a normal distribution, but it’s not quite the same. For comparison purposes I’ve plotted a standard normal distribution as the dashed line.
+]]
+.pull-right[
+.content-box-blue[
+The t-distribution is a continuous distribution that looks very similar to a normal distribution. Note that the “tails” of the t-distribution are “heavier” (i.e., extend further outwards) than the tails of the normal distribution). 
+
+That’s the important difference between the two. This distribution tends to arise in situations where you think that the data actually follow a normal distribution, but you don’t know the `mean` or `standard deviation`. 
+
+We’ll run into this distribution again in chapter Comparing two means.
+]]
+
+---
+# The $\tilde{\chi}^2$-Distribution
+----
+
+.pull-left[
+<img src="https://lsj.readthedocs.io/en/latest/_images/lsj_chiSqDist.svg">
+.font70[χ²-distribution with 3 degrees of freedom. Notice that the observed values must always be greater than zero, and that the distribution is pretty skewed. These are the key features of a χ²-distribution.
+]]
+.pull-right[
+.content-box-blue[
+The χ²-distribution is is typically used with Categorical data analysis.
+
+The χ²-distribution turns up all over the place is that if you have a bunch of variables that are normally distributed, square their values and then add them up (a procedure referred to as taking a “sum of squares”), this sum has a χ²-distribution
+]]
+
+---
+# The F-distribution
+----
+
+.pull-left[
+<img src="https://lsj.readthedocs.io/en/latest/_images/lsj_FDist.svg">
+.font70[F-distribution with 3 and 5 degrees of freedom. Qualitatively speaking, it looks pretty similar to a χ²-distribution, but they’re not quite the same in genera.
+]]
+.pull-right[
+.content-box-blue[
+The F-distribution looks a bit like a χ²-distribution, and it arises whenever you need to compare two χ²-distributions to one another. Remember that χ² turns out to be the key distribution when we’re taking a “sum of squares”? Well, what that means is if you want to compare two different “sums of squares”, you’re probably talking about something that has an F-distribution. 
+
+Later in chapter Comparing several means (one-way ANOVA), we’ll run into the F-distribution. 
+]]
+
+---
+class: sydney-sgreen
+background-image: url(assets/CSUN_LOGO_HORIZONTAL_186.svg)
+background-size: 460px
+background-position: 5% 95%
+
+# Thanks!
+
+.pull-right[.pull-down[
+
+<a href="mailto:ovandef@csun.edu">
+.white[`r icons::fontawesome("paper-plane")` ovandef@csun.edu]
+</a>
+
+<a href="http://twitter.com/ofurtado">
+.white[`r icons::fontawesome("twitter")` @ofurtado]
+</a>
+
+<a href="http://github.com/drfurtado">
+.white[`r icons::fontawesome("github")` @drfurtado]
+</a>
+
+<br><br><br>
+
+]]
