@@ -1,26 +1,26 @@
 ---
 title: "Datasets"
-output:
 ---
 
 Below are several data sets I refer (and use) when performing the statistical analyses covered in the book.
 
 # Human Benchmark
 
-For the course at teach at CSUN, I ask students to complete a series of tests with the intent to measure the students abilities by asking them to complete brain games and cognitive tests, which can be found at the [Human Benchmark website](https://humanbenchmark.com/) .
+For the course at teach at CSUN, I ask students to complete a series of tests with the intent to measure the students abilities by asking them to complete brain games and cognitive tests, which can be found at the [Human Benchmark website](https://humanbenchmark.com/).
 
-## Reaction Time Test
+- [Reaction Time Test](https://humanbenchmark.com/tests/reactiontime)
+- [Sequence Memory Test](https://humanbenchmark.com/tests/sequence)
 
-This is a simple too to measure the individual's reaction time. Caution should be exercised when interpreting the results. For further information, read the section [About the test](https://humanbenchmark.com/tests/reactiontime).
+## Submitting and accessing the data
 
-### Data collection
+Once done taking any of the tests above, come back to this page and submit the information requested by visiting the link below.
 
-Visit the link below and complete the reaction time 5 times. These are your PRACTICE trials.
+https://bit.ly/isk-data-send
 
-Proceed to complete 5 more trials (TEST trials). Then, record your average score from your TEST trial ONLY.
+## Data Access
 
-### Data Submission
+To access the data, visit the link below
 
-Once done, come back here and submit the information requested by visiting the link below.
+https://bit.ly/isk-data-access
 
-<https://bit.ly/kin610-color-reaction>
+
