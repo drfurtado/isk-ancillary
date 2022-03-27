@@ -3,11 +3,11 @@ title: "KIN-610 - Stats Project"
 author: "[Furtado, JR., O](http://drfurtado.us)"
 date: "`r Sys.Date()`"
 output:
+  bookdown::pdf_document2:
+    keep_tex: true
   bookdown::html_document2:
      toc: true
      toc_float: true
-  bookdown::pdf_document2:
-    keep_tex: true
   bookdown::word_document2:
     toc: true
     toc_float: true
@@ -16,7 +16,7 @@ self_contained: true
 
 Other formats: [PDF](project1.pdf)
 
-----
+------------------------------------------------------------------------
 
 # Learning objectives {#learning-objectives}
 
@@ -32,8 +32,8 @@ Other formats: [PDF](project1.pdf)
 
 ## Data set
 
-1.  Download the data set: [https://osf.io/8ehtw/](https://osf.io/8ehtw/) 
-2.  Download the data codebook: [https://osf.io/b87a3/](https://osf.io/b87a3/) 
+1.  Download the data set: <https://osf.io/8ehtw/>
+2.  Download the data codebook: <https://osf.io/b87a3/>
 
 ## Data Information {#data-info}
 
@@ -47,17 +47,15 @@ The description of each drill can be [found here](https://nflcombineresults.com/
 
 For the final project, I have modified the data set in the following ways:
 
-1. Extra variables were created for each dependent variable and random numbers were generated for these variables. Thus, the data for the "pos-test" variables are fabricated.
+1.  Extra variables were created for each dependent variable and random numbers were generated for these variables. Thus, the data for the "pos-test" variables are fabricated.
 
-2. Scores were also fabricated using the test's population mean and standard deviation for the Wonderlic[^project-01-1] variable. Due to privacy, the data for this variable are not publicly available.
+2.  Scores were also fabricated using the test's population mean and standard deviation for the Wonderlic[^1] variable. Due to privacy, the data for this variable are not publicly available.
 
-[^project-01-1]: Wonderlic test - Wikipedia." <https://en.wikipedia.org/wiki/Wonderlic_test>. Accessed 21 Oct. 2020.
+[^1]: Wonderlic test - Wikipedia." <https://en.wikipedia.org/wiki/Wonderlic_test>. Accessed 21 Oct. 2020.
 
 ## Statistical package
 
 Although students are free to use the software of their choice, I recommend [`jamovi`](www.jamovi.org), which is covered extensively in my course.
-
-
 
 # Required steps {#steps}
 
@@ -65,39 +63,39 @@ In a nutshell, you will be assigned a [research question](#appendix-a) and be gi
 
 ## Preliminary information {#prelim-info}
 
-_Hint: copy the [template](#templates) associated with this assignment and paste it into a Google Doc document._
+*Hint: copy the [template](#templates) associated with this assignment and paste it into a Google Doc document.*
 
 Before running the statistical test to answer your research question, you will be asked to complete these steps:
 
 **Part 1 - steps 1-3**
 
-1. Identify the DV and IV
-2. State the Null ($H_0$) and the alternate hypotheses ($H_1$)
-3. Choose the statistical model to test your Null hypothesis ($H_0$)
+1.  Identify the DV and IV
+2.  State the Null ($H_0$) and the alternate hypotheses ($H_1$)
+3.  Choose the statistical model to test your Null hypothesis ($H_0$)
 
 **Part 2 - step 4**
 
-4. Search related articles + 2-page summary
+4.  Search related articles + 2-page summary
 
 ### Part 1
 
 #### Dependent (DV) and independent variable (IV)
 
-The assignment of research question will be done on the first day of class and a record of the assignment will be available on Canvas (Modules > Project Information). 
+The assignment of research question will be done on the first day of class and a record of the assignment will be available on Canvas (Modules \> Project Information).
 
 Once you are assigned a number, refer to [Appendix B](#appendix-b) to identify the research question associated with your assigned #.
 
-Once the research question is identified,  proceed to identify the independent and dependent variables.
+Once the research question is identified, proceed to identify the independent and dependent variables.
 
-a. For the DV, identify whether it is *continuous* or *discrete* (nominal or ordinal).
+a.  For the DV, identify whether it is *continuous* or *discrete* (nominal or ordinal).
 
-b. For the IV, identify the levels associated with it (i.,e. sex - two levels; males and females)
+b.  For the IV, identify the levels associated with it (i.,e. sex - two levels; males and females)
 
-----
+------------------------------------------------------------------------
 
 Whenever applicable, run the normality plots with tests to verify whether the distribution of scores for the dependent variable is approximating or deviating from normality. Use this information to decide whether you will need to use a parametric or non-parametric test (i., e. independent-samples t-test vs Mann-Whitney test). If you do, then provide the information under Data Analysis.
 
-----
+------------------------------------------------------------------------
 
 #### Hypothesis(ses) for each of the dependent variable(s)
 
@@ -105,8 +103,8 @@ A hypothesis for each of the DVs must be formulated. First, state your predictio
 
 Next, you must decide whether you will be testing your hypothesis using the one-tailed or the two-tailed test. Once this is decided, you are ready to state the `Ho` (Null) and the `H1` (alternate Hypothesis). Below is an example of two-tailed test (non-directional hypothesis):
 
-- $H_0$: 10-year-old girls and boys perform similarly on the skill of skipping
-- $H_a$: 10-year-old girls and boys will perform differently on the skill of skipping
+-   $H_0$: 10-year-old girls and boys perform similarly on the skill of skipping
+-   $H_a$: 10-year-old girls and boys will perform differently on the skill of skipping
 
 Notice above that `Ha` was stated as non-directional (two-tailed) because, even though we predicted that girls will do better than boys, we are uncertain of this prediction. Thus, the recommendation is to choose the two-tailed test.
 
@@ -118,15 +116,15 @@ State the statistical procedure (i.e., ANOVA, Spearman rho) you selected to test
 
 Recall that the selection of the procedure will depend on several factors, including but not limited to, `1)` the nature of the dependent variable (continuous, discrete), `2)` the level (nominal, ordinal, scale), `3)` the number of DVs/IVs. In addition, because the sample you are using is not a `true random sample`, normality cannot be assumed by default. You must run the normality plots with tests for each dependent variable and report it appropriately.
 
------
+------------------------------------------------------------------------
 
 Hint: You may use the [StatsKat](https://statkat.com/index.php) website to help you choosing the test.
 
-----
+------------------------------------------------------------------------
 
 Note that you must chose a statistical model for each research hypothesis ( $H_a$ ) formulated.
 
-----
+------------------------------------------------------------------------
 
 ### Part 2
 
@@ -138,11 +136,19 @@ Once you find the articles, read, summarize and [create annotated bibliography e
 
 Then, proceed to write a 2-page summary that will be part of the `Introduction` section of the final project. Note that you will need to turn in the 2-page summary by the [deadline](#deadlines).
 
------
+------------------------------------------------------------------------
 
-_Hint: Use the guidelines from Dr. McLeod (https://bit.ly/3C46nbw) when writing the `Introduction`._
+*Hint: Use the guidelines from Dr. McLeod (<https://bit.ly/3C46nbw>) when writing the `Introduction`.*
 
------
+------------------------------------------------------------------------
+
+## Presenting results
+
+-   You will be required to create a presentation to present the results of your final project using Google Slides.
+-   The structure of the presentation must follow the structure of the [final project](#final-report)
+-   Once done, you must add me ([ovande.furtado\@csun.edu](mailto:ovande.furtado@csun.edu){.email}) as "Commenter" of the Google Slides so that I can provide feedback to the presentation.
+-   Click on the link below to learn how to add me as commenter.
+    -   <https://www.screencast.com/t/brGgeGfW7qA>
 
 ## Final report {#final-report}
 
@@ -150,181 +156,164 @@ Once the preliminary information is gathered, and after running the appropriate 
 
 A template was created following APA Style 7th ed. Ensure to use the template when completing the written report.
 
-The template can be found here --> https://bit.ly/kin610-project-template 
+The template can be found here --\> <https://bit.ly/kin610-project-template>
 
-```
-1. Title
-2. Abstract
- - help found here --> https://bit.ly/3Npz1e7
-3. Introduction
- - help found here --> https://bit.ly/3C46nbw
-4. Method 
- - help found here --> https://bit.ly/3iAR2rQ
-   a. Participants
-   b. Design
-    - more help found here --> https://bit.ly/37TZdgE
-   c. Statistical Analysis
-    - help found here --> https://bit.ly/31skJ5I 
-   c. Materials
-    - help found here --> https://bit.ly/3iAR2rQ
-   d. Procedures
-   - help found here --> https://bit.ly/3iAR2rQ
-5. Results
- - help found here --> https://bit.ly/3Lg9qT5
-6. References
- - help found here --> https://bit.ly/3tHqIm7
-7. Appendix
-   7.1 Preliminary info
-   - Add here the preliminary info turned in previously
+    1. Title
+    2. Abstract
+     - help found here --> https://bit.ly/3Npz1e7
+    3. Introduction
+     - help found here --> https://bit.ly/3C46nbw
+    4. Method 
+     - help found here --> https://bit.ly/3iAR2rQ
+       a. Participants
+       b. Design
+        - more help found here --> https://bit.ly/37TZdgE
+       c. Statistical Analysis
+        - help found here --> https://bit.ly/31skJ5I 
+       c. Materials
+        - help found here --> https://bit.ly/3iAR2rQ
+       d. Procedures
+       - help found here --> https://bit.ly/3iAR2rQ
+    5. Results
+     - help found here --> https://bit.ly/3Lg9qT5
+    6. References
+     - help found here --> https://bit.ly/3tHqIm7
+    7. Appendix
+       7.1 Preliminary info
+       - Add here the preliminary info turned in previously
 
-```
+------------------------------------------------------------------------
 
-----
+*Hint 1: Download and read this article (<https://bit.ly/31skJ5I>) that covers the best practices of Methods/Results/Conclusion write-ups.*
 
-_Hint 1: Download and read this article (https://bit.ly/31skJ5I) that covers the best practices of Methods/Results/Conclusion write-ups._
+*Hint 2: Follow the example proposed by Dr. McLeod (<https://bit.ly/3fptZzD>).*
 
-_Hint 2: Follow the example proposed by Dr. McLeod (https://bit.ly/3fptZzD)._ 
+\_Hint 3: Ensure to phrase your results following the APA Style ([https://bit.ly/2HirVLv)\_](https://bit.ly/2HirVLv)_){.uri}
 
-_Hint 3: Ensure to phrase your results following the APA Style (https://bit.ly/2HirVLv)_
-
-----
+------------------------------------------------------------------------
 
 # Templates {#templates}
 
 Below you will find the templates you are to use when submitting the required assignments related to the final project.
 
-1. Copy the content of each template
-2. Open [Google Docs](http://docs.google.com) and paste the content into the body of the blank document - Do NOT change the font type or size
-3. Proceed to complete the assignment, then click on "File>Download>PDF Document"
-4. Finally, submit the PDF file via Canvas
+1.  Copy the content of each template
+2.  Open [Google Docs](http://docs.google.com) and paste the content into the body of the blank document - Do NOT change the font type or size
+3.  Proceed to complete the assignment, then click on "File\>Download\>PDF Document"
+4.  Finally, submit the PDF file via Canvas
 
 ## Preliminary info (Part 1) - Variables, Hypotheses, and Model
 
-```
-Cal State Northridge - Kinesiology
-KIN-610 - Dr. Furtado
-Points: ___/30
+    Cal State Northridge - Kinesiology
+    KIN-610 - Dr. Furtado
+    Points: ___/30
 
-YOUR RESEAERCH QUESTION
-Type here...
+    YOUR RESEAERCH QUESTION
+    Type here...
 
 
-DEPENDENT AND INDEPENDENT VARIABLES (10 points)
+    DEPENDENT AND INDEPENDENT VARIABLES (10 points)
 
-IV: 
-Levels of the IV:
-Scale:
+    IV: 
+    Levels of the IV:
+    Scale:
 
-DV:
-Scale:
+    DV:
+    Scale:
 
-HYPOTHESES (10 points)
+    HYPOTHESES (10 points)
 
-State your prediction (i.e., boys will perform better than gilrs on the skill of kicking)
-Type here...
+    State your prediction (i.e., boys will perform better than gilrs on the skill of kicking)
+    Type here...
 
-Type of hypothesis (e.g., directional vs non-directional)
+    Type of hypothesis (e.g., directional vs non-directional)
 
-State the null hyphothsis (Ho)
-Type here...
+    State the null hyphothsis (Ho)
+    Type here...
 
-State the alternative (aka research hypothesis) hyphothsis (Ha)
-Type here...
+    State the alternative (aka research hypothesis) hyphothsis (Ha)
+    Type here...
 
-STATISTICAL MODEL (10 points)
+    STATISTICAL MODEL (10 points)
 
-State the statistical model (test) that you chose to test the hypothesis
-Type here...
+    State the statistical model (test) that you chose to test the hypothesis
+    Type here...
 
-Reason 1 for choosing the test:
-Reason 2 for choosing the test:
-Reason 3 for choosing the test:
-
-```
+    Reason 1 for choosing the test:
+    Reason 2 for choosing the test:
+    Reason 3 for choosing the test:
 
 ## Preliminary info (Part 2) - Articles and annotated bibliography entries
 
-```
-Cal State Northridge - Kinesiology
-KIN-610 - Dr. Furtado
-Points ___/30
+    Cal State Northridge - Kinesiology
+    KIN-610 - Dr. Furtado
+    Points ___/30
 
-YOUR RESEAERCH QUESTION
-Type here...
+    YOUR RESEAERCH QUESTION
+    Type here...
 
-Link to 1st article:
-URL here....
+    Link to 1st article:
+    URL here....
 
-Annotated bibliography entry:
-Type text here...
-
-
-Link to 2nd article:
-URL here....
-
-Annotated bibliography entry:
-Type text here...
+    Annotated bibliography entry:
+    Type text here...
 
 
-Link to 3rd article:
-URL here....
+    Link to 2nd article:
+    URL here....
 
-Annotated bibliography entry:
-Type text here...
+    Annotated bibliography entry:
+    Type text here...
 
-Note: visit the following link to see examples of annotated bibliography
-entries: https://bit.ly/2YIGK2t
 
-```
+    Link to 3rd article:
+    URL here....
+
+    Annotated bibliography entry:
+    Type text here...
+
+    Note: visit the following link to see examples of annotated bibliography
+    entries: https://bit.ly/2YIGK2t
 
 ## Two-page summary (Introduction for the final written report)
 
-```
-Cal State Northridge - Kinesiology
-KIN-610 - Dr. Furtado
-Points ___/20
+    Cal State Northridge - Kinesiology
+    KIN-610 - Dr. Furtado
+    Points ___/20
 
-YOUR RESEAERCH QUESTION
-Type here...
+    YOUR RESEAERCH QUESTION
+    Type here...
 
-Type your summary here...
+    Type your summary here...
 
-Note: This assignment will become the "Introduction" section of your final 
-project's written report.
+    Note: This assignment will become the "Introduction" section of your final 
+    project's written report.
 
-```
+## Google Slides Template
 
-## Google Template
-
-```
-Refer to the Google Slides template --> 
-
-```
+    Refer to the Google Slides template --> https://bit.ly/kin610-presentation-template
 
 ## Written report
 
-```
-Cal State Northridge - Kinesiology
-KIN-610 - Dr. Furtado
-Points ___/100
-*Refer to Canvas for the eval rubric
+    Cal State Northridge - Kinesiology
+    KIN-610 - Dr. Furtado
+    Points ___/100
+    *Refer to Canvas for the eval rubric
 
-1. Title
-2. Abstract
-3. Introduction
-4. Method
-   a. Participants
-   b. Design
-   c. Statistical Analysis
-   d. Materials
-   e. Procedures
-5. Results
-6. Discussion
-7. References
-8. Appendix
-   8.1 Preliminary info
-   
-```
+    1. Title
+    2. Abstract
+    3. Introduction
+    4. Method
+       a. Participants
+       b. Design
+       c. Statistical Analysis
+       d. Materials
+       e. Procedures
+    5. Results
+    6. Discussion
+    7. References
+    8. Appendix
+       8.1 Preliminary info
+       
 
 # Appendices {#appendices}
 
@@ -333,11 +322,10 @@ Points ___/100
 When evaluating the size of a bivariate correlation, please use Cohen (1988)
 
 | Coefficient Value | Strength of Association     |
-|:-------------------|:----------------------------|
-| 0.1 \< *r* \< .3   | small correlation           |
-| 0.3 \< *r* \< .5   | medium/moderate correlation |
-| *r* \> .5          | Large/strong correlation    |
-
+|:------------------|:----------------------------|
+| 0.1 \< *r* \< .3  | small correlation           |
+| 0.3 \< *r* \< .5  | medium/moderate correlation |
+| *r* \> .5         | Large/strong correlation    |
 
 ## B: Research Questions {#appendix-b}
 
@@ -349,11 +337,11 @@ Since you had access to players from another university in the State of Iowa `(U
 
 As a group, do players from `Iowa State (70)` perform better than players from `Iowa University (69)` on the **Bench Press** (`bench_press_post)` test? How about for **vertical Leap** (`vert_leap_post`)?
 
-----
+------------------------------------------------------------------------
 
 You will need to filter cases to perform this analysis so that only values `69` and `70` is selected for `college`. Notice that you will need to run the analysis for bench press and vertical leap.
 
-----
+------------------------------------------------------------------------
 
 ### RQ #2
 
@@ -361,11 +349,11 @@ Research has shown that in the general population there is a `negative` and `mod
 
 Assume that you are specially interested in football players that play as `Defensive Ends (3)`. Is there a relationship between `Weight` and `Broad Jump (pre)` scores among `Defensive Ends (3)`?
 
-----
+------------------------------------------------------------------------
 
 You will need to filter cases to perform this analysis so that only value `3` is selected/checked for `position`.
 
-----
+------------------------------------------------------------------------
 
 ### RQ #3
 
@@ -373,11 +361,11 @@ Defensive players are known to be stronger than those playing on other positions
 
 Are Defensive `Tacklers (4)`, `Linebackers (10)`, and `Cornerbacks (2)` different when it comes to `bench press (pre)` scores?
 
-----
+------------------------------------------------------------------------
 
 You will need to filter cases to perform this analysis so that only the values `4`, `10` and `2` are selected/checked for `position`.
 
-----
+------------------------------------------------------------------------
 
 ### RQ #4
 
@@ -387,11 +375,11 @@ To test the effectiveness of the program, you invited players from `Ohio State U
 
 Do players from `Ohio State University (127)` improve their scores on the `20-yard Shuttle` from pre to post-test? How about for the `3-cone Drill`?
 
-----
+------------------------------------------------------------------------
 
 You will need to filter cases to perform this analysis so that only the value `127` is selected/checked for `college`. Notice that you will need to run the analysis for 20-yard Shuttle and 3-cone Drill.
 
-----
+------------------------------------------------------------------------
 
 ### RQ #5
 
@@ -399,29 +387,29 @@ There is evidence that `Wide Receivers` and `Running Backs` have a higher incide
 
 How do players playing as `Wide Receivers (22)`, `Running Backs (18)` and `Quarterbacks (17)` compare on the Wonderlic scores? For this analysis, please, **ONLY use the data for 2020 data**.
 
-----
+------------------------------------------------------------------------
 
 You will need to filter cases to perform this analysis so that only the values `17`, `18` and `22` are selected/checked for `position`.
 
-----
+------------------------------------------------------------------------
 
 ### RQ #6
 
 Quarterbacks must have excellent decision-making skills and act quickly under pressure during game plays.
 
-Since the Wonderlic[^project-01-4] test assesses cognitive ability under pressure, an interesting question is whether QBs are above average when it comes to cognitive ability.
+Since the Wonderlic[^2] test assesses cognitive ability under pressure, an interesting question is whether QBs are above average when it comes to cognitive ability.
 
-[^project-01-4]: <https://en.wikipedia.org/wiki/Wonderlic_test>
+[^2]: <https://en.wikipedia.org/wiki/Wonderlic_test>
 
 According to the test developers, the average (mean) score on the Wonderlic test is 20 and the median score is (19).
 
 Do QBs tested in 2018, 2019, and 2019 perform better than the general population on the Wonderlic Cognitive ability test?
 
-----
+------------------------------------------------------------------------
 
 You will need to filter cases to perform this analysis so that only the value `17`, is selected/checked for `position`.
 
-----
+------------------------------------------------------------------------
 
 ### RQ #7
 
@@ -429,11 +417,11 @@ It has been [reported](https://www.cbssports.com/nfl/news/nfl-draft-combine-the-
 
 Test the hypothesis that OT (15) players tested in 2018, 2019, and 2020 perform differently than FB (6) players on the Wonderlic Cognitive Ability test.
 
-----
+------------------------------------------------------------------------
 
 You will need to filter cases to perform this analysis so that only the values `5` and `15` are selected/checked for `position`.
 
-----
+------------------------------------------------------------------------
 
 ### RQ #8
 
@@ -443,11 +431,11 @@ Considering that defensive players do train speed during football practices, it 
 
 Is there a correlation between `weight` and `speed` among football `Defensive Tackles (4)`? How about `Defensive Ends (3)`?
 
-----
+------------------------------------------------------------------------
 
 For this analysis, use the variables `Weight` and `40-yard Dash Pretest`, and filter cases so that only positions `3` and `4` are selected/checked.
 
-----
+------------------------------------------------------------------------
 
 ### RQ #9
 
@@ -457,11 +445,11 @@ In 2020, you designed a program to help players improve their `speed`.
 
 `Quarterbacks (17)` from all attending colleges were selected to be part of the intervention. Test the hypothesis that the players would improve from pre to post-test on the `40-yard Dash`.
 
-----
+------------------------------------------------------------------------
 
 For this analysis, use the variables `40-yard Dash`, and filter cases so that only position `17` is selected/checked. Also, note that this study involves only players who were tested in `2020`.
 
-----
+------------------------------------------------------------------------
 
 ### RQ #10
 
@@ -471,11 +459,11 @@ In `2020`, you designed a program to help players improve their `speed` scores.
 
 `Running Backs (18)` from all attending colleges were selected to be part of the intervention. Test the hypothesis that the players would improve from pre to post-test on the `40-yard Dash`.
 
-----
+------------------------------------------------------------------------
 
 For this analysis, use the variable `40-yard Dash`, and filter cases so that only position `18` is selected/checked. Also, note that this study involves only players who were tested in `2020`.
 
-----
+------------------------------------------------------------------------
 
 ### RQ #11
 
@@ -485,11 +473,11 @@ In 2020, you designed a program to help players improve their `agility`.
 
 `Quarterbacks (17)` from all attending colleges were selected to be part of the intervention. Test the hypothesis that the players would improve from pre to post-test on the `3-cone Drill`.
 
-----
+------------------------------------------------------------------------
 
 For this analysis, use the variable `3-cone Drill`, and filter cases so that only position `17` is selected/checked. Also, note that this study involves only players who were tested in `2020`.
 
-----
+------------------------------------------------------------------------
 
 ### RQ #12
 
@@ -499,11 +487,11 @@ In 2020, you designed a program to help players improve their `agility`.
 
 `Running Backs (18)` from all attending colleges were selected to be part of the intervention. Test the hypothesis that the players would improve from pre to post-test on the `3-cone Drill`.
 
-----
+------------------------------------------------------------------------
 
 For this analysis, use the variable `3-cone Drill`, and filter cases so that only position `18` is selected/checked. Also, note that this study involves only players who were tested in `2020`.
 
-----
+------------------------------------------------------------------------
 
 ### RQ #13
 
@@ -515,18 +503,22 @@ Certain football positions require players to perform extraordinary moves. `Wide
 
 Test the hypothesis that `WR` will perform differently when compared to `Quarterbacks` (QB) and `Defensive Line` (DT) players on the test of `Broad-Jump` (broad_jump_post). Your prediction is that `WR` will overperform both `QB` and `DL` players and the last two positions will not show difference when compared.
 
-----
+------------------------------------------------------------------------
 
-_Hint: use `position_labels` for this analysis._
+*Hint: use `position_labels` for this analysis.*
 
-----
+------------------------------------------------------------------------
 
 ## C: Deadlines {#deadlines}
 
 Refer to Canvas
 
-----
+------------------------------------------------------------------------
+
 # License
 
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://drfurtado.github.io/kin610/">KIN 610 Stats Course</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="http://www.drfurtado.us">Ovande Furtado Jr</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> 
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
 
+<a property="dct:title" rel="cc:attributionURL" href="https://drfurtado.github.io/kin610/">KIN 610 Stats Course</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="http://www.drfurtado.us">Ovande Furtado Jr</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/></a>
+
+</p>
