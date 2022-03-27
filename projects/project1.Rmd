@@ -3,11 +3,11 @@ title: "KIN-610 - Stats Project"
 author: "[Furtado, JR., O](http://drfurtado.us)"
 date: "`r Sys.Date()`"
 output:
+  bookdown::pdf_document2:
+    keep_tex: true
   bookdown::html_document2:
      toc: true
      toc_float: true
-  bookdown::pdf_document2:
-    keep_tex: true
   bookdown::word_document2:
     toc: true
     toc_float: true
@@ -518,14 +518,7 @@ _Hint: use `position_labels` for this analysis._
 
 ## C: Deadlines {#deadlines}
 
-| Due Date | What to do |
-|:---------|:---------------|
-|refer to Canvas | submit items 2-3 of [Preliminary Info](#prelim-info) |
-|refer to Canvas | [submit 3 related articles & annotated bibliography - Step 4](#articles) |
-|refer to Canvas | submit a 2-page introduction |
-|refer to Canvas | submit an outline of the presentation |
-|refer to Canvas | present project results |
-|refer to Canvas | submit written report |
+Refer to Canvas
 
 ----
 # License
