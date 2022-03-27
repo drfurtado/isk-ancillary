@@ -288,13 +288,13 @@ Below you will find the templates you are to use when submitting the required as
 
 ## Presentation Template {#presentation-template}
 
-I strongly encourage you to use the template I created for the presentation. Please, visit [this link](slides/final-project-presentation.html) to view and download the template.
+I strongly encourage you to use the template I created for the presentation. Please, visit [this link](https://drfurtado.github.io/isk-ancillary/slides/final-project-presentation.html) to view and download the template.
 
 ## Written report
 
     Cal State Northridge - Kinesiology
     KIN-610 - Dr. Furtado
-    Points ___/100
+    Points ___/100 
     *Refer to Canvas for the eval rubric
 
     1. Title
