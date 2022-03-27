@@ -1,6 +1,6 @@
 ---
 title: "KIN-610 - Stats Project"
-author: "Furtado, JR., O"
+author: "[Furtado, JR., O](http://drfurtado.us)"
 date: "`r Sys.Date()`"
 output:
   bookdown::html_document2:

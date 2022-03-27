@@ -1,6 +1,6 @@
 ---
 title: "KIN-610 - Stats Project"
-author: "Furtado, JR., O"
+author: "[Furtado, JR., O](http://drfurtado.us)"
 date: "`r Sys.Date()`"
 output:
   bookdown::html_document2:
@@ -113,7 +113,7 @@ Recall that the selection of the procedure will depend on several factors, inclu
 
 ----
 
-Note that you must chose a statistical model for each research hypothesis `(Ha)` formulated.
+Note that you must chose a statistical model for each research hypothesis ( $H_a$ ) formulated.
 
 ----
 
@@ -123,16 +123,199 @@ You will be asked to search and find at least *3 articles* related to your resea
 
 Once you find the articles, read, summarize and [create annotated bibliography entries for each](https://bit.ly/2YIGK2t). Note that you will be required to submit the links to the 3 articles and the annotated bibliography entries for each of the 3 articles before the [deadline](#deadlines).
 
-
 Then, proceed to write a 2-page summary that will be part of the `Introduction` section of the final project. Note that you will need to turn in the 2-page summary by the [deadline](#deadlines).
+
+-----
+
+Hint: Use the guidelines from Dr. McLeod (https://bit.ly/3C46nbw) when writing the `Introduction`.
+
+-----
 
 # Structure of the Report
 
-Once the preliminary information is gathered, and after running the appropriate statistical model to test your hypothesis(ses), you can proceed to write your research report following the APA Style. 
+Once the preliminary information is gathered, and after running the appropriate statistical model to test your hypothesis(ses), you can proceed to write your research report. Below are the required sections of the written report.
 
-> IMPORTANT: You will be required to follow the example proposed by Dr. McLeod (https://bit.ly/3fptZzD). 
+A template was created following APA Style 7th ed. Ensure to use the template when completing the written report.
+
+The template can be found here --> https://bit.ly/kin610-project-template 
 
 ```
+1. Title
+2. Abstract
+ - help found here --> https://bit.ly/3Npz1e7
+3. Introduction
+ - help found here --> https://bit.ly/3C46nbw
+4. Method 
+ - help found here --> https://bit.ly/3iAR2rQ
+   a. Participants
+   b. Design
+    - more help found here --> https://bit.ly/37TZdgE
+   c. Statistical Analysis
+    - help found here --> https://bit.ly/31skJ5I 
+   c. Materials
+    - help found here --> https://bit.ly/3iAR2rQ
+   d. Procedures
+   - help found here --> https://bit.ly/3iAR2rQ
+5. Results
+ - help found here --> https://bit.ly/3Lg9qT5
+6. References
+ - help found here --> https://bit.ly/3tHqIm7
+7. Appendix
+   7.1 Preliminary info
+   - Add here the preliminary info turned in previously
+
+```
+
+----
+
+Hint 1: Download and read this article (https://bit.ly/31skJ5I) that covers the best practices of Methods/Results/Conclusion write-ups.
+
+Hint 2: Follow the example proposed by Dr. McLeod (https://bit.ly/3fptZzD). 
+
+Hint 3: Ensure to phrase your results following the APA Style (https://bit.ly/2HirVLv)
+
+----
+
+# Templates {#templates}
+
+Below you will find the templates you are to use when submitting the required assignments related to the final project.
+
+1. Copy the content of each template
+2. Open [Google Docs](http://docs.google.com) and paste the content into the body of the blank document - Do NOT change the font type or size
+3. Proceed to complete the assignment, then click on "File>Download>PDF Document"
+4. Finally, submit the PDF file via Canvas
+
+## Preliminary info (Part 1) - Variables, Hypotheses, and Model
+
+```
+Cal State Northridge - Kinesiology
+KIN-610 - Dr. Furtado
+Points: ___/30
+
+YOUR RESEAERCH QUESTION
+Type here...
+
+
+DEPENDENT AND INDEPENDENT VARIABLES (10 points)
+
+IV: 
+Levels of the IV:
+Scale:
+
+DV:
+Scale:
+
+HYPOTHESES (10 points)
+
+State your prediction (i.e., boys will perform better than gilrs on the skill of kicking)
+Type here...
+
+Type of hypothesis (e.g., directional vs non-directional)
+
+State the null hyphothsis (Ho)
+Type here...
+
+State the alternative (aka research hypothesis) hyphothsis (Ha)
+Type here...
+
+STATISTICAL MODEL (10 points)
+
+State the statistical model (test) that you chose to test the hypothesis
+Type here...
+
+Reason 1 for choosing the test:
+Reason 2 for choosing the test:
+Reason 3 for choosing the test:
+
+```
+
+## Preliminary info (Part 2) - Articles and annotated bibliography entries
+
+```
+Cal State Northridge - Kinesiology
+KIN-610 - Dr. Furtado
+Points ___/30
+
+YOUR RESEAERCH QUESTION
+Type here...
+
+Link to 1st article:
+URL here....
+
+Annotated bibliography entry:
+Type text here...
+
+
+Link to 2nd article:
+URL here....
+
+Annotated bibliography entry:
+Type text here...
+
+
+Link to 3rd article:
+URL here....
+
+Annotated bibliography entry:
+Type text here...
+
+Note: visit the following link to learn about annotated bibliography
+entries and samples: https://bit.ly/2YIGK2t
+
+```
+
+## Two-page summary (Introduction for the final written report)
+
+```
+Cal State Northridge - Kinesiology
+KIN-610 - Dr. Furtado
+Points ___/20
+
+YOUR RESEAERCH QUESTION
+Type here...
+
+Type your summary here...
+
+Note: This assignment will become the "Introduction" section of your final 
+project's written report.
+
+```
+
+## Presentation outline
+
+```
+Cal State Northridge - Kinesiology
+KIN-610 - Dr. Furtado
+Points ___/10
+
+1. Title slide
+2. Background
+ - the 2-page introduction you complete in a previous assignment
+3. Purpose
+ - Derived from the research question
+4. Prediction and Hypotheses
+ - Derived from the research question
+ - 
+5. Method
+   a. Participants
+   b. Design
+   c. Statistical Analysis
+   d. Materials
+   e. Procedures
+6. Results
+7. Conclusion
+8. References
+
+```
+
+## Written report
+
+```
+Cal State Northridge - Kinesiology
+KIN-610 - Dr. Furtado
+Points ___/100
+*Refer to Canvas for the eval rubric
+
 1. Title
 2. Abstract
 3. Introduction
@@ -147,16 +330,8 @@ Once the preliminary information is gathered, and after running the appropriate 
 7. References
 8. Appendix
    8.1 Preliminary info
-
+   
 ```
-
-----
-
-Hint 1: Please download and read this article (https://bit.ly/31skJ5I)  that covers the best practices of Methods/Results/Conclusion write-ups.
-
-Hint 2: Ensure to phrase your results following the APA Style (https://bit.ly/2HirVLv)
-
-----
 
 # Appendices {#appendices}
 
@@ -357,168 +532,13 @@ Hint: use `position_labels` for this analysis.
 
 | Due Date | What to do |
 |:---------|:---------------|
-|10/26/21 | [submit 3 related articles & annotated bibliography](#articles) |
-|11/09/21 | submit items 2-3 of [Preliminary Info](#prelim-info) |
-|11/02/21 | submit a 2-page introduction |
-|12/07/21 | submit an outline of the presentation* |
-|12/14/21 | present project results  |
-|12/16/21 | submit written report |
+|refer to Canvas | submit items 2-3 of [Preliminary Info](#prelim-info) |
+|refer to Canvas | [submit 3 related articles & annotated bibliography - Step 4](#articles) |
+|refer to Canvas | submit a 2-page introduction |
+|refer to Canvas | submit an outline of the presentation |
+|refer to Canvas | present project results |
+|refer to Canvas | submit written report |
 
-*Presentation will be on **12/14/21**
-
-# Templates {#templates}
-
-Below you will find the templates you are to use when submitting the required assignments related to the final project.
-
-1. Copy the content of each template
-2. Open [Google Docs](http://docs.google.com) and paste the content into the body of the blank document - Do NOT change the font type or size
-3. Proceed to complete the assignment, then click on "File>Download>PDF Document"
-4. Finally, submit the PDF file via Canvas
-
-## Preliminary info (Part 1) - Variables, Hypotheses, and Model
-
-```
-Cal State Northridge - Kinesiology
-KIN-610 - Dr. Furtado
-Points: ___/30
-
-YOUR RESEAERCH QUESTION
-Type here...
-
-
-DEPENDENT AND INDEPENDENT VARIABLES (10 points)
-
-IV: 
-Levels of the IV:
-Scale:
-
-DV:
-Scale:
-
-HYPOTHESES (10 points)
-
-State your prediction (i.e., boys will perform better than gilrs on the skill of kicking)
-Type here...
-
-Type of hypothesis (e.g., directional vs non-directional)
-
-State the null hyphothsis (Ho)
-Type here...
-
-State the alternative (aka research hypothesis) hyphothsis (Ha)
-Type here...
-
-STATISTICAL MODEL (10 points)
-
-State the statistical model (test) that you chose to test the hypothesis
-Type here...
-
-Reason 1 for choosing the test:
-Reason 2 for choosing the test:
-Reason 3 for choosing the test:
-
-```
-
-## Preliminary info (Part 2) - Articles and annotated bibliography entries
-
-```
-Cal State Northridge - Kinesiology
-KIN-610 - Dr. Furtado
-Points ___/30
-
-YOUR RESEAERCH QUESTION
-Type here...
-
-Link to 1st article:
-URL here....
-
-Annotated bibliography entry:
-Type text here...
-
-
-Link to 2nd article:
-URL here....
-
-Annotated bibliography entry:
-Type text here...
-
-
-Link to 3rd article:
-URL here....
-
-Annotated bibliography entry:
-Type text here...
-
-Note: visit the following link to learn about annotated bibliography
-entries and samples: https://bit.ly/2YIGK2t
-
-```
-
-## Two-page summary (Introduction for the final written report)
-
-```
-Cal State Northridge - Kinesiology
-KIN-610 - Dr. Furtado
-Points ___/20
-
-YOUR RESEAERCH QUESTION
-Type here...
-
-Type your summary here...
-
-Note: This assignment will become the "Introduction" section of your final 
-project's written report.
-
-```
-
-## Presentation outline
-
-```
-Cal State Northridge - Kinesiology
-KIN-610 - Dr. Furtado
-Points ___/10
-
-1. Title slide
-2. Background (info from your introduction)
-3. Purpose
-4. Prediction and Hypotheses
-5. Method
-   a. Participants
-   b. Design
-   c. Statistical Analysis
-   d. Materials
-   e. Procedures
-6. Results
-7. Conclusion
-8. References
-
-```
-
-## Written report
-
-```
-Cal State Northridge - Kinesiology
-KIN-610 - Dr. Furtado
-Points ___/100
-*Refer to Canvas for the eval rubric
-
-
-1. Title
-2. Abstract
-3. Introduction
-4. Method
-   a. Participants
-   b. Design
-   c. Statistical Analysis
-   d. Materials
-   e. Procedures
-5. Results
-6. Discussion
-7. References
-8. Appendix
-   8.1 Preliminary info
-   
-```
 ----
 # License
 
