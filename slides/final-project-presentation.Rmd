@@ -1,8 +1,8 @@
 ---
-title: "Xaringan"
-subtitle: "A theme for the <br>University of Sydney"
-author: "Garth Tarr"
-date: "15 May 2018"
+title: "Final Project Presentation"
+subtitle: "Title of presentation here"
+author: "Replace with your name"
+date: "Date here"
 output:
  xaringan::moon_reader:
  css: ["sydney-fonts.css", "sydney.css"]
@@ -22,11 +22,17 @@ output:
 
 class: title-slide
 background-position: 10% 90%, 100% 50%
-background-size: 160px, 50% 100%
+background-size: 160px, 50% 100%     
 background-color: #ffffff
 
 ----
 # Instructions
-- 
+- You will be required to present the results of your final project
+- Use this template as the starting point  
+- The structure of the presentation must follow the structure of the final project 
+ - For more information [visit this link](projects/project1.html)
+- To get started, download this template as PowerPoint by [clicking here](final-project-presentation.pptx)
+-      
+
 
 

@@ -52,11 +52,14 @@ Text here
   
 ## Convert to other file formats
 
-# install.packages("remotes")
+install.packages("remotes")
+install.packages("pdftools")
 
 # load the library
 library(xaringanBuilder)
+# load the library
+library(pdftools)
 
 # convert files to desired file formats
-build_pdf("filename.Rmd") # _html, _gif, _mp4, _png
+build_pptx("slides/final-project-presentation.Rmd") # _html, _gif, _mp4, _png
 

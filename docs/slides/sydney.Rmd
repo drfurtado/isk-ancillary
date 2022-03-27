@@ -21,17 +21,12 @@ output:
 ---
 
 class: title-slide
-background-image: url("assets/USydLogo-white.svg"), url("assets/title-image1.jpg")
 background-position: 10% 90%, 100% 50%
 background-size: 160px, 50% 100%
-background-color: #0148A4
+background-color: #ffffff
 
 ----
-# Manually specify title here
+# Instructions
+- 
 
-icons::fontawesome("rocket")
-
----
-## Manually specify subtitle here
-### Manually specify author here
 

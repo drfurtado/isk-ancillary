@@ -1,13 +1,13 @@
 ---
 title: "KIN-610 - Stats Project"
 author: "[Furtado, JR., O](http://drfurtado.us)"
-date: "`r Sys.Date()`"
+date: "Last updated on `r Sys.Date()`"
 output:
-  bookdown::pdf_document2:
-    keep_tex: true
   bookdown::html_document2:
      toc: true
      toc_float: true
+  bookdown::pdf_document2:
+    keep_tex: true
   bookdown::word_document2:
     toc: true
     toc_float: true
@@ -15,6 +15,8 @@ self_contained: true
 ---
 
 Other formats: [PDF](project1.pdf)
+
+Hint: use Control+F (Windows) or Command+F (Mac) to search this page
 
 ------------------------------------------------------------------------
 
@@ -142,15 +144,11 @@ Then, proceed to write a 2-page summary that will be part of the `Introduction` 
 
 ------------------------------------------------------------------------
 
-## Presenting results
+## Presenting results {#presenting-results}
 
--   You will be required to create a presentation to present the results of your final project using Google Slides.
--   The structure of the presentation must follow the structure of the [final project](#final-report)
--   Once done, you must add me ([ovande.furtado\@csun.edu](mailto:ovande.furtado@csun.edu){.email}) as "Commenter" of the Google Slides so that I can provide feedback to the presentation.
--   Click on the link below to learn how to add me as commenter.
-    -   <https://www.screencast.com/t/brGgeGfW7qA>
 
-## Final report {#final-report}
+
+## Written report {#written-report}
 
 Once the preliminary information is gathered, and after running the appropriate statistical model to test your hypothesis(ses), you can proceed to write your research report. Below are the required sections of the written report.
 
@@ -184,11 +182,11 @@ The template can be found here --\> <https://bit.ly/kin610-project-template>
 
 ------------------------------------------------------------------------
 
-*Hint 1: Download and read this article (<https://bit.ly/31skJ5I>) that covers the best practices of Methods/Results/Conclusion write-ups.*
+*Hint 1: Download and read [this article](<https://bit.ly/31skJ5I>) that covers the best practices of Methods/Results/Conclusion write-ups.*
 
-*Hint 2: Follow the example proposed by Dr. McLeod (<https://bit.ly/3fptZzD>).*
+*Hint 2: Follow the example proposed by [Dr. McLeod](<https://bit.ly/3fptZzD>).*
 
-\_Hint 3: Ensure to phrase your results following the APA Style ([https://bit.ly/2HirVLv)\_](https://bit.ly/2HirVLv)_){.uri}
+Hint 3: Ensure to phrase your results following the [APA Style](https://bit.ly/2HirVLv)
 
 ------------------------------------------------------------------------
 
@@ -288,9 +286,9 @@ Below you will find the templates you are to use when submitting the required as
     Note: This assignment will become the "Introduction" section of your final 
     project's written report.
 
-## Google Slides Template
+## Presentation Template {#presentation-template}
 
-    Refer to the Google Slides template --> https://bit.ly/kin610-presentation-template
+I strongly encourage you to use the template I created for the presentation. Please, visit [this link](slides/final-project-presentation.html) to view and download the template.
 
 ## Written report
 
