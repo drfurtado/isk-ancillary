@@ -1,0 +1,96 @@
+---
+title             : "The title"
+shorttitle        : "Title"
+
+author: 
+  - name          : "Author Name"
+    affiliation   : "1"
+
+affiliation:
+  - id            : "1"
+    institution   : "California State University, Northridge"
+
+abstract: |
+
+  help found here --> https://bit.ly/3Npz1e7
+  
+  
+  <!-- https://tinyurl.com/ybremelq -->
+  
+keywords          : "keywords"
+
+bibliography      : "r-references.bib"
+
+floatsintext      : no
+linenumbers       : yes
+draft             : no
+mask              : no
+
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+
+classoption       : "man"
+output            : papaja::apa6_word
+---
+
+```{r setup, include = FALSE}
+library("papaja")
+r_refs("r-references.bib")
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+```
+
+Place discussion here, just below the title of the project. Notice that Methods, Results, References and Appendices begin in a new page. Visit this link to learn how to write an Introduction section: https://bit.ly/3C46nbw
+
+Please, do not change the font size or type.
+
+\newpage
+
+# Methods
+
+  Help found here --> https://bit.ly/3iAR2rQ
+
+## Participants
+
+  Help found here --> https://bit.ly/3iAR2rQ
+
+## Design
+
+  Help found here --> https://bit.ly/3iAR2rQ
+  More help found here --> https://bit.ly/37TZdgE
+
+## Statistical analysis
+
+  Help found here --> https://bit.ly/31skJ5I
+
+## Materials
+
+  Help found here --> https://bit.ly/3iAR2rQ
+
+## Procedures
+
+  Help found here --> https://bit.ly/3iAR2rQ
+  
+\newpage
+
+# Results
+
+  Help found here --> https://bit.ly/3Lg9qT5
+
+\newpage
+
+# References
+
+  Help found here --> https://bit.ly/3tHqIm7
+
+\newpage
+  
+# Appendices
+
+Add here the preliminary info turned in previously
+

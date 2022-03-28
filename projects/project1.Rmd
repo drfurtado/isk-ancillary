@@ -146,6 +146,7 @@ Then, proceed to write a 2-page summary that will be part of the `Introduction` 
 
 ## Presenting results {#presenting-results}
 
+You will be given 15 minutes to present the results of your project - 10 minutes (presenting) and 5 minutes (questions). You will be required to use PowerPoint, Google Slides, or something similar. I have created [PPTX template](#presentation-template) you can use to get started.
 
 
 ## Written report {#written-report}
@@ -199,7 +200,9 @@ Below you will find the templates you are to use when submitting the required as
 3.  Proceed to complete the assignment, then click on "File\>Download\>PDF Document"
 4.  Finally, submit the PDF file via Canvas
 
-## Preliminary info (Part 1) - Variables, Hypotheses, and Model
+## Preliminary info (Part 1)
+
+**Variables, Hypotheses, and Model**
 
     Cal State Northridge - Kinesiology
     KIN-610 - Dr. Furtado
@@ -240,7 +243,9 @@ Below you will find the templates you are to use when submitting the required as
     Reason 2 for choosing the test:
     Reason 3 for choosing the test:
 
-## Preliminary info (Part 2) - Articles and annotated bibliography entries
+## Preliminary info (Part 2)
+
+**Articles and annotated bibliography entries**
 
     Cal State Northridge - Kinesiology
     KIN-610 - Dr. Furtado
@@ -272,7 +277,9 @@ Below you will find the templates you are to use when submitting the required as
     Note: visit the following link to see examples of annotated bibliography
     entries: https://bit.ly/2YIGK2t
 
-## Two-page summary (Introduction for the final written report)
+## Two-page summary
+
+**Introduction for the final written report**
 
     Cal State Northridge - Kinesiology
     KIN-610 - Dr. Furtado
@@ -288,30 +295,11 @@ Below you will find the templates you are to use when submitting the required as
 
 ## Presentation Template {#presentation-template}
 
-I strongly encourage you to use the template I created for the presentation. Please, visit [this link](https://drfurtado.github.io/isk-ancillary/slides/final-project-presentation.html) to view and download the template.
+Students will be required to use a template created for the purpose of presenting the results of their project. Simply download the [PPTX template](pres-template.pptx) and open it using MS PowerPoint. You can also import it to Keynote, Google Slides if needed. Please, do a search online to find out how this can be accomplished. 
 
 ## Written report
 
-    Cal State Northridge - Kinesiology
-    KIN-610 - Dr. Furtado
-    Points ___/100 
-    *Refer to Canvas for the eval rubric
-
-    1. Title
-    2. Abstract
-    3. Introduction
-    4. Method
-       a. Participants
-       b. Design
-       c. Statistical Analysis
-       d. Materials
-       e. Procedures
-    5. Results
-    6. Discussion
-    7. References
-    8. Appendix
-       8.1 Preliminary info
-       
+Similar to the Presentation Template, students are required to use a template created to write the report. The template is based on APA 6th ed. and can be [downloaded here](project-template.docx).
 
 # Appendices {#appendices}
 

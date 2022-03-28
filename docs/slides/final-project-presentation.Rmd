@@ -30,9 +30,9 @@ background-color: #ffffff
 - You will be required to present the results of your final project
 - Use this template as the starting point  
 - The structure of the presentation must follow the structure of the final project 
- - For more information [visit this link](https://drfurtado.github.io/isk-ancillary/projects/project1.html)
+ - For more information [visit this link](https://drfurtado.github.io/isk-ancillary/projects/project1.html#33_Written_report)
 - To get started, download this template as PowerPoint by [clicking here](final-project-presentation.pptx)
--      
+- Once done, save your Presentation as PDF and submit it via Canvas      
 
 
 
