@@ -14,7 +14,9 @@ output:
 self_contained: true
 ---
 
-Other formats: [PDF](project1.pdf)
+# Readme
+
+Other formats: [PDF](project1.pdf) | [HTML](project1.html) 
 
 Hint: use Control+F (Windows) or Command+F (Mac) to search this page
 
