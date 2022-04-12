@@ -1,5 +1,5 @@
 ---
-title: "Statistical Methods"
+title: "Comparing two means"
 author: "[Furtado Jr, Ovande](http://drfurtado.us)"
 date: "Last updated on `r Sys.Date()`"
 output:
@@ -17,11 +17,11 @@ bibliography: references.bib
 csl: ../apa-numeric-superscript-brackets.csl
 ---
 
-# Tests - One-Sample z-test
+# One-Sample z-test
 
 ## Readme
 
-Other formats: [PDF](2means.pdf) \| [HTML](2means.html)
+Other formats: [PDF](z-test.pdf) \| [HTML](z-test.html)
 
 Hint: use Control+F (Windows) or Command+F (Mac) to search this page
 
@@ -30,14 +30,13 @@ Hint: use Control+F (Windows) or Command+F (Mac) to search this page
 ## Learning objectives {#learning-objectives}
 
 1.  Deciding when to use the z test
+2.  
 
 ## When to use it? {#when-to-use-it}
 
 -   Comparing a sample mean to population mean
--   Standard deviation of the population is known
+-   Standard deviation of the population is **known**
 -   Have a single quantitative variable of interval/ratio level
-
-Using, the
 
 ## Stating the Hypotheses {#stating-the-hypotheses}
 
@@ -59,7 +58,7 @@ $H_1$ left sided: $\mu < \mu_0$
 
 -   The data are continuous (not discrete);
 -   The data follow the normal probability distribution;
--   Population standard deviation $\sigma$ is known;
+-   Population standard deviation $\sigma$ is **known**;
 -   Sample is a simple random sample from the population[^1].
 
 [^1]: Each individual in the population has an equal probability of being selected in the sample.
@@ -127,6 +126,136 @@ Where $\bar{X}$ is the sample mean and z\* is the critical value based on the de
 **Cohen's d**
 
 The simplest situation to consider is the one corresponding to a one-sample *t*-test. In this case, this is the one sample mean $\bar{X}$ and one (hypothesized) population mean $\mu_0$ to compare it to. Not only that, there's really only one sensible way to estimate the population standard deviation. We just use our usual estimate. Therefore, we end up with the following as the only way to calculate d:
+
+## Example
+
+Is the average VO2-max score of CSUN's varsity soccer players different from $\mu_0$ = 50? Assume that the standard deviation of the varsity soccer players in the population is $\sigma$ = 3.
+
+## Doing it in jamovi
+
+Follow the instructions in [this video](https://youtu.be/dE-fQzM86Ew) tutorial to learn how to run a z-test[^3] in jamovi.
+
+[^3]: This can be accomplished by installing a module.
+
+------------------------------------------------------------------------
+
+# One-sample t-test
+
+## Learning objectives
+
+1.  Deciding when to use the t-test
+2.  
+
+## When to use it?
+
+-   Comparing a sample mean to population mean
+-   Standard deviation of the population is **unknown**
+-   Have a single quantitative variable of interval/ratio level
+
+Using, the
+
+## Stating the Hypotheses
+
+**Null hypothesis**
+
+$H_0:\mu = \mu_0$
+
+where, $\mu$ is the population mean and $\mu_0$ refer to some specified value.
+
+**Alternative hypothesis**
+
+$H_1$ two sided: $\mu \ne \mu_0$
+
+$H_1$ right sided: $\mu > \mu_0$
+
+$H_1$ left sided: $\mu < \mu_0$
+
+## Assumptions
+
+-   The data are continuous (not discrete);
+-   The data follow the normal probability distribution;
+-   Sample is a simple random sample from the population[^4].
+
+[^4]: Each individual in the population has an equal probability of being selected in the sample.
+
+## Test statistic
+
+$$
+t = \frac{\bar{X} - \mu}{s/\sqrt{N-1} }
+$$ where, $\bar{X}$ is the sample mean, $\mu_0$ is the population mean according to the null hypothesis, $\sigma$ is the population standard deviation, and N is the sample size.
+
+The denominator s/√N is the standard error of the mean.
+
+## Sampling distribution
+
+When running the t-test, you will need to use the [*t* sampling distribution](https://statkat.com/sampling-distribution/one-sample-t-test/t.php).
+
+\
+To avoid bias, use the *t* distribution with $N-1$ degrees of freedom
+
+------------------------------------------------------------------------
+
+*Suppose that the assumptions of the one sample t test hold, and that the null hypothesis that μ=μ0 is true. Then the sampling distribution of t is the t distribution with N−1 degrees of freedom. That is, most of the time we would find t values close to 0, and only sometimes we would find t values further away from 0. If we find a t value in our actual sample that is far away from 0, this is a rare event if the null hypothesis were true, and is therefore considered evidence against the null hypothesis (t value in rejection region, small p value).* @rivkadevries.
+
+------------------------------------------------------------------------
+
+## Significance
+
+To find out whether the test is significant, compare the observed test statistics (z value) with the critical value after considering the **alpha value**, the **type of test** (two-sided, right-sided, or left sided), and the **degrees of freedom**.
+
+-   compare the observed test statistic with the critical value of z (refer to Table \@ref(tab:critical-values).
+
+    -   if the observed z value is equal or greater than the critical value, reject the $H_0$ ; or
+
+-   compare the observed p-value[^5] with the alpha value ($\alpha$).
+
+    -   if the calculate p-value is less than the $\alpha$, reject the $H_0$
+
+[^5]: Value calculated by the statistical package; i.e., jamovi, SPSS
+
+**Example**
+
+You are interested in comparing a sample mean with a population value and the standard deviation is known.
+
+Assume the following:
+
+1.  z-value = 1.55; alpha = .05; two-sided test
+
+    -   Would you reject or fail to reject the $H_0$? Why?
+
+2.  observed p-value = .03; alpha = .05; two-sided test
+
+    -   Would you reject or fail to reject the $H_0$? Why?
+
+## Confidence Interval for $\mu$
+
+The confidence interval is typically reported along with the statistic (i.e. mean, standard deviation, etc) when performing a significance test. However, it also be used as a [significant test](https://statkat.com/confidence-interval-as-test/one-sample-z-test.php).
+
+Below is the equation used to calculate the CI for the z test
+
+```{=tex}
+\begin{equation} 
+\bar{X} \pm z^* \times \dfrac{\sigma}{\sqrt{N}}
+(\#eq:confidence-interval)
+\end{equation}
+```
+Where $\bar{X}$ is the sample mean and z\* is the critical value based on the desired level of confidence (e.g. = 1.96 for a 95% confidence interval).
+
+## Effect size
+
+**Cohen's d**
+
+The simplest situation to consider is the one corresponding to a one-sample *t*-test. In this case, this is the one sample mean $\bar{X}$ and one (hypothesized) population mean $\mu_0$ to compare it to. Not only that, there's really only one sensible way to estimate the population standard deviation. We just use our usual estimate. Therefore, we end up with the following as the only way to calculate d:
+
+## Example
+
+Is the average VO2-max score of CSUN's varsity soccer players different from $\mu_0$ = 50? Assume that the standard deviation of the varsity soccer players in the population is $\sigma$ = 3.
+
+## Doing it in jamovi
+
+Follow the instructions in [this video](https://youtu.be/dE-fQzM86Ew) tutorial to learn how to run a z-test[^6] in jamovi.
+
+[^6]: This can be accomplished by installing a module.
 
 # Appendices {.unnumbered}
 
