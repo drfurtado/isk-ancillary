@@ -56,9 +56,9 @@ Considering the nature of both dependent variables used in `Question 1` and assu
 
 In `question 1`, you calculated the measures of central tendency and variability, which fall under the category of descriptive statistics. Discuss the difference between **descriptive statistics** and **inferential statistics**. More complete answers will receive more points.
 
-> DS --> Allows one to see patterns in the data which is not possible when inspecting the raw data.
+> DS --\> Allows one to see patterns in the data which is not possible when inspecting the raw data.
 >
-> IS --> Allows one to make inferences from a sample to a population.
+> IS --\> Allows one to make inferences from a sample to a population.
 
 ------------------------------------------------------------------------
 

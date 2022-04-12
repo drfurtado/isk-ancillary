@@ -13,3 +13,5 @@ RnwWeave: Sweave
 LaTeX: XeLaTeX
 
 BuildType: Website
+
+ZoteroLibraries: "Intro to Stats In Kinesiology"

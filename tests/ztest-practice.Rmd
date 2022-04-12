@@ -1,0 +1,25 @@
+---
+title: 'Title'
+author: 'John Doe'
+date: '`r format(Sys.time(), "%d %B, %Y")`'
+output:
+  unilur::examen_pdf:
+    id: yes
+  unilur::examen_pdf_solution:
+    id: yes
+---
+
+##### Multiple choice question
+
+```{block, mcq = TRUE}
+- Item 1
+- Item 2
+- Item 3
+```
+
+##### Question
+
+```{block, solution = TRUE, answer.lines = 0.5}
+This is the answer which is replaced by dotted lines in the question file!
+```
+
