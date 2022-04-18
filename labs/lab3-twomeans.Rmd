@@ -1,0 +1,159 @@
+---
+title: "Lab 3 - Comparing two means"
+author: "Furtado Jr., O."
+date: "10/5/2021"
+output:
+  html_document:
+    df_print: paged
+  word_document: default
+---
+
+### Learning objectives
+
+1.  c
+
+### Data set {#data-set}
+
+We will use a modified version of the NFL Combine data set. You will need to download the `csv` data file and open it with `jamovi`. Note that this sample data is regarded as a `non-probability` sample[^1].
+
+[^1]: Visit [this site](https://www.scribbr.com/methodology/sampling-methods/) to learn about different type of samples.
+
+[Click here](./datasets/data-labs.csv) to download the data set for this lab.
+
+Note that you will be required to create filters[^2] when completing some of the required analysis for this assignment.
+
+[^2]: Creating filters in jamovi: <https://youtu.be/pij0KlFhITw>
+
+| Position ID | Name              |
+|:------------|:------------------|
+| 1           | Cornerback        |
+| 2           | Defensive lineman |
+| 3           | Safety            |
+| 4           | Linebacker        |
+| 5           | Offensive lineman |
+| 6           | Running back      |
+| 7           | Wide receiver     |
+
+: Position key
+
+### Research question 1
+
+Suppose a researcher working for the NFL Combine Data Collection Team wanted to find whether players of two different positions would differ on their bench press scores (bpress). The field positions considered for this study were: 1= Cornerback; 2= Defensive Lineman. The scores were recorded as the number of repetitions \@ 225 lbs. **Run an analysis to learn if differences exist between these two positions on the bench press variable.**
+
+#### Step 1: Descriptive stats
+
+**Filter**: create a filter for `position` so that only `Wide Receivers` and `Safety` are included in this analysis.
+
+Calculate the `mean`, `median`, `standard deviation`, `n`, `minimum` and `maximum`. Ensure to provide the `Descriptives Table`.
+
+```{r echo=FALSE, comment = NA}
+library(jmv)
+library(jmvconnect)
+data <- jmvconnect::read(1) 
+jmv::descriptives(
+    formula = bpress ~ position,
+    data = data,
+    hist = TRUE,
+    dens = TRUE,
+    qq = TRUE,
+    missing = FALSE,
+    median = FALSE,
+    min = FALSE,
+    max = FALSE)
+```
+
+#### Step 2: Variables & hypotheses
+
+Re-read the research question 1. Then, provide the following:
+
+*Identify the DV and IV and state whether it is quantitative (continuous or discrete) or categorical (dichotomous, nominal, or ordinal)*[^3]
+
+[^3]: [*https://www.scribbr.com/methodology/types-of-variables/*](https://www.scribbr.com/methodology/types-of-variables/){.uri}
+
+**Example**:
+
+DV: `height` (quantitative and continuous)
+
+IV: `gender` (categorical and nominal)
+
+*State the Null (*$H_0$*) and the alternate hypotheses (*$H_1$*)*
+
+**Example:**
+
+$H_0$: a two-week fitness program **will have no effect** on VO2-max scores in varsity volleyball players
+
+$H_1$: a two-week fitness program **will have an effect** on VO2-max scores in varsity volleyball players[^4]
+
+[^4]: This is non-directional hypothesis (two-tailed test).
+
+#### Step 3: Test and assumptions
+
+Choose the statistical model to test your Null hypothesis ($H_0$) and provide at least 3 reasons why you chose the test. Use the StatsKat[^5] site to help you with the decision.
+
+[^5]: [Stakat](https://statkat.com/)
+
+**Example:**
+
+Two-Way ANOVA
+
+1.  comparing more than two means
+2.  data are continuous
+3.  groups are independent
+4.  there is a single DV
+5.  there is a single IV with 2 or more groups
+
+Assumptions
+
+1.  normality: scores on the DV are normally distributed
+2.  homogeneity of variance: the standard deviation of the scores on the dependent variable are the same
+3.  group independence: observations are independent from one another
+
+#### Step 3:
+
+#### Question 4
+
+**Filter**: create a filter to `position` so that only `Quarterbacks` (QB) are included in this analysis.
+
+Using the variable `BroadJumpin`, calculate the `range`, `standard deviation` and the `IQR` for Quarterbacks (QB) ONLY.
+
+#### Question 5
+
+**Filter**: turn off all filters before proceeding!
+
+In `Question 1`, you were asked to calculate the standard deviation of height (inches) and weight (lbs). Suppose you want to compare the `standard deviations` of `height` and `weight`. How the two standard deviations compare?
+
+#### Question 6
+
+When calculating the sample variance and standard deviation, `jamovi` uses `N - 1` in the denominator (see below). In your own words, explain why `N - 1` is used instead of `N`.
+
+Standard Deviation equation for the sample:
+
+$\sigma = \sqrt{\frac{\sum (x - \mu)^2}{N-1}}$
+
+Variance equation for the sample:
+
+$s^2 = \frac{\sum (x - \bar{x})^2}{N - 1}$
+
+#### Question 7
+
+The `variance` and the `standard deviation` are the two most common measures of variability reported in research manuscripts. Let's say the manuscript you submitted for publication was returned by the editor. The editor-in-chief has asked you to report either the `variance` OR the `standard deviation`. Which one would you pick and why?
+
+## Question 8
+
+**Filter**: create a filter to `Status` so that **only** `Year 2` is included in this analysis.
+
+The variable "Status" refers to players who were either tested during the first or second year. Run an analysis to calculate the `mean`, and `standard deviation` for the variable `Shuttle`.
+
+## Question 9
+
+Create a `histogram` for the variable `Shuttle` and add the density line to it.
+
+Provide the histogram create by `jamovi` below and state whether the distribution of scores for `Shuttle` appears to be deviating or approximating normality. In this particular case, disregard other sources of normality (skewness, kurtosis, QQ-plots, Shapiro-Wilk test, etc.).
+
+## Question 10
+
+Create a `boxplot` for `Shuttle`. Did the creation of the boxplot reveal any outliers? Explain.
+
+# License
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" alt="Creative Commons License" style="border-width:0"/></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.

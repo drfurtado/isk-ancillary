@@ -1,0 +1,179 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Lab 3 - Comparing two means},
+  pdfauthor={Furtado Jr., O.},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{Lab 3 - Comparing two means}
+\author{Furtado Jr., O.}
+\date{10/5/2021}
+
+\begin{document}
+\maketitle
+
+\textbf{Other Formats}: \href{ds1.pdf}{PDF} \textbar{}
+\href{ds1.docx}{Word}
+
+\hypertarget{learning-objectives}{%
+\subsection{Learning objectives}\label{learning-objectives}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  calculate measures of central tendency and variability in
+  \texttt{jamovi}
+\item
+  differentiate between descriptive and inferential statistics
+\item
+  create and interpret histograms and boxplots
+\item
+  understand characteristics of normal and non-normal distributions
+\end{enumerate}
+
+\hypertarget{data-set}{%
+\subsection{Data set}\label{data-set}}
+
+We will use a modified version of the NFL Combine data set. You will
+need to download the \texttt{csv} data file and open it with
+\texttt{jamovi}.
+
+\href{./datasets/data-labs.csv}{Click here} to download the data set for
+this lab.
+
+Note that you will be required to create filters\footnote{Creating
+  filters in jamovi: \url{https://youtu.be/pij0KlFhITw}} when completing
+some of the required analysis for this assignment.
+
+\begin{longtable}[]{@{}ll@{}}
+\caption{Position key}\tabularnewline
+\toprule
+Position ID & Name \\
+\midrule
+\endfirsthead
+\toprule
+Position ID & Name \\
+\midrule
+\endhead
+1 & Cornerback \\
+2 & Defensive lineman \\
+3 & Safety \\
+4 & Linebacker \\
+5 & Offensive lineman \\
+6 & Running back \\
+7 & Wide receiver \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{problem-1}{%
+\subsection{Problem 1}\label{problem-1}}
+
+Suppose a researcher working for the NFL Combine Data Collection Team
+wanted to find whether players of two different positions would differ
+on their bench press scores (bpress). The field positions considered for
+this study were: 1= Cornerback; 2= Defensive Lineman. The scores were
+recorded as the number of repetitions @ 225 lbs. \textbf{Run an analysis
+to learn if differences exist between these two positions on the bench
+press variable.}
+
+\hypertarget{question-1}{%
+\subsubsection{Question 1}\label{question-1}}
+
+\textbf{Filter}: create a filter for \texttt{position} so that only
+\texttt{Wide\ Receivers} and \texttt{Safety} are included in this
+analysis.
+
+Calculate the \texttt{mean}, \texttt{standard\ deviation}, \texttt{n},
+\texttt{skewness}, \texttt{kurtosis}, and \texttt{shapiro-wilk\ test}.
+Ensure to provide the \texttt{Descriptives\ Table} as part of this
+question.
+
+\begin{verbatim}
+ DESCRIPTIVES
+
+ Descriptives                                            
+ ─────────────────────────────────────────────────────── 
+                         position             bpress     
+ ─────────────────────────────────────────────────────── 
+   N                     Cornerback                 15   
+                         Defensive lineman          32   
+   Mean                  Cornerback           16.86667   
+                         Defensive lineman    28.15625   
+   Standard deviation    Cornerback           3.044120   
+                         Defensive lineman    5.941160   
+ ─────────────────────────────────────────────────────── 
+\end{verbatim}
+
+\includegraphics{test_files/figure-latex/unnamed-chunk-1-1.pdf}
+\includegraphics{test_files/figure-latex/unnamed-chunk-1-2.pdf}
+
+\end{document}
