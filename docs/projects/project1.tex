@@ -33,14 +33,6 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\hypersetup{
-  pdftitle={KIN-610 - Stats Project},
-  pdfauthor={Furtado, JR., O},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
-\urlstyle{same} % disable monospaced font for URLs
 \usepackage[margin=1in]{geometry}
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
@@ -72,10 +64,18 @@
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={KIN-610 - Stats Project},
+  pdfauthor={Furtado, JR., O},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
 
 \title{KIN-610 - Stats Project}
 \author{\href{http://drfurtado.us}{Furtado, JR., O}}
-\date{Last updated on 2022-03-29}
+\date{Last updated on 2022-05-05}
 
 \begin{document}
 \maketitle
@@ -277,7 +277,21 @@ Then, proceed to write a 2-page summary that will be part of the \texttt{Introdu
 \hypertarget{presenting-results}{%
 \subsection{Presenting results}\label{presenting-results}}
 
-You will be given 15 minutes to present the results of your project - 10 minutes (presenting) and 5 minutes (questions). You will be required to use PowerPoint, Google Slides, or something similar. I have created \protect\hyperlink{presentation-template}{PPTX template} you can use to get started.
+You will be given 15 minutes to present the results of your project - 10 minutes (presenting) and 5 minutes (Q\&A).
+
+You will be required to use PowerPoint, Google Slides, or something similar. I have created a \href{pres-template.html}{template} you can use to get started. You can also import it to Keynote, Google Slides if needed. Please, do a search online to learn how this can be accomplished.
+
+You will be required to turn-in a draft of the slides the week before your presentation. Use the template above to create the presentation draft. \textbf{On each of the slides of the template, indicate to be added}. For instance,
+
+\begin{verbatim}
+- SLide 1: The title and my name will be added
+- Slide 2: ....
+- ...
+- Slide 6: Statistical Analysis
+  - The nature of the test
+  - The variables of interest
+  - Indi
+\end{verbatim}
 
 \hypertarget{written-report}{%
 \subsection{Written report}\label{written-report}}
@@ -444,11 +458,6 @@ Note: This assignment will become the "Introduction" section of your final
 project's written report.
 \end{verbatim}
 
-\hypertarget{presentation-template}{%
-\subsection{Presentation Template}\label{presentation-template}}
-
-Students will be required to use a template created for the purpose of presenting the results of their project. Simply download the \href{pres-template.pptx}{PPTX template} and open it using MS PowerPoint. You can also import it to Keynote, Google Slides if needed. Please, do a search online to find out how this can be accomplished.
-
 \hypertarget{written-report-1}{%
 \subsection{Written report}\label{written-report-1}}
 
@@ -463,14 +472,14 @@ Similar to the Presentation Template, students are required to use a template cr
 When evaluating the size of a bivariate correlation, please use Cohen (1988)
 
 \begin{longtable}[]{@{}ll@{}}
-\toprule
+\toprule()
 Coefficient Value & Strength of Association \\
-\midrule
+\midrule()
 \endhead
 0.1 \textless{} \emph{r} \textless{} .3 & small correlation \\
 0.3 \textless{} \emph{r} \textless{} .5 & medium/moderate correlation \\
 \emph{r} \textgreater{} .5 & Large/strong correlation \\
-\bottomrule
+\bottomrule()
 \end{longtable}
 
 \hypertarget{appendix-b}{%
