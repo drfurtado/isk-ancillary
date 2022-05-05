@@ -1,5 +1,6 @@
 ---
 title: "Introduction to Statistics in Kinesiology"
+output: pdf_document
 ---
 
 This web resource is an ancillary to the the [Introduction to Statistics in Kinesiology textbook](https://drfurtado.github.io/isk/), which is currently under development.  

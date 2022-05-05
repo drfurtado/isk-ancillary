@@ -1,0 +1,303 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Multiple Regression},
+  pdfauthor={Furtado Jr, Ovande},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Multiple Regression}
+\author{\href{http://drfurtado.us}{Furtado Jr, Ovande}}
+\date{Last updated on 2022-05-02}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{multiple-regression}{%
+\section{Multiple regression}\label{multiple-regression}}
+
+\hypertarget{when-to-use-it}{%
+\subsection{When to use it?}\label{when-to-use-it}}
+
+Multiple regression, and multiple correlation, are tool used to examine the combined relations between multiple predictors and a dependent variable.
+
+When correlating one quantitative dependent variable (\(Yi\)) with multiple (more than one) quantitative variable (\(Xi_1, Xi_2,... Xi_k\) ). it is specially useful when several independent variables work better at predicting a dependent variable compared to a single independent variable. For example, one can estimate percent body fat using the skinfold measurement technique. Although there are several techniques to estimate body site, researchers have used multiple regression techniques to indentify the best predictors. See excerpt below:
+
+\begin{quote}
+The practical equation including age, race, height, weight and waist circumference had high predictive ability for lean body mass (men: R 2=0·91, standard error of estimate (SEE)=2·6 kg; women: R 2=0·85, SEE=2·4 kg) and fat mass (men: R 2=0·90, SEE=2·6 kg; women: R 2=0·93,
+SEE=2·4 kg). Waist circumference was a strong predictor in men only. Addition of other circumference and skinfold measures slightly improved the prediction model.\textsuperscript{{[}1{]}}
+\end{quote}
+
+\hypertarget{variables}{%
+\subsection{Variables}\label{variables}}
+
+\hypertarget{independent-variables}{%
+\subsubsection{Independent variables}\label{independent-variables}}
+
+One or more quantitative (interval or ratio) variables.
+
+\hypertarget{dependent-variable}{%
+\subsubsection{Dependent variable}\label{dependent-variable}}
+
+One quantitative of interval or ratio level variable.
+
+\hypertarget{stating-the-hypotheses}{%
+\subsection{Stating the Hypotheses}\label{stating-the-hypotheses}}
+
+\textbf{Null hypothesis}
+
+\(F\) test for the complete regression model
+
+\(H_0:\) the variance explained by all the independent variables together (the complete model) is 0 in the population
+
+\(H_0:\beta_1 = \beta_2 = \ldots = \beta_K = 0\)
+
+\(t\) test for the individual regression coefficient \(\beta_k\)
+
+\(H_0: \beta_k = 0\)
+
+\textbf{Alternative hypothesis}
+
+\(F\) test for the complete regression model
+
+\(H_a:\) not all population regression coefficients are 0
+
+\(H_a:\beta_1 \neq \beta_2 \neq \ldots \neq \beta_K \neq 0\)
+
+\(t\) test for the individual regression coefficient \(\beta_k\)
+
+\(H_a: \beta_k \neq 0\) (two sided)
+
+\(H_a: \beta_k > 0\) (right sided)
+
+\(H_0: \beta_k < 0\) (left sided)
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{assumptions}{%
+\subsection{Assumptions}\label{assumptions}}
+
+Adapted from Navarro and Foxcroft (2019)
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Normality. Like many of the models in statistics, basic simple or multiple linear regression relies on an assumption of normality. Specifically, it assumes that the residuals are normally distributed. It's actually okay if the predictors X and the outcome Y are non-normal, so long as the residuals ε are normal. See section Checking the normality of the residuals.
+\item
+  Linearity. A pretty fundamental assumption of the linear regression model is that the relationship between X and Y actually is linear! Regardless of whether it's a simple regression or a multiple regression, we assume that the relationships involved are linear.
+\item
+  Homogeneity of variance. Strictly speaking, the regression model assumes that each residual εi is generated from a normal distribution with mean 0, and (more importantly for the current purposes) with a standard deviation σ that is the same for every single residual. In practice, it's impossible to test the assumption that every residual is identically distributed. Instead, what we care about is that the standard deviation of the residual is the same for all values of Ŷ, and (if we're being especially paranoid) all values of every predictor X in the model.
+\item
+  Uncorrelated predictors. The idea here is that, in a multiple regression model, you don't want your predictors to be too strongly correlated with each other. This isn't ``technically'' an assumption of the regression model, but in practice it's required. Predictors that are too strongly correlated with each other (referred to as ``collinearity'') can cause problems when evaluating the model. See section Checking for collinearity.
+\item
+  Residuals are independent of each other. This is really just a ``catch all'' assumption, to the effect that ``there's nothing else funny going on in the residuals''. If there is something weird (e.g., the residuals all depend heavily on some other unmeasured variable) going on, it might screw things up.
+\item
+  No ``bad'' outliers. Again, not actually a technical assumption of the model (or rather, it's sort of implied by all the others), but there is an implicit assumption that your regression model isn't being too strongly influenced by one or two anomalous data points because this raises questions about the adequacy of the model and the trustworthiness of the data in some cases. See section Three kinds of anomalous data.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{test-statistic}{%
+\subsection{Test statistic}\label{test-statistic}}
+
+\(F\) test for the complete regression model. Refer to the One-Way ANOVA test.
+
+\(t\) test for individual \(\beta_k\)
+
+\[
+t = \dfrac{b_k}{SE_{b_k}}
+\]
+
+For one independent variable:
+
+\[
+SE_{b_1} = \dfrac{\sqrt{\sum (y_j - \hat{y}_j)^2 / (N - 2)}}{\sqrt{\sum (x_j - \bar{x})^2}} = \dfrac{s}{\sqrt{\sum (x_j - \bar{x})^2}}
+\]
+
+with \(s\) the sample standard deviation of the residuals, \(x_j\) the score of subject \(j\) on the independent variable \(x\) , and \(\bar{x}\) the mean of \(x\).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{sampling-distributions}{%
+\subsection{Sampling distributions}\label{sampling-distributions}}
+
+Refer to the sampling distributions of the \(F\) test (One-Way ANOVA) and the \(t\) test (Independent-Samples \(t\) test).
+
+\hypertarget{significance}{%
+\subsection{Significance}\label{significance}}
+
+Refer to the steps used for the \(F\) test (One-Way ANOVA) and the \(t\) test (Independent-Samples \(t\) test).
+
+\hypertarget{confidence-intervals}{%
+\subsection{Confidence Intervals}\label{confidence-intervals}}
+
+Refer to the StatKat website\footnote{Confidence interval for linear regression - \url{https://bit.ly/3rVJOUp}} for a detailed explanation. I will show below how to calculate it using \texttt{jamovi}.
+
+\hypertarget{effect-size}{%
+\subsection{Effect size}\label{effect-size}}
+
+For linear regression we calculate \(R^2\) as the effect size. This is the amount of variance in the dependent variable \(y\) that is explained by the sample regression equation (the independent variable(s))
+
+\hypertarget{example}{%
+\subsection{Example}\label{example}}
+
+Regression \textgreater{} Linear Regression
+
+Put your dependent variable in the box below Dependent Variable and your independent variables of interval/ratio level in the box below Covariates.
+
+We will the \texttt{parenthood} data set once again.
+
+Before, let's understand the concept of the slop and the intercept. Below is the formula for a straight line:
+
+\[
+y = a + bx
+\]
+
+Where, \(a\) is the intercept, \(b\) is the slop, and \(x\) is a given value. The intercept is where the line touches the \(y\) axis, which in the graph in the left is between 80 and 90. This is the expected value of \(Yi\) when \(Xi\) is equal to 0. The slop is the tilt of the best fit line.
+
+To run the linear regression, click on \texttt{Regression} - \texttt{Linear\ Regression} analysis in jamovi, using the \href{https://lsj.readthedocs.io/en/latest/Ch12/_static/data/parenthood.omv}{\texttt{parenthood}} data set.
+
+Then specify \texttt{dani.grump} as the \texttt{Dependent\ Variable} and \texttt{dani.sleep} as the variable entered in the \texttt{Covariates} box. This gives the results shown above.
+
+intercept \(a\) = 125.96 (grumpiness index)
+
+slope \(b\) = - 8.94 (hours)
+
+With these values, we can create the linear regression equation:
+
+\[
+\hat{Y} = 125.96 + (-8.94)X
+\]
+
+\hypertarget{interpretation}{%
+\subsubsection{Interpretation:}\label{interpretation}}
+
+The slope: if one increases \(Xi\) by 1 unit, then one is decreasing \(Yi\) by 8.94. In other words, for each additional hour of sleep, Dani reduce her grumpiness level (points), which in turn will improve her mood.
+
+The intercept: recall that the \(a\) is the predicted value of \(Yi\) when \(Xi\) is equal to 0. Thus, if Dani gets zero hours of sleep (\(Xi = 0\)), then her grumpiness will reach about (\(Yi = 125.96\)), which is lot since the scale goes up to 100.
+
+\hypertarget{assumption-checks}{%
+\subsubsection{Assumption Checks}\label{assumption-checks}}
+
+Normality: QQ-plots + Shapiro-Wilk test
+
+Outlier
+
+Interpretation: Values greater than 1 is often considered large and indicates the presence of outlier.
+
+\hypertarget{web-resources}{%
+\section{Web Resources}\label{web-resources}}
+
+I have created a list of additional resources on this topic that can be accessed by scanning the following QR code:
+
+\includegraphics[width=1.04167in,height=\textheight]{images/qr-m_regression.png}
+
+\hypertarget{references}{%
+\section*{References}\label{references}}
+\addcontentsline{toc}{section}{References}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{1}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-lee2017}{}}%
+1. Lee, D. H., Keum, N., Hu, F. B., Orav, E. J., Rimm, E. B., Sun, Q., Willett, W. C., \& Giovannucci, E. L. (2017). Development and validation of anthropometric prediction equations for lean body mass, fat mass and percent fat in adults using the National Health and Nutrition Examination Survey (NHANES) 1999{\textendash}2006. \emph{British Journal of Nutrition}, \emph{118}(10), 858--866. \url{https://doi.org/10.1017/s0007114517002665}
+
+\end{CSLReferences}
+
+\end{document}

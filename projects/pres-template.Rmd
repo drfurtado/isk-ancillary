@@ -16,10 +16,8 @@ knitr::opts_chunk$set(echo = FALSE)
 - The structure of the presentation must follow the structure of the final project
   - For more information [visit this link](https://drfurtado.github.io/isk-ancillary/projects/project1.html#33_Written_report)
 - I've created this presentation template to help you getting started
-- To get started, download this template as PowerPoint by [clicking here](pres-template.pptx)
+- The template can be downloaded as PPT by [clicking here](pres-template.pptx)
 - Once done, save your Presentation as PDF and submit it via Canvas.
-- 
-
 
 ## Background
 - Main points from the 3 articles you found on your topic

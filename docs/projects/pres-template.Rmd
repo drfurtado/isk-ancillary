@@ -2,7 +2,9 @@
 title: "Presentation Title Here"
 author: "Your Name Here"
 date: "`r Sys.Date()`"
-output: powerpoint_presentation
+output:
+  ioslides_presentation: default
+  powerpoint_presentation: default
 ---
 
 ```{r setup, include=FALSE}
@@ -11,11 +13,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Instructions
 - You will be required to present the results of your final project
-- Use this template as the starting point
 - The structure of the presentation must follow the structure of the final project
   - For more information [visit this link](https://drfurtado.github.io/isk-ancillary/projects/project1.html#33_Written_report)
-- To get started, download this template as PowerPoint by [clicking here](final-project-presentation.pptx)
-- Once done, save your Presentation as PDF and submit it via Canvas
+- I've created this presentation template to help you getting started
+- The template can be downloaded as PPT by [clicking here](pres-template.pptx)
+- Once done, save your Presentation as PDF and submit it via Canvas.
 
 ## Background
 - Main points from the 3 articles you found on your topic

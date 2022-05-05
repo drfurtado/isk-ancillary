@@ -1,0 +1,68 @@
+---
+title: "Lab 3 - Comparing two means"
+author: "Furtado Jr., O."
+date: "10/5/2021"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+  word_document: default
+---
+
+**Other Formats**: [PDF](ds1.pdf) | [Word](ds1.docx)
+
+## Learning objectives
+
+1.  calculate measures of central tendency and variability in `jamovi`
+2.  differentiate between descriptive and inferential statistics
+3.  create and interpret histograms and boxplots
+4.  understand characteristics of normal and non-normal distributions
+
+## Data set
+
+We will use a modified version of the NFL Combine data set. You will need to download the `csv` data file and open it with `jamovi`.
+
+[Click here](./datasets/data-labs.csv) to download the data set for this lab.
+
+Note that you will be required to create filters[^1] when completing some of the required analysis for this assignment.
+
+[^1]: Creating filters in jamovi: <https://youtu.be/pij0KlFhITw>
+
+| Position ID | Name              |
+|:------------|:------------------|
+| 1           | Cornerback        |
+| 2           | Defensive lineman |
+| 3           | Safety            |
+| 4           | Linebacker        |
+| 5           | Offensive lineman |
+| 6           | Running back      |
+| 7           | Wide receiver     |
+
+: Position key
+
+## Problem 1
+
+Suppose a researcher working for the NFL Combine Data Collection Team wanted to find whether players of two different positions would differ on their bench press scores (bpress). The field positions considered for this study were: 1= Cornerback; 2= Defensive Lineman. The scores were recorded as the number of repetitions \@ 225 lbs. **Run an analysis to learn if differences exist between these two positions on the bench press variable.**
+
+### Question 1
+
+**Filter**: create a filter for `position` so that only `Wide Receivers` and `Safety` are included in this analysis.
+
+Calculate the `mean`, `standard deviation`, `n`, `skewness`, `kurtosis`, and `shapiro-wilk test`. Ensure to provide the `Descriptives Table` as part of this question.
+
+
+```{r echo=FALSE, comment = NA}
+library(jmv)
+library(jmvconnect)
+data <- jmvconnect::read(1) 
+jmv::descriptives(
+    formula = bpress ~ position,
+    data = data,
+    hist = TRUE,
+    dens = TRUE,
+    qq = TRUE,
+    missing = FALSE,
+    median = FALSE,
+    min = FALSE,
+    max = FALSE)
+```

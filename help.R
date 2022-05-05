@@ -63,3 +63,19 @@ library(pdftools)
 # convert files to desired file formats
 build_pptx("slides/final-project-presentation.Rmd") # _html, _gif, _mp4, _png
 
+
+{r eval=FALSE, comment=, include=FALSE}
+library(jmv)
+library(jmvconnect)
+data <- jmvconnect::read(1) 
+jmv::descriptives(
+  formula = bpress ~ position,
+  data = data,
+  hist = TRUE,
+  dens = TRUE,
+  qq = TRUE,
+  missing = FALSE,
+  median = FALSE,
+  min = FALSE,
+  max = FALSE)
+

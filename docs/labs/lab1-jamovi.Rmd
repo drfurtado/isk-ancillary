@@ -1,0 +1,20 @@
+---
+title: "jamovi 1"
+author: "Furtado Jr., O."
+date: "10/5/2021"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+  word_document: default
+---
+
+*Learning objectives*
+
+1. Differentiate between independent and dependent variables
+2. Assign the correct data level to variables (nominal, ordinal, and continuous)
+3. Create and compute new variables in `jamovi`
+4. Select and deselect cases in `jamovi`
+5. Install modules in `jamovi`
+
+`Instructions`: https://osf.io/7562g/

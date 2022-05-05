@@ -1,0 +1,716 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Correlation \& Bivariate Regression},
+  pdfauthor={Furtado Jr, Ovande},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Correlation \& Bivariate Regression}
+\author{\href{http://drfurtado.us}{Furtado Jr, Ovande}}
+\date{Last updated on 2022-05-03}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{correlation}{%
+\section{Correlation}\label{correlation}}
+
+The Pearson correlation is a measure for the strength and direction of the linear relationship between two variables of at least interval measurement level.\textsuperscript{{[}1{]}}. Although there are other types\footnote{Other types of correlation coefficients - \url{https://bit.ly/3kfNGew}} of correlation coefficients, I will focus on the Pearson Product Moment correlation coefficient in this lesson.
+
+\hypertarget{learning-objectives}{%
+\subsection{Learning objectives}\label{learning-objectives}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  tbd
+\end{enumerate}
+
+\hypertarget{when-to-use-it}{%
+\subsection{When to use it?}\label{when-to-use-it}}
+
+When correlating one quantitative variable (\(Yi\)) with another quantitative variable (\(Xi\)).
+
+\hypertarget{stating-the-hypotheses}{%
+\subsection{Stating the Hypotheses}\label{stating-the-hypotheses}}
+
+\textbf{Null hypothesis}
+
+\(H_0:\) There is no correlation between variable \(x\) and variable \(y\) in the population
+
+\(H_0:\rho = 0\)
+
+where, \(\rho\) is the Pearson correlation in the population.
+
+\textbf{Alternative hypothesis}
+
+\(H_a:\) There is a correlation between variable \(x\) and variable \(y\) in the population
+
+\(H_a: \rho \neq 0\) (two sided)
+
+\(H_a: \rho > 0\) (right sided)
+
+\(H_a: \rho < 0\) left sided)
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{assumptions}{%
+\subsection{Assumptions}\label{assumptions}}
+
+\begin{itemize}
+\item
+  Both variables are on an interval or ratio level of measurement (quantitative)
+\item
+  Data from both variables follow normal distributions
+\item
+  Data have no outliers
+\item
+  Data is from a random or representative sample
+\item
+  You expect a linear relationship between the two variables
+\end{itemize}
+
+Keep in mind that the Pearson coefficient measures the strength of the linear relationship between variable \(x\) and \(y\). The assumptions above are only important for the significance test and confidence interval.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{test-statistic}{%
+\subsection{Test statistic}\label{test-statistic}}
+
+\[
+t = \dfrac{r \times \sqrt{N - 2}}{\sqrt{1 - r^2}}
+\] where, \(r\) is the sample correlation and \(n\) is the sample size.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{sampling-distribution}{%
+\subsection{Sampling distribution}\label{sampling-distribution}}
+
+To test the significance of the correlation (association) between the two variables, we use the \(t\) distribution.\footnote{The \(t\) distribution - \url{https://bit.ly/3vNh3dG}}
+
+Note on the equation above that \(n\) is subtracted by 2 (two variables). This is also known of the degrees of freedom.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{significance}{%
+\subsection{Significance}\label{significance}}
+
+To find out whether the test is significant, compare the observed test statistics (\(t\) value) with the critical value after considering the \textbf{alpha value}, the \textbf{type of test} (two-sided, right-sided, or left sided), and the \textbf{degrees of freedom}.
+
+\begin{itemize}
+\item
+  compare the observed test statistic with the critical value
+
+  \begin{itemize}
+  \tightlist
+  \item
+    if the observed \(t\) value is equal or greater than the critical value, reject the \(H_0\) ; or
+  \end{itemize}
+\item
+  compare the observed \(p\) value\footnote{Value calculated by the statistical package; i.e., jamovi, SPSS or by using an online calculator such as \href{https://statkat.com/online-calculators/critical-f-value-given-alpha.php}{StatKat}.} with the alpha value ( \(\alpha\) ).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    if the calculate \(p\) value is less than the \(\alpha\), reject the \(H_0\)
+  \end{itemize}
+\end{itemize}
+
+\textbf{Critical Value for} \(t\) \textbf{Statistic}
+
+You can find the \(t\) critical value for a sample data using a \(t\) distribution table\footnote{\(t\) distribution table - \url{https://bit.ly/3viQqyg}} or using a online calculator\footnote{\(t\) critical value online calculator - \url{https://bit.ly/3M3DLVr}}. In both cases, you will need the alpha level, the degrees of freedom ( \(n - 2\); see section \ref{sampling-distribution}), and the type of test (two sided, right sided, or left sided).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{confidence-interval-for-mu}{%
+\subsection{\texorpdfstring{Confidence Interval for \(\mu\)}{Confidence Interval for \textbackslash mu}}\label{confidence-interval-for-mu}}
+
+The confidence interval is typically reported along with the statistic (i.e.~mean, standard deviation, etc) when performing a significance test. However, it also be used as a \href{https://statkat.com/confidence-interval-as-test/one-sample-z-test.php}{significant test}.
+
+The equation for the confidence interval is a bit complicated and purposefully omitted here. I will show you in section ??? how to calculate it using \texttt{jamovi}. The StaKat website\footnote{Confidence interval for correlation coefficient - \url{https://bit.ly/38n6sOu}} explains the equations in details.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{interpreting-a-correlation-coefficient---effect-size}{%
+\subsection{Interpreting a correlation coefficient - effect size}\label{interpreting-a-correlation-coefficient---effect-size}}
+
+\begin{longtable}[]{@{}lll@{}}
+\caption{\label{tab:correlation-table} A rough guide to interpreting correlations. Note that I say a \emph{rough} guide. There aren't hard and fast rules for what counts as strong or weak relationships. It depends on the context.}\tabularnewline
+\toprule()
+Correlation coefficient & Correlation strength & Correlation type \\
+\midrule()
+\endfirsthead
+\toprule()
+Correlation coefficient & Correlation strength & Correlation type \\
+\midrule()
+\endhead
+-.7 to -1 & Very strong & Negative \\
+-.5 to -.7 & Strong & Negative \\
+-.3 to -.5 & Moderate & Negative \\
+0 to -.3 & Weak & Negative \\
+0 & None & Zero \\
+0 to .3 & Weak & Positive \\
+.3 to .5 & Moderate & Positive \\
+.5 to .7 & Strong & Positive \\
+.7 to 1 & Very strong & Positive \\
+\bottomrule()
+\end{longtable}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{example}{%
+\subsection{Example}\label{example}}
+
+We will use a data set called \texttt{parenthood} from Navarro and Foxcroft (2019)\footnote{`parenthood data from Navarro and Foxcroft (2019) - \url{https://bit.ly/3ybECzN}}. The data set is found under \textbf{Data Library} in \texttt{jamovi}.\footnote{Make sure to install lsj-data from \texttt{Modules} in \texttt{jamovi.}} The variables of interest are \texttt{dani.sleep}, \texttt{baby.sleep}, \texttt{dani.grump} , and \texttt{day}.
+
+\hypertarget{running-the-test}{%
+\subsubsection{Running the test}\label{running-the-test}}
+
+I demonstrate below how to test the \(H_0\) with the statistical package \texttt{jamovi}. We will use a two-sided test with an alpha level set to .05.
+
+\hypertarget{descriptive-stats}{%
+\paragraph*{Descriptive Stats}\label{descriptive-stats}}
+\addcontentsline{toc}{paragraph}{Descriptive Stats}
+
+\includegraphics{images/paste-3DBA2127.png}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{correlation-analysis}{%
+\paragraph*{Correlation analysis}\label{correlation-analysis}}
+\addcontentsline{toc}{paragraph}{Correlation analysis}
+
+\includegraphics{images/paste-34DE3154.png}
+
+\hypertarget{interpretation}{%
+\paragraph{Interpretation}\label{interpretation}}
+
+How should you interpret a correlation of, say, \(r\) = 0.4? The honest answer is that it really depends on what you want to use the data for, and on how strong the correlations in your field tend to be. In short, the interpretation of a correlation depends a lot on the context. For a rough statement, use Table \ref{tab:correlation-table}.
+
+Refer to Navarro and Foxcroft (2019)\footnote{Interpretation of correlation using the \texttt{parenthood} data set - \url{https://bit.ly/3Kj1DmK}} for a detailed interpretation of the results.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{simple-linear-regression-slr}{%
+\section{Simple Linear Regression (SLR)}\label{simple-linear-regression-slr}}
+
+\hypertarget{when-to-use-it-1}{%
+\subsection{When to use it?}\label{when-to-use-it-1}}
+
+Simple linear regression, or simply bivariate regression, is an extension of the correlation coefficient. In this context, the dependent variable is the one being predicted whereas the independent variable is the predictor.
+
+\hypertarget{variables}{%
+\subsection{Variables}\label{variables}}
+
+When running a SLR, it's important to distinguish between the variable of interest (\(Y\)) and the variable (\(X\)) that will be used to predict the variable of interest.
+
+The \textbf{Responsive Variable} is denoted by \(Y\) and called the \textbf{variable of interest} or dependent variable. This must be a quantitative variable (interval or ratio).
+
+The \textbf{Predictor Variable} is denoted by \(X\) and called the \textbf{explanatory} or independent variable\footnote{More than one variable if using multiple predictors.}. This also must be a quantitative variable (interval or ratio).
+
+\hypertarget{notations-and-equations}{%
+\subsection{Notations and equations}\label{notations-and-equations}}
+
+Below are some other important notations related to regression.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3056}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6944}}@{}}
+\caption{Notations for Simple Linear Regression}\tabularnewline
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+Symbol
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Meaning
+\end{minipage} \\
+\midrule()
+\endfirsthead
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+Symbol
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Meaning
+\end{minipage} \\
+\midrule()
+\endhead
+\(Y\) & is the response variable \\
+\(X\) & is the predictor variable \\
+\(y_1, y_2, …y_n\) & is the observed values of \(Y\) \\
+\(x_1, x_2, …x_n\) & is the observed values of \(X\) \\
+(\(x_i, y_1\)) & are coordinates where \(i = 1, …, n\) \\
+\(\beta_0\) \textbar{} \(\hat{\beta_0}\) & is the population y-intercept \textbar{} sample y-intercept \\
+\(\beta_1\) \textbar{} \(\hat{\beta_1}\) & is the population slope \textbar{} sample slope \\
+\(\epsilon_i\) & is the error or deviation of \(y_i\) from the line, \(\beta_0+\beta_1x_i\) \\
+\bottomrule()
+\end{longtable}
+
+The SRL regression general form is, \[
+Y=\beta_0+\beta_1X+\epsilon
+\]
+
+For an individual observation, the form is,
+
+\[
+y_i=\beta_0+\beta_1x_i+\epsilon_i
+\]
+
+Given the equations above, I will use the \textbf{Least Square Line} to estimate the parameters from the sample. The LSL ``is the line for which the sum of squared errors of predictions for all sample points is the least''.\textsuperscript{{[}2{]}}
+
+The formulas to calculate least squares estimates are:
+
+Sample Slope
+
+\[
+\hat{\beta}_1=\dfrac{\sum (x_i-\bar{x})(y_i-\bar{y})}{\sum (x_i-\bar{x})^2}
+\]
+
+Sample Intercept
+
+\[
+\hat{\beta}_0=\bar{y}-\hat{\beta}_1\bar{x}
+\]
+
+From the two equation above, we derive the Least Squares Regression equation below:
+
+\[
+\hat{y}=\hat{\beta}_0+\hat{\beta}_1x
+\]
+
+In addition, we can use the LSR line to estimate errors, which are called residuals.
+
+\textbf{Residual}
+
+\(\hat{\epsilon}_i=y_i-\hat{y}_i\)
+
+\hypertarget{interpretation-1}{%
+\subsubsection{Interpretation}\label{interpretation-1}}
+
+Interpreting the \textbf{slope} of the regression equation, \(\hat{\beta_1}\)
+
+\(\hat{\beta_1}\) represents the estimated increase in \emph{Y} per unit increase in \emph{X}. Note that the increase may be negative which is reflected when \(\hat{\beta_1}\) is negative.
+
+\(\hat{\beta_0}\) is the Y-intercept of the regression line. When X = 0 is within the scope of observation, \(\hat{\beta_0}\) is the estimated value of \emph{Y} when X = 0.
+
+Note: when X = 0 is not within the scope of the observation, the \emph{Y}-intercept is usually not of interest.
+
+Practice
+
+Suppose we found the following regression equation for weight vs.~height.
+
+\[
+\text{weight }=-222.5 +5.49\text{ height }
+\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Interpret the slope of the regression equation.
+\item
+  Does the intercept have a meaningful interpretation? If so, interpret the value.
+\end{enumerate}
+
+The answer is here.
+
+\hypertarget{stating-the-hypotheses-1}{%
+\subsection{Stating the Hypotheses}\label{stating-the-hypotheses-1}}
+
+If the slope of the line is positive, then there is a positive linear relationship, i.e., as one increases, the other increases. If the slope is negative, then there is a negative linear relationship, i.e., as one increases the other variable decreases. If the slope is 0, then as one increases, the other remains constant, i.e., no predictive relationship.
+
+Therefore, we are interested in testing the following hypotheses:
+
+\textbf{Null hypothesis}
+
+\(F\) test for the complete regression model
+
+\begin{itemize}
+\tightlist
+\item
+  \(H_0:\beta = 0\) (the variance explained by all the independent variables together (the complete model) is 0 in the population)
+\end{itemize}
+
+\(t\) test for the individual regression coefficient \(b_k\)
+
+\begin{itemize}
+\tightlist
+\item
+  \(H_0: \beta = 0\)
+\end{itemize}
+
+\textbf{Alternative hypothesis}
+
+\(F\) test for the complete regression model
+
+\begin{itemize}
+\tightlist
+\item
+  \(H_a: \beta \neq 0\) (not all population regression coefficients are 0)
+\end{itemize}
+
+\(t\) test for the individual regression coefficient \(\beta\)
+
+\begin{itemize}
+\item
+  \(H_a: \beta \neq 0\) (two sided)
+\item
+  \(H_a: \beta > 0\) (right sided)
+\item
+  \(H_0: \beta < 0\) (left sided)
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{assumptions-regression}{%
+\subsection{Assumptions regression}\label{assumptions-regression}}
+
+There are some assumptions we need to check (other than the general form) to make inferences for the population parameters based on the sample values.
+
+\hypertarget{linearity-reg}{%
+\subsubsection{Linearity}\label{linearity-reg}}
+
+The relationship between X and Y must be linear.
+
+\begin{itemize}
+\tightlist
+\item
+  Examine the scatterplot of x and y.
+\end{itemize}
+
+\hypertarget{independence-of-errors-reg}{%
+\subsubsection{Independence of errors}\label{independence-of-errors-reg}}
+
+There is not a relationship between the residuals and the Y variable; in other words, Y is independent of errors.
+
+\begin{itemize}
+\tightlist
+\item
+  Examine the scatterplot of ``residuals versus fits''; the correlation should be approximately 0. In other words, there should not look like there is a relationship.
+\end{itemize}
+
+\hypertarget{normality-of-errors}{%
+\subsubsection{Normality of errors}\label{normality-of-errors}}
+
+The residuals must be approximately normally distributed.
+
+\begin{itemize}
+\tightlist
+\item
+  Check this assumption by examining a normal probability plot; the observations should be near the line. You can also examine a histogram of the residuals; it should be approximately normally distributed.
+\end{itemize}
+
+\hypertarget{equal-variances}{%
+\subsubsection{Equal variances}\label{equal-variances}}
+
+The variance of the residuals is the same for all values of X.
+
+\begin{itemize}
+\tightlist
+\item
+  Check this assumption by examining the scatterplot of ``residuals versus fits''; the variance of the residuals should be the same across all values of the x-axis. If the plot shows a pattern (e.g., bowtie or megaphone shape), then variances are not consistent, and this assumption has not been met.
+\end{itemize}
+
+Adapted from Applied Statistics\textsuperscript{{[}2{]}}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{test-statistic-1}{%
+\subsection{Test statistic}\label{test-statistic-1}}
+
+\(F\) test for the complete regression model. Refer to the One-Way ANOVA test. \textbf{This is only useful in the case of Multiple Regression}
+
+\(t\) test for the slope (individual \(\beta_k\))
+
+\[
+t = \dfrac{b_k}{SE_{b_k}}
+\]
+
+where, \(SE_{b_k}\) is the estimated standard error of the sample slope.
+
+For one independent variable:
+
+\[
+SE_{b_1} = \dfrac{\sqrt{\sum (y_j - \hat{y}_j)^2 / (N - 2)}}{\sqrt{\sum (x_j - \bar{x})^2}} = \dfrac{s}{\sqrt{\sum (x_j - \bar{x})^2}}
+\]
+
+with \(s\) the sample standard deviation of the residuals, \(x_j\) the score of subject \(j\) on the independent variable \(x\) , and \(\bar{x}\) the mean of \(x\).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{sampling-distributions}{%
+\subsection{Sampling distributions}\label{sampling-distributions}}
+
+Refer to the sampling distributions of the \(F\) test (One-Way ANOVA) and the \(t\) test (Independent-Samples \(t\) test).
+
+\hypertarget{significance-1}{%
+\subsection{Significance}\label{significance-1}}
+
+Refer to the steps used for the \(F\) test (One-Way ANOVA) and the \(t\) test (Independent-Samples \(t\) test).
+
+\hypertarget{confidence-intervals}{%
+\subsection{Confidence Intervals}\label{confidence-intervals}}
+
+Refer to the StatKat website\footnote{Confidence interval for linear regression - \url{https://bit.ly/3rVJOUp}} for a detailed explanation. I will show below how to calculate it using \texttt{jamovi}.
+
+\hypertarget{effect-size}{%
+\subsection{Effect size}\label{effect-size}}
+
+For linear regression we calculate \(R^2\) as the effect size. This is the amount of variance in the dependent variable \(y\) that is explained by the sample regression equation (the independent variable(s))
+
+\hypertarget{example-1}{%
+\subsection{Example}\label{example-1}}
+
+Regression \textgreater{} Linear Regression
+
+Put your dependent variable in the box below Dependent Variable and your independent variables of interval/ratio level in the box below Covariates.
+
+We will the \texttt{parenthood} data set once again.
+
+Before, let's understand the concept of the slop and the intercept. Below is the formula for a straight line:
+
+\[
+\hat{y}=\hat{\beta}_0+\hat{\beta}_1x
+\]
+
+Where, \(\hat{\beta}_0\) is the intercept, \(\hat{\beta}_1\) is the slope, and \(x\) is the predictor. The intercept is where the line touches the \(y\) axis, which in the graph in the left is between 80 and 90. This is the expected value of \(Yi\) when \(Xi\) is equal to 0. The slop is the tilt of the best fit line.
+
+\includegraphics{images/paste-DF1CA582.png}
+
+\includegraphics{images/paste-D53FB07C.png}
+
+To run the linear regression, click on \texttt{Regression} - \texttt{Linear\ Regression} analysis in jamovi, using the \href{https://lsj.readthedocs.io/en/latest/Ch12/_static/data/parenthood.omv}{\texttt{parenthood}} data set.
+
+Then specify \texttt{dani.grump} as the \texttt{Dependent\ Variable} and \texttt{dani.sleep} as the variable entered in the \texttt{Covariates} box. This gives the results shown above.
+
+intercept \(\hat{\beta_0}\) = 125.96 (grumpiness index)
+
+slope \(\hat{\beta_1}\) = - 8.94 (hours)
+
+With these values, we can create the linear regression equation:
+
+\[
+\hat{y} = 125.96 + (-8.94)x
+\]
+
+\hypertarget{interpretation-2}{%
+\subsubsection{Interpretation:}\label{interpretation-2}}
+
+The slope: if one increases \(Xi\) by 1 unit, then one is decreasing \(Yi\) by 8.94. In other words, for each additional hour of sleep, Dani reduce her grumpiness level (points), which in turn will improve her mood.
+
+The intercept: recall that the \(a\) is the predicted value of \(Yi\) when \(Xi\) is equal to 0. Thus, if Dani gets zero hours of sleep (\(Xi = 0\)), then her grumpiness will reach about (\(Yi = 125.96\)), which is lot since the scale goes up to 100.
+
+\includegraphics{images/paste-802AADA8.png}
+
+\hypertarget{assumption-checks}{%
+\subsubsection{Assumption Checks}\label{assumption-checks}}
+
+Normality: QQ-plots + Shapiro-Wilk test
+
+\includegraphics{images/paste-D10A6EBB.png}
+
+Outlier
+
+\includegraphics{images/paste-42FF4628.png}
+
+Interpretation: Values greater than 1 is often considered large and indicates the presence of outlier.
+
+\hypertarget{answers-to-questions}{%
+\subsection{Answers to questions}\label{answers-to-questions}}
+
+Interpreting coefficients
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  slope of 5.49 represents the estimated change in weight (in pounds) for every increase of one inch of height.\\
+\item
+  A height of zero, or X = 0 is not within the scope of the observation since no one has a height of 0. The value \(\hat{\beta_0}\) by itself is not of much interest other than being the constant term for the regression line.
+\end{enumerate}
+
+\hypertarget{multiple-linear-regression}{%
+\section{Multiple Linear Regression}\label{multiple-linear-regression}}
+
+In Multiple Linear Regression, there is one quantitative response and more than one predictor or independent variable.
+
+Multiple regression and multiple correlation---tools that can be used to examine the combined relations between multiple predictors and a dependent variable.
+
+Useful when multiple independent variables can do a better job of predicting a dependent variable than a single independent variable.
+
+Example: using both the rate of fatigue during 30 second cycle test and rate of force development maximal isometric contraction to predict muscle fiber type.
+
+The model will contain the constant or intercept term, \(\hat{\beta_0}\), and more than one coefficient, denoted \(\hat{\beta_1}, ....,\hat{\beta_k}\) , where \(k\) is the number of predictors.
+
+The MLR model will then be:
+
+\[
+Y=\beta_0+\beta_1X_1+...+\beta_kX_k
+\]
+
+There are several methods by which multiple regressions are performed. 1. Forward selection 2. Backward elimination 3. Stepwise 4. Hierarchical multiple regression
+
+Different methods lead to different orders by which independent variables are added to the model.
+
+Forward
+
+\begin{itemize}
+\tightlist
+\item
+  Start with a correlation matrix, which is a table with Pearson r correlation coefficients between all X and Y variables.
+\item
+  The first X variable added to the model is the one with the highest correlation with the Y variable.
+\item
+  Further additions of X variables are added to the model in order of how much each variable can increase the R2 value.
+\item
+  They are added in order of how much unique variance they can account for.
+\end{itemize}
+
+Backwards
+
+\begin{itemize}
+\tightlist
+\item
+  All X variables are initially forced into the model.
+\item
+  A computer algorithm eliminates X variables in order of which variables decrease R2 the least when removed.
+\item
+  Each removal of an X variable that would not cause a statistically significant decrease in R2 is executed.
+\item
+  Stops when further removal of any X variable would significantly decrease R2.
+\end{itemize}
+
+SW
+
+Stepwise multiple regression is the same process as forward selection.
+
+\begin{itemize}
+\item
+  However, in stepwise multiple regression, at each step, the algorithm may remove a variable that was previously added if it would not decrease the R2 significantly.
+\item
+  This occurs if a variable no longer accounts for a significant portion of unique variance in the model.
+\end{itemize}
+
+Hierarchical multiple regression
+
+\begin{itemize}
+\tightlist
+\item
+  Allows the researcher/investigator to dictate the order in which X variables are added to the model
+\item
+  Used to examine a specific model or hypothesis
+\item
+  Example: a researcher decides fat-free mass should be a better predictor of strength than weight despite weight having a slightly higher correlation with strength (refer to tables 9.1 and 9.2)
+\end{itemize}
+
+\hypertarget{references}{%
+\section*{References}\label{references}}
+\addcontentsline{toc}{section}{References}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{1}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-rivkadevries2022}{}}%
+1. Rivka deVries. (2022). \emph{Statkat}. \url{https://statkat.com/index.php}
+
+\leavevmode\vadjust pre{\hypertarget{ref-applied}{}}%
+2. \emph{Applied Statistics - STAT 500}. (n.d.). \url{https://online.stat.psu.edu/stat500/home}
+
+\end{CSLReferences}
+
+\end{document}
