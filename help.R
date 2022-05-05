@@ -19,7 +19,7 @@ https://slides.yihui.org/xaringan/#1
 
 ---
   
-  The holy passion of Friendship is of so sweet and steady
+The holy passion of Friendship is of so sweet and steady
 and loyal and enduring a nature that it will last through
 a whole lifetime...
 

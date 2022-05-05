@@ -148,8 +148,21 @@ Then, proceed to write a 2-page summary that will be part of the `Introduction` 
 
 ## Presenting results {#presenting-results}
 
-You will be given 15 minutes to present the results of your project - 10 minutes (presenting) and 5 minutes (questions). You will be required to use PowerPoint, Google Slides, or something similar. I have created [PPTX template](#presentation-template) you can use to get started.
+You will be given 15 minutes to present the results of your project - 10 minutes (presenting) and 5 minutes (Q&A). 
 
+You will be required to use PowerPoint, Google Slides, or something similar. I have created a [template](pres-template.html) you can use to get started. You can also import it to Keynote, Google Slides if needed. Please, do a search online to learn how this can be accomplished.
+
+You will be required to turn-in a draft of the slides the week before your presentation. Use the template above to create the presentation draft. **On each of the slides of the template, indicate to be added**. For instance, 
+
+```
+- SLide 1: The title and my name will be added
+- Slide 2: ....
+- ...
+- Slide 6: Statistical Analysis
+  - The nature of the test
+  - The variables of interest
+  - Indi
+```
 
 ## Written report {#written-report}
 
@@ -294,10 +307,6 @@ Below you will find the templates you are to use when submitting the required as
 
     Note: This assignment will become the "Introduction" section of your final 
     project's written report.
-
-## Presentation Template {#presentation-template}
-
-Students will be required to use a template created for the purpose of presenting the results of their project. Simply download the [PPTX template](pres-template.pptx) and open it using MS PowerPoint. You can also import it to Keynote, Google Slides if needed. Please, do a search online to find out how this can be accomplished. 
 
 ## Written report
 

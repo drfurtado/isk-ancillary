@@ -10,7 +10,8 @@ output:
 
 ### Learning objectives
 
-1.  c
+1.  sdsd
+2.  sdsd
 
 ### Data set {#data-set}
 
@@ -45,22 +46,6 @@ Suppose a researcher working for the NFL Combine Data Collection Team wanted to 
 **Filter**: create a filter for `position` so that only `Wide Receivers` and `Safety` are included in this analysis.
 
 Calculate the `mean`, `median`, `standard deviation`, `n`, `minimum` and `maximum`. Ensure to provide the `Descriptives Table`.
-
-```{r echo=FALSE, comment = NA}
-library(jmv)
-library(jmvconnect)
-data <- jmvconnect::read(1) 
-jmv::descriptives(
-    formula = bpress ~ position,
-    data = data,
-    hist = TRUE,
-    dens = TRUE,
-    qq = TRUE,
-    missing = FALSE,
-    median = FALSE,
-    min = FALSE,
-    max = FALSE)
-```
 
 #### Step 2: Variables & hypotheses
 
