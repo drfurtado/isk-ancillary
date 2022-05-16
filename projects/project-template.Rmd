@@ -45,7 +45,7 @@ set.seed(42)
 knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 ```
 
-Place discussion here, just below the title of the project. Notice that Methods, Results, References and Appendices begin in a new page. Visit this link to learn how to write an Introduction section: https://bit.ly/3C46nbw
+Place discussion here, just below the title of the project. Notice that Methods, Results, References and Appendices begin in a new page. Visit this link to learn how to write an Introduction section: <https://bit.ly/3C46nbw>
 
 Please, do not change the font size or type.
 
@@ -53,44 +53,61 @@ Please, do not change the font size or type.
 
 # Methods
 
-  Help found here --> https://bit.ly/3iAR2rQ
+Help found here --\> <https://bit.ly/3iAR2rQ>
 
 ## Participants
 
-  Help found here --> https://bit.ly/3iAR2rQ
+Help found here --\> <https://bit.ly/3iAR2rQ>
+
+See example below:
+
+    Thirty-two college male soccer players (16 experienced, mean age = 21.13 years, SD = 1.62; 16 inexperienced, mean age = 19.54 years, SD = 1.14) participated in the study. Experienced players were selected based on two criteria. They needed to be members of a college soccer team from a Division-I university, and have eight or more years of competitive experience. (Division I is the highest level of intercollegiate competition in the United States.) Experienced players had an average of 13.78 years (SD = 1.57) including their college and high school soccer experience. Inexperienced soccer players were selected from among college students who did not play soccer for their high school team or play competitive soccer since leaving high school and had a minimum of one and a maximum of four years of soccer experience. Inexperienced soccer players had an average of 2.38 years (SD = 1.08) of organized soccer experience, all of which were accrued before entering high school. It was important that inexperienced players had limited experience with soccer because individuals without any experience are likely to answer decision-making problems at random. Choosing answers randomly is likely to mask the effects of exercise on decision making. Before the start of the experiment, all participants signed the informed consent form, and their health was screened with the use of a medical questionnaire.
+    Fontana, F. E., Mazzardo, O., Mokgothu, C., Furtado, O., Jr., & Gallagher, J. D. (2009). Influence of exercise intensity on the decision-making performance of experienced and inexperienced soccer players. Journal of Sport & Exercise Psychology, 31(2), 135–151. http://www.ncbi.nlm.nih.gov/pubmed/19454768
 
 ## Design
 
-  Help found here --> https://bit.ly/3iAR2rQ
-  More help found here --> https://bit.ly/37TZdgE
+Help found here --\> <https://bit.ly/3iAR2rQ> More help found here --\> <https://bit.ly/37TZdgE>
 
-## Statistical analysis
+## Statistical Analysis
 
-  Help found here --> https://bit.ly/31skJ5I
+Help found here --\> <https://bit.ly/31skJ5I>
+
+See examples below:
+
+    Descriptive statistics of age (Mean and SD) and BMI was computed for both males and females. Data from all variables were examined for normality using the ShapiroWilk statistical test. Based on the test for normality, parametric and non-parametric analyzes were performed. Independent t-tests were used to examine sex differences in the Habitual PA (step count) and the FMS variables, while Mann-Whitney tests examined gender differences in the non-parametric variables. Since sex differences were present for some of the variables, Spearman Rho correlations were computed separately for males and females to examine the association among PA variables (step count, organized PA) and sedentary activities, with the FMS variables (total FMS, locomotor, and object control skills). All statistical procedures were performed using the SPSS 17.0 statistical package.
+    Mazzardo, O., Fontana, F. E., Furtado Jr, O., & Gallagher, J. D. (2018). The relationship of movement skills with habitual and organized physical activity in seven and eight-year-old children. Pensar a Prática, 21(1). https://doi.org/10.5216/rpp.v21i1.42360
 
 ## Materials
 
-  Help found here --> https://bit.ly/3iAR2rQ
+List all the materials and measures used to collect data. Do not add anything related to data analysis here.
+
+Help found here --\> <https://bit.ly/3iAR2rQ>
 
 ## Procedures
 
-  Help found here --> https://bit.ly/3iAR2rQ
-  
+Do not add anything related to data analysis here.
+
+Help found here --\> <https://bit.ly/3iAR2rQ>
+
 \newpage
 
 # Results
 
-  Help found here --> https://bit.ly/3Lg9qT5
+Help found here --\> <https://bit.ly/3Lg9qT5>
+
+    Notes
+    - Ensure to use APA Style when phrasing the results
+    - Add at least the Discriptive Table, the main test statistic table and one graph (scatterplot, mean plot, etc) to illustrate the results.
+    - Do not add results for assumption checks here (Levene's, Shapiro-Wilk, etc.) as this information should under Statistical Analysis.
 
 \newpage
 
 # References
 
-  Help found here --> https://bit.ly/3tHqIm7
+Help found here --\> <https://bit.ly/3tHqIm7>
 
 \newpage
-  
+
 # Appendices
 
-Add here the preliminary info turned in previously
-
+Add here the preliminary info turned in previously.
