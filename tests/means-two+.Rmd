@@ -61,6 +61,7 @@ $$
 F = \dfrac{\mbox{mean square between}}{\mbox{mean square error}}
 $$ where, $MSb$ is represents the mean square between groups and $MSw$ is the mean square within groups.
 
+<<<<<<< Updated upstream
 SSw = difference between each individual score ( $Yik$ ) from their group mean ( $\bar{Y}k$ )
 
 SSb = difference between the group means ( $\bar{Y}k$ ) and the grand mean ( $\bar{Y}$ )
@@ -74,6 +75,17 @@ SSb = difference between the group means ( $\bar{Y}k$ ) and the grand mean ( $\b
                                                                                                                                                                                                                                                                                                                                                                                                             \displaystyle\sum_{k=1}^G \displaystyle\sum_{i = 1}^{N_k} ({Y}_{ik} - \bar{Y}_k)^2                      
                                                                                                                                                                                                                                                                                                                                                                                                             $$                                                                                                      | MS~w~ = SS~w~ / *df*~w~ |                   |
 |                |                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |                         |                   |
+=======
+|                | df              | sum of squares                                                                                                                                                 | mean squares            | *F*-statistic     |
+|----------------|-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|-------------------|
+| between groups | *df*~b~ = G - 1 | $$                                                                                                                                                             
+                                                                                                            \displaystyle\sum_{k=1}^G N_k(\bar{Y}_k - \bar{Y})^2                                    
+                                                                                                            $$                                                                                      | MS~b~ = SS~b~ / *df*~b~ | F = MS~b~ / MS~w~ |
+| within groups  | *df*~w~ = N - G | $$                                                                                                                                                             
+                                                                                                            \displaystyle\sum_{k=1}^G \displaystyle\sum_{i = 1}^{N_k} ({Y}_{ik} - \bar{Y}_k)^2      
+                                                                                                            $$                                                                                      | MS~w~ = SS~w~ / *df*~w~ |                   |
+|                |                 |                                                                                                                                                                |                         |                   |
+>>>>>>> Stashed changes
 
 : (#tab:f-test) APA style ANOVA table
 
